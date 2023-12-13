@@ -41,6 +41,8 @@ class ReplaceCharacters {
 		int originalUpgrades2 = -1;
 };
 
+void LoadSonic_h(int);
+void LoadKnuckles_h(int);
 void StageLoadHook();
 int UpgradeHook(int);
 void StageCompletedHook(char);

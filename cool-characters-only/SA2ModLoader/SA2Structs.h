@@ -810,6 +810,7 @@ struct CharObj2Base
 	float SomeMultiplier;
 	int field_44;
 	float MechHP;
+	char gap70[32];
 	NJS_POINT3 Eff;
 	NJS_POINT3 Acceleration;
 	NJS_VECTOR Speed;
@@ -828,8 +829,10 @@ struct CharObj2Base
 	NJS_MOTION** Animation;
 	PhysicsData PhysData;
 	NJS_VECTOR SomeVectors[4];
+	int field_144[12];
 	CharAnimInfo AnimInfo;
 	CharSurfaceInfo SurfaceInfo;
+	float idk6;
 };
 
 struct playerwk
