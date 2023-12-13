@@ -25,5 +25,13 @@ class StartingPositions {
 		void init();
 };
 
+signed int sub_458970();
 void LoadStartPosition_r();
 int LoadStartPosition_h(int, NJS_VECTOR*, Rotation*);
+void sub_46DC70(int, NJS_VECTOR*, char);
+void Load2PIntroPos_h(int);
+void Load2PIntroPos_r();
+void sub_43DF30_h(int);
+void sub_43DF30();
+signed int sub_46DBD0(int);
+signed int LoadEndPosition_h(int);

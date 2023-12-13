@@ -23,10 +23,11 @@
 
 // Sonic
 FunctionHook<void, int> hLoadSonic((intptr_t)LoadSonic);
-FunctionHook<int> hLoadSonEffTex((intptr_t)LoadSonEffTex);
+FunctionHook<void, int> hLoadShadow((intptr_t)LoadShadow);
 
 // Knuckles
 FunctionHook<void, int> hLoadKnuckles((intptr_t)LoadKnuckles);
+FunctionHook<void, int> hLoadRouge((intptr_t)LoadRouge);
 FunctionHook<void> hLoadAquaticMineCharAnims((intptr_t)LoadAquaticMineCharAnims);
 
 // Fixes
@@ -37,11 +38,12 @@ FunctionHook<void> hStageLoadUnloadHandler((intptr_t)0x43D510);
 
 void ReplaceCharacters::init() {
 	// Sonic
-	hLoadSonic.Hook(LoadShadow);
-	hLoadSonEffTex.Hook(LoadShadEffTex);
+	hLoadSonic.Hook(LoadSonic_h);
+	hLoadShadow.Hook(LoadSonic_h);
 
 	// Knuckles
-	hLoadKnuckles.Hook(LoadRouge);
+	hLoadKnuckles.Hook(LoadKnuckles_h);
+	hLoadRouge.Hook(LoadKnuckles_h);
 	hLoadAquaticMineCharAnims.Hook(LoadDryLagoon2PCharAnims);
 
 	// Fixes
@@ -167,6 +169,22 @@ void ReplaceCharacters::restoreLevelUpgrades() {
 
 	this->originalUpgrades1 = -1;
 	this->originalUpgrades2 = -1;
+}
+
+void LoadSonic_h(int player) {
+	if (player == 0) {
+		hLoadShadow.Original(0);
+	} else {
+		hLoadSonic.Original(player);
+	}
+}
+
+void LoadKnuckles_h(int player) {
+	if (player == 0) {
+		hLoadRouge.Original(0);
+	} else {
+		hLoadKnuckles.Original(player);
+	}
 }
 
 void StageLoadHook() {
