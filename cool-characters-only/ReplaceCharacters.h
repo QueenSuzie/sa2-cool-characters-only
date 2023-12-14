@@ -20,30 +20,17 @@
 
 #pragma once
 
-#include <vector>
-#include <algorithm>
-
 class ReplaceCharacters {
 	public:
 		void init();
 		void setStageUpgrades();
-		void restoreLevelUpgrades();
 
 	private:
 		void initCharacterVoices();
-		void initSonicStages();
-		void initKnucklesStages();
 		void setSonicUpgrades();
 		void setKnucklesUpgrades();
-		std::vector<short> sonicStages;
-		std::vector<short> knucklesStages;
-		int originalUpgrades1 = -1;
-		int originalUpgrades2 = -1;
 };
 
 void LoadSonic_h(int);
 void LoadKnuckles_h(int);
-void StageLoadHook();
 int UpgradeHook(int);
-void StageCompletedHook(char);
-void StageLoadUnloadHook();

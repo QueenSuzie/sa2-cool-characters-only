@@ -540,13 +540,11 @@ void StartingPositions::init() {
 
 LevelCutscene* const stru_173A808 = (LevelCutscene*)0x173A808;
 signed int __cdecl sub_458970() {
-	signed int v0; // ecx@3
+	signed int v0 = -1; // ecx@3
 	unsigned int v1; // eax@6
 
 	if (MainCharObj2[0])
 		v0 = MainCharObj2[0]->CharID2;
-	else
-		v0 = -1;
 
 	if (v0 >= Characters_Amy) return 0;
 	if (AltCostume[0]) return 0;
