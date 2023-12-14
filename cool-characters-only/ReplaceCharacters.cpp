@@ -31,10 +31,7 @@ FunctionHook<void, int> hLoadRouge((intptr_t)LoadRouge);
 FunctionHook<void> hLoadAquaticMineCharAnims((intptr_t)LoadAquaticMineCharAnims);
 
 // Fixes
-FunctionHook<void> hStageLoad((intptr_t)0x47BB50);
 FunctionHook<int, int> hUpgradeGet((intptr_t)LevelItem_Main);
-FunctionHook<void, char> hloadResultScreen((intptr_t)LoadResultScreenObjects);
-FunctionHook<void> hStageLoadUnloadHandler((intptr_t)0x43D510);
 
 void ReplaceCharacters::init() {
 	// Sonic
@@ -47,14 +44,9 @@ void ReplaceCharacters::init() {
 	hLoadAquaticMineCharAnims.Hook(LoadDryLagoon2PCharAnims);
 
 	// Fixes
-	hStageLoad.Hook(StageLoadHook);
 	hUpgradeGet.Hook(UpgradeHook);
-	hloadResultScreen.Hook(StageCompletedHook);
-	hStageLoadUnloadHandler.Hook(StageLoadUnloadHook);
 
 	this->initCharacterVoices();
-	this->initSonicStages();
-	this->initKnucklesStages();
 }
 
 void ReplaceCharacters::initCharacterVoices() {
@@ -73,107 +65,66 @@ void ReplaceCharacters::initCharacterVoices() {
 	CharacterVoiceBanks2P[Characters_Knuckles].SoundList = CharacterVoiceBanks2P[Characters_Rouge].SoundList;
 }
 
-void ReplaceCharacters::initSonicStages() {
-	this->sonicStages.push_back(LevelIDs_CityEscape);
-	this->sonicStages.push_back(LevelIDs_MetalHarbor);
-	this->sonicStages.push_back(LevelIDs_SonicVsShadow1);
-	this->sonicStages.push_back(LevelIDs_GreenForest);
-	this->sonicStages.push_back(LevelIDs_PyramidCave);
-	this->sonicStages.push_back(LevelIDs_EggGolemS);
-	this->sonicStages.push_back(LevelIDs_CrazyGadget);
-	this->sonicStages.push_back(LevelIDs_FinalRush);
-	this->sonicStages.push_back(LevelIDs_SonicVsShadow2);
-	this->sonicStages.push_back(LevelIDs_CannonsCoreS);
-	this->sonicStages.push_back(LevelIDs_GreenHill);
-}
-
-void ReplaceCharacters::initKnucklesStages() {
-	this->knucklesStages.push_back(LevelIDs_WildCanyon);
-	this->knucklesStages.push_back(LevelIDs_PumpkinHill);
-	this->knucklesStages.push_back(LevelIDs_AquaticMine);
-	this->knucklesStages.push_back(LevelIDs_DeathChamber);
-	this->knucklesStages.push_back(LevelIDs_KingBoomBoo);
-	this->knucklesStages.push_back(LevelIDs_MeteorHerd);
-	this->knucklesStages.push_back(LevelIDs_CannonsCoreK);
-}
-
 void ReplaceCharacters::setStageUpgrades() {
-	if (std::find(this->sonicStages.begin(), this->sonicStages.end(), CurrentLevel) != this->sonicStages.end()) {
+	if (CurrentCharacter == Characters_Sonic) {
 		this->setSonicUpgrades();
-	} else if (std::find(this->knucklesStages.begin(), this->knucklesStages.end(), CurrentLevel) != this->knucklesStages.end()) {
+	} else if (CurrentCharacter == Characters_Knuckles) {
 		this->setKnucklesUpgrades();
 	}
 }
 
 void ReplaceCharacters::setSonicUpgrades() {
-	this->originalUpgrades1 = MainCharObj2[0]->Upgrades;
-	if (TwoPlayerMode) {
-		this->originalUpgrades2 = MainCharObj2[1]->Upgrades;
+	if (SonicLightShoesGot) {
+		MainCharObj2[0]->Upgrades |= Upgrades_ShadowAirShoes;
 	}
 
-	if (CurrentLevel == LevelIDs_CityEscape || CurrentLevel == LevelIDs_MetalHarbor) {
-		MainCharObj2[0]->Upgrades = 0;
-		if (TwoPlayerMode) {
-			MainCharObj2[1]->Upgrades = 0;
-		}
-
-		return;
+	if (SonicAncientLightGot) {
+		MainCharObj2[0]->Upgrades |= Upgrades_ShadowAncientLight;
 	}
 
-	for (int i = 0; i < (TwoPlayerMode == 0 ? 1 : 2); i++) {
-		int upgrades = Upgrades_SonicLightShoes | Upgrades_ShadowAirShoes;
-		if (CurrentLevel == LevelIDs_GreenHill) {
-			upgrades = Upgrades_SonicBounceBracelet;
-		} else if (CurrentLevel == LevelIDs_CrazyGadget || CurrentLevel > LevelIDs_PyramidCave) {
-			upgrades |= Upgrades_SonicBounceBracelet;
-		}
+	if (SonicMagicGlovesGot) {
+		MainCharObj2[0]->Upgrades |= Upgrades_SonicMagicGloves;
+	}
 
-		MainCharObj2[i]->Upgrades = upgrades;
+	if (SonicFlameRingGot) {
+		MainCharObj2[0]->Upgrades |= Upgrades_ShadowFlameRing;
+	}
+
+	if (SonicBounceBraceletGot) {
+		MainCharObj2[0]->Upgrades |= Upgrades_SonicBounceBracelet;
+	}
+
+	if (SonicMysticMelodyGot) {
+		MainCharObj2[0]->Upgrades |= Upgrades_ShadowMysticMelody;
 	}
 }
 
 void ReplaceCharacters::setKnucklesUpgrades() {
-	this->originalUpgrades1 = MainCharObj2[0]->Upgrades;
-	if (TwoPlayerMode) {
-		this->originalUpgrades2 = MainCharObj2[1]->Upgrades;
+	if (KnucklesShovelClawGot) {
+		MainCharObj2[0]->Upgrades |= Upgrades_RougePickNails;
 	}
 
-	if (CurrentLevel == LevelIDs_WildCanyon || CurrentLevel == LevelIDs_PumpkinHill) {
-		MainCharObj2[0]->Upgrades = 0;
-		if (TwoPlayerMode) {
-			MainCharObj2[1]->Upgrades = 0;
-		}
-
-		return;
+	if (KnucklesSunglassesGot) {
+		MainCharObj2[0]->Upgrades |= Upgrades_RougeTreasureScope;
 	}
 
-	for (int i = 0; i < (TwoPlayerMode == 0 ? 1 : 2); i++) {
-		int upgrades = Upgrades_KnucklesShovelClaw | Upgrades_RougePickNails;
-		if (CurrentLevel >= LevelIDs_MeteorHerd) {
-			upgrades |= Upgrades_KnucklesShovelClaw | Upgrades_RougeIronBoots;
-		}
-
-		MainCharObj2[i]->Upgrades = upgrades;
-	}
-}
-
-void ReplaceCharacters::restoreLevelUpgrades() {
-	if (this->originalUpgrades1 < 0) {
-		return;
+	if (KnucklesHammerGlovesGot) {
+		MainCharObj2[0]->Upgrades |= Upgrades_RougeIronBoots;
 	}
 
-	MainCharObj2[0]->Upgrades = this->originalUpgrades1;
-	if (TwoPlayerMode) {
-		MainCharObj2[1]->Upgrades = this->originalUpgrades2;
+	if (KnucklesAirNecklaceGot) {
+		MainCharObj2[0]->Upgrades |= Upgrades_KnucklesAirNecklace;
 	}
 
-	this->originalUpgrades1 = -1;
-	this->originalUpgrades2 = -1;
+	if (KnucklesMysticMelodyGot) {
+		MainCharObj2[0]->Upgrades |= Upgrades_RougeMysticMelody;
+	}
 }
 
 void LoadSonic_h(int player) {
 	if (player == 0) {
 		hLoadShadow.Original(0);
+		ReplaceMod.setStageUpgrades();
 	} else {
 		hLoadSonic.Original(player);
 	}
@@ -182,48 +133,22 @@ void LoadSonic_h(int player) {
 void LoadKnuckles_h(int player) {
 	if (player == 0) {
 		hLoadRouge.Original(0);
+		ReplaceMod.setStageUpgrades();
 	} else {
 		hLoadKnuckles.Original(player);
 	}
 }
 
-void StageLoadHook() {
-	hStageLoad.Original();
-	ReplaceMod.setStageUpgrades();
-}
-
 int UpgradeHook(int upgrade) {
-	if (CurrentLevel != LevelIDs_DeathChamber) {
-		return hUpgradeGet.Original(upgrade);
-	}
-
 	int upgrades = MainCharObj2[0]->Upgrades;
 	int ret = hUpgradeGet.Original(upgrade);
+	if (CurrentLevel != LevelIDs_DeathChamber) {
+		return ret;
+	}
+
 	if (MainCharObj2[0]->Upgrades != upgrades) {
-		MainCharObj2[0]->Upgrades |= Upgrades_KnucklesShovelClaw | Upgrades_RougeIronBoots;
+		MainCharObj2[0]->Upgrades |= Upgrades_RougeIronBoots;
 	}
 
 	return ret;
-}
-
-void StageCompletedHook(char player) {
-	ReplaceMod.restoreLevelUpgrades();
-	hloadResultScreen.Original(player);
-}
-
-void StageLoadUnloadHook() {
-	// Only on exit game or game over. For cannon's core, also on normal stage exit.
-	if (
-		(
-			GameState == GameStates_Exit_1 &&
-			CurrentLevel >= LevelIDs_CannonsCoreS &&
-			CurrentLevel <= LevelIDs_CannonsCoreK
-		) ||
-		GameState == GameStates_NormalExit ||
-		GameState == GameStates_Pause
-	) {
-		ReplaceMod.restoreLevelUpgrades();
-	}
-
-	hStageLoadUnloadHandler.Original();
 }
