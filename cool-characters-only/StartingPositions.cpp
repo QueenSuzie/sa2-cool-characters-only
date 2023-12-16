@@ -1006,7 +1006,9 @@ void LoadTitleCardTextures() {
 	const char* v15; // esi@19
 	char filename[24]; // [sp+Ch] [bp-20h]@27
 
-	if (TwoPlayerMode || CurrentLevel == LevelIDs_Route101280) {
+	if (CurrentLevel == LevelIDs_CannonsCoreT) {
+		v15 = "SH";
+	} else if (TwoPlayerMode || CurrentLevel == LevelIDs_Route101280) {
 		switch (CurrentCharacter) {
 		case Characters_Knuckles:
 		case Characters_Rouge:
@@ -1023,9 +1025,6 @@ void LoadTitleCardTextures() {
 			break;
 		}
 	} else {
-		if (CurrentLevel == LevelIDs_CannonsCoreT)
-			goto LABEL_26;
-
 		switch (MainCharObj2[0]->CharID2) {
 			case Characters_Shadow:
 			case Characters_SuperShadow:
@@ -1064,7 +1063,6 @@ void LoadTitleCardTextures() {
 				v15 = "DC";
 				break;
 			default:
-			LABEL_26:
 				v15 = "SO";
 				break;
 		}
