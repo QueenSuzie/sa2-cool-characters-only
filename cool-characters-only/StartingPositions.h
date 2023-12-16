@@ -35,3 +35,5 @@ void sub_43DF30_h(int);
 void sub_43DF30();
 signed int sub_46DBD0(int);
 signed int LoadEndPosition_h(int);
+void LoadTitleCardTextures();
+void loc_472A7D();

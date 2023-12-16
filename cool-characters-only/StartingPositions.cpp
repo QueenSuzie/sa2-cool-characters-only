@@ -532,10 +532,11 @@ DataPointer(void*, off_1DE95E0, 0x1DE95E0);
 #pragma endregion
 
 void StartingPositions::init() {
-	WriteJump((void*)0x458970, sub_458970);
+	WriteJump((void*)0x458970, sub_458970); // Mini Event Cutscenes
 	WriteJump((void*)LoadStartPositionPtr, LoadStartPosition_r);
-	WriteJump((void*)0x43DF30, sub_43DF30);
+	WriteJump((void*)0x43DF30, sub_43DF30); // End Positions
 	WriteJump((void*)Load2PIntroPos, Load2PIntroPos_r);
+	WriteJump((void*)0x472A7D, loc_472A7D); // Title Card Textures
 }
 
 LevelCutscene* const stru_173A808 = (LevelCutscene*)0x173A808;
@@ -996,3 +997,89 @@ signed int LoadEndPosition_h(int player) {
 	byte_1DE4664[v8] = *(char*)0x1DE4660;
 	return 1;
 }
+
+#pragma region Title Card Textures
+
+DataPointer(NJS_TEXLIST, stru_1738D90, 0x1738D90);
+DataPointer(NJS_TEXLIST, stru_1738DB0, 0x1738DB0);
+void LoadTitleCardTextures() {
+	const char* v15; // esi@19
+	char filename[24]; // [sp+Ch] [bp-20h]@27
+
+	if (TwoPlayerMode || CurrentLevel == LevelIDs_Route101280) {
+		switch (CurrentCharacter) {
+		case Characters_Knuckles:
+		case Characters_Rouge:
+			v15 = "KN";
+			break;
+		case Characters_Tails:
+		case Characters_Eggman:
+		case Characters_MechTails:
+		case Characters_MechEggman:
+			v15 = "TA";
+			break;
+		default:
+			v15 = "SO";
+			break;
+		}
+	} else {
+		if (CurrentLevel == LevelIDs_CannonsCoreT)
+			goto LABEL_26;
+
+		switch (MainCharObj2[0]->CharID2) {
+			case Characters_Shadow:
+			case Characters_SuperShadow:
+				v15 = "SH";
+				break;
+			case Characters_Eggman:
+			case Characters_MechEggman:
+				v15 = "EG";
+				break;
+			case Characters_Tails:
+			case Characters_MechTails:
+				v15 = "TA";
+				break;
+			case Characters_Knuckles:
+				v15 = "KN";
+				break;
+			case Characters_Rouge:
+				v15 = "RO";
+				break;
+			case Characters_Amy:
+				v15 = "AM";
+				break;
+			case Characters_MetalSonic:
+				v15 = "ME";
+				break;
+			case Characters_Tikal:
+				v15 = "TI";
+				break;
+			case Characters_Chaos:
+				v15 = "C0";
+				break;
+			case Characters_ChaoWalker:
+				v15 = "CH";
+				break;
+			case Characters_DarkChaoWalker:
+				v15 = "DC";
+				break;
+			default:
+			LABEL_26:
+				v15 = "SO";
+				break;
+		}
+	}
+
+	sprintf_s(filename, "MISSIONTEX_%s", v15);
+	LoadTextureList(filename, &stru_1738D90);
+	sprintf_s(filename, "MISSIONTEX_%s2", v15);
+	LoadTextureList(filename, &stru_1738DB0);
+}
+
+static const void* const loc_472B12 = (void*)0x472B12;
+__declspec(naked) void loc_472A7D() {
+	LoadTitleCardTextures();
+	__asm jmp loc_472B12
+}
+
+#pragma endregion
