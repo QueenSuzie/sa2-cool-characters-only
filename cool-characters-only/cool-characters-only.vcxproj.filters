@@ -51,6 +51,5 @@
   <ItemGroup>
     <CopyFileToFolders Include="..\mod.ini" />
     <CopyFileToFolders Include="..\LICENSE" />
-    <CopyFileToFolders Include="..\sonic2app_data.ini" />
   </ItemGroup>
 </Project>

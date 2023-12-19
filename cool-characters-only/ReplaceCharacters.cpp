@@ -31,6 +31,7 @@ FunctionHook<void, int> hLoadRouge((intptr_t)LoadRouge);
 FunctionHook<void> hLoadAquaticMineCharAnims((intptr_t)LoadAquaticMineCharAnims);
 
 // Fixes
+FunctionHook<void> hStageLoad((intptr_t)0x439610);
 FunctionHook<int, int> hUpgradeGet((intptr_t)LevelItem_Main);
 
 void ReplaceCharacters::init() {
@@ -44,6 +45,7 @@ void ReplaceCharacters::init() {
 	hLoadAquaticMineCharAnims.Hook(LoadDryLagoon2PCharAnims);
 
 	// Fixes
+	hStageLoad.Hook(SetStageUpgrades);
 	hUpgradeGet.Hook(UpgradeHook);
 
 	this->initCharacterVoices();
@@ -124,7 +126,6 @@ void ReplaceCharacters::setKnucklesUpgrades() {
 void LoadSonic_h(int player) {
 	if (player == 0) {
 		hLoadShadow.Original(0);
-		ReplaceMod.setStageUpgrades();
 	} else {
 		hLoadSonic.Original(player);
 	}
@@ -133,10 +134,14 @@ void LoadSonic_h(int player) {
 void LoadKnuckles_h(int player) {
 	if (player == 0) {
 		hLoadRouge.Original(0);
-		ReplaceMod.setStageUpgrades();
 	} else {
 		hLoadKnuckles.Original(player);
 	}
+}
+
+void SetStageUpgrades() {
+	hStageLoad.Original();
+	ReplaceMod.setStageUpgrades();
 }
 
 int UpgradeHook(int upgrade) {
