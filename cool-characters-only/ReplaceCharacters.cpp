@@ -48,6 +48,9 @@ void ReplaceCharacters::init() {
 	hStageLoad.Hook(SetStageUpgrades);
 	hUpgradeGet.Hook(UpgradeHook);
 
+	// PC HourGlass Fix
+	WriteData<char>((char*)0x7083F6, 0xEBu);
+
 	this->initCharacterVoices();
 }
 
