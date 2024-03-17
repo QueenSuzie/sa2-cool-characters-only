@@ -29,10 +29,12 @@ FunctionHook<void, int> hLoadShadow((intptr_t)LoadShadow);
 FunctionHook<void, int> hLoadKnuckles((intptr_t)LoadKnuckles);
 FunctionHook<void, int> hLoadRouge((intptr_t)LoadRouge);
 FunctionHook<void> hLoadAquaticMineCharAnims((intptr_t)LoadAquaticMineCharAnims);
+FunctionHook<void> hLoadCannonsCoreKCharAnims((intptr_t)LoadCannonsCoreKCharAnims);
 
 // Fixes
 FunctionHook<void> hStageLoad((intptr_t)0x439610);
 FunctionHook<int, int> hUpgradeGet((intptr_t)LevelItem_Main);
+FunctionHook<void, ObjectMaster*> hInputColi((intptr_t)InputColi);
 
 void ReplaceCharacters::init() {
 	// Sonic
@@ -43,10 +45,12 @@ void ReplaceCharacters::init() {
 	hLoadKnuckles.Hook(LoadKnuckles_h);
 	hLoadRouge.Hook(LoadKnuckles_h);
 	hLoadAquaticMineCharAnims.Hook(LoadDryLagoon2PCharAnims);
+	hLoadCannonsCoreKCharAnims.Hook(LoadDryLagoon2PCharAnims);
 
 	// Fixes
 	hStageLoad.Hook(SetStageUpgrades);
 	hUpgradeGet.Hook(UpgradeHook);
+	hInputColi.Hook(InputColi_h);
 
 	// PC HourGlass Fix
 	WriteData<char>((char*)0x7083F6, 0xEBu);
@@ -159,4 +163,11 @@ int UpgradeHook(int upgrade) {
 	}
 
 	return ret;
+}
+
+void __cdecl InputColi_h(ObjectMaster* obj) {
+	hInputColi.Original(obj);
+	if (CurrentLevel == LevelIDs_CannonsCoreS) {
+		ControllerEnabled[0] = 1; // Allow Shadow to move in Cannon's Core
+	}
 }
