@@ -9,8 +9,8 @@
 
 // add headers that you want to pre-compile here
 #include "framework.h"
-#include "SA2ModLoader/SA2ModLoader.h"
-#include "SA2ModLoader/FunctionHook.h"
+#include "SA2ModLoader.h"
+#include "FunctionHook.h"
 #include "ReplaceCharacters.h"
 #include "StartingPositions.h"
 #include "main.h"

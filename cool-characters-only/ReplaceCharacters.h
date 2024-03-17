@@ -35,3 +35,4 @@ void LoadSonic_h(int);
 void LoadKnuckles_h(int);
 void SetStageUpgrades();
 int UpgradeHook(int);
+void InputColi_h(ObjectMaster*);
