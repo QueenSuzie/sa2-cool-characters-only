@@ -761,7 +761,7 @@ void __cdecl Load2PIntroPos_h(int player) {
 		v4->Position.x = 0.0;
 	LABEL_16:
 		sub_46DC70(v2, v8, 0);
-		v4->Collision->CollisionArray->attr |= 0x70u;
+		v4->Collision->CollisionArray->form |= 0x70u;
 		v11 = *(char*)0x1DE4660;
 		*(int*)&MainCharObj2[v2]->FloorNormal.z = 0;
 		byte_1DE4664[v2 & 1] = v11;
@@ -877,7 +877,7 @@ void __cdecl sub_43DF30_h(int player) {
 		*((int*)*(&off_1DE95E0 + v1) + 7) = 0;
 	LABEL_27:
 		sub_46DC70(v1, &v4->Position, 0);
-		v4->Collision->CollisionArray->attr |= 0x70u;
+		v4->Collision->CollisionArray->form |= 0x70u;
 		*(int*)&MainCharObj2[v1]->FloorNormal.z = 0;
 		if ((short)CurrentLevel == LevelIDs_RadicalHighway || (short)CurrentLevel == LevelIDs_LostColony)
 			byte_1DE4664[v1 & 1] = 5;
@@ -986,7 +986,7 @@ signed int LoadEndPosition_h(int player) {
 	MainCharObj2[v1]->SurfaceInfo.BottomSurfaceDist = v11;
 	MainCharObj2[v1]->SomeVectors[0].x = 0;
 	sub_46DC70(v1, &v4->Position, 0);
-	v4->Collision->CollisionArray->attr |= 0x70u;
+	v4->Collision->CollisionArray->form |= 0x70u;
 	*(int*)&MainCharObj2[v1]->FloorNormal.z = 0;
 	v8 = v1 & 1;
 	if ((short)CurrentLevel == LevelIDs_LostColony) {
