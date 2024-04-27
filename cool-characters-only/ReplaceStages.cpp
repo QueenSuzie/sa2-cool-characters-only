@@ -34,6 +34,10 @@ void StageLoadUnloadHook() {
 		ReplaceStages::LAST_LEVEL = 0;
 	}
 
+	if (!TailsBoosterGot && GameState == GameStates_Exit_1 && CurrentLevel == LevelIDs_PrisonLane) {
+		TailsBoosterGot = '1';
+	}
+
 	hStageLoadUnloadHandler.Original();
 }
 
