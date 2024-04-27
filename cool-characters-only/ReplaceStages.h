@@ -20,13 +20,15 @@
 
 #pragma once
 
-DataPointer(byte, StoryLevelCount, 0x1DEB31E);
-DataPointer(WORD, OtherStoryCount, 0x1DEB31F);
+DataPointer(byte, CurrentStoryLevelCount, 0x1DEB31E);
+DataPointer(WORD, AllStoriesLevelCount, 0x1DEB31F);
 
 class ReplaceStages {
 	public:
 		static inline short LAST_LEVEL = 0;
+		static inline bool FINAL_CHASE_COMPLETE = false;
 		static void init();
 };
 
+void StageLoadUnloadHook();
 signed int GameModeHandler_h();

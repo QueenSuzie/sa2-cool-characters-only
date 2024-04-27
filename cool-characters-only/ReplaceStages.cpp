@@ -22,16 +22,26 @@
 #include "ReplaceStages.h"
 
 FunctionHook<signed int> hGameModeHandler((intptr_t)GameModeHandler);
+FunctionHook<void> hStageLoadUnloadHandler((intptr_t)0x43D510);
 
 void ReplaceStages::init() {
 	hGameModeHandler.Hook(GameModeHandler_h);
+	hStageLoadUnloadHandler.Hook(StageLoadUnloadHook);
+}
+
+void StageLoadUnloadHook() {
+	if (GameState == GameStates_NormalExit || GameState == GameStates_Pause) {
+		ReplaceStages::LAST_LEVEL = 0;
+	}
+
+	hStageLoadUnloadHandler.Original();
 }
 
 signed int GameModeHandler_h() {
-	short currentLevel = CurrentLevel;
+	bool settingLevel = GameMode == GameMode_LoadStory;
 	signed int ret = hGameModeHandler.Original();
 
-	if (currentLevel == 0) {
+	if (settingLevel) {
 		if (CurrentLevel == LevelIDs_MissionStreet) {
 			CurrentLevel = LevelIDs_RadicalHighway;
 			CurrentCharacter = Characters_Shadow;
@@ -41,13 +51,17 @@ signed int GameModeHandler_h() {
 		} else if (CurrentLevel == LevelIDs_SonicVsShadow1 && (ReplaceStages::LAST_LEVEL == LevelIDs_MetalHarbor || ReplaceStages::LAST_LEVEL == 0)) {
 			CurrentLevel = LevelIDs_WhiteJungle;
 			CurrentCharacter = Characters_Shadow;
-			StoryLevelCount -= 1;
-			OtherStoryCount -= 1;
-		} else if (CurrentLevel == LevelIDs_TailsVsEggman2 && (ReplaceStages::LAST_LEVEL == LevelIDs_CrazyGadget || ReplaceStages::LAST_LEVEL == 0)) {
-			CurrentLevel = LevelIDs_FinalChase;
-			CurrentCharacter = Characters_Shadow;
-			StoryLevelCount -= 2;
-			OtherStoryCount -= 2;
+			CurrentStoryLevelCount -= 1;
+			AllStoriesLevelCount -= 1;
+		} else if (CurrentLevel == LevelIDs_TailsVsEggman2) {
+			if (!ReplaceStages::FINAL_CHASE_COMPLETE && (ReplaceStages::LAST_LEVEL == LevelIDs_CrazyGadget || ReplaceStages::LAST_LEVEL == 0)) {
+				CurrentLevel = LevelIDs_FinalChase;
+				CurrentCharacter = Characters_Shadow;
+				CurrentStoryLevelCount -= 2;
+				AllStoriesLevelCount -= 2;
+			} else {
+				ReplaceStages::FINAL_CHASE_COMPLETE = true;
+			}
 		}
 
 		if (CurrentLevel != 0) {
