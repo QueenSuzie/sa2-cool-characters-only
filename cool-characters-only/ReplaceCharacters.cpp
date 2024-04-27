@@ -152,6 +152,7 @@ void LoadKnuckles_h(int player) {
 }
 
 void SetStageUpgrades() {
+	TailsBoosterGot = '1';
 	hStageLoad.Original();
 	ReplaceCharacters::setStageUpgrades();
 }
