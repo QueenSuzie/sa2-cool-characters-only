@@ -83,7 +83,6 @@ signed int GameModeHandler_h() {
 }
 
 void* SummaryBgLoad() {
-	int t = SummarySceneID;
 	if (SummaryBgCharacterID == Characters_Sonic) {
 		SummaryBgCharacterID = Characters_Shadow;
 		switch (SummarySceneID) {
