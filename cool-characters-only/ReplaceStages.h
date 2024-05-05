@@ -22,13 +22,17 @@
 
 DataPointer(byte, CurrentStoryLevelCount, 0x1DEB31E);
 DataPointer(WORD, AllStoriesLevelCount, 0x1DEB31F);
+DataPointer(DWORD, SummaryBgCharacterID, 0x1D1C1B0);
+DataPointer(DWORD, SummarySceneID, 0x1D1C1B4);
 
 class ReplaceStages {
 	public:
 		static inline short LAST_LEVEL = 0;
 		static inline bool FINAL_CHASE_COMPLETE = false;
+		static inline bool WHITE_JUNGLE_COMPLETE = false;
 		static void init();
 };
 
 void StageLoadUnloadHook();
 signed int GameModeHandler_h();
+void* SummaryBgLoad();
