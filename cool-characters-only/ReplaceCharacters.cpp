@@ -1,7 +1,7 @@
 /**************************************************************************************
  *   ReplaceCharacters.cpp  --  This file is part of Cool Characters Only.            *
  *                                                                                    *
- *   Copyright (C) 2023 Queen Suzie                                                   *
+ *   Copyright (C) 2023 - 2024 Queen Suzie                                            *
  *                                                                                    *
  *   Cool Characters Only is free software: you can redistribute it and/or modify     *
  *   it under the terms of the GNU General Public License as published                *
@@ -55,7 +55,12 @@ void ReplaceCharacters::init() {
 	// PC HourGlass Fix
 	WriteData<char>((char*)0x7083F6, 0xEBu);
 
-	this->initCharacterVoices();
+	// BB Box Break Fix
+	uint8_t opcode = 0x3Cu;
+	uint8_t value = 0x48u;
+	WriteData((void*)0x46ECF8, { opcode, value});
+
+	ReplaceCharacters::initCharacterVoices();
 }
 
 void ReplaceCharacters::initCharacterVoices() {
@@ -76,9 +81,9 @@ void ReplaceCharacters::initCharacterVoices() {
 
 void ReplaceCharacters::setStageUpgrades() {
 	if (CurrentCharacter == Characters_Sonic) {
-		this->setSonicUpgrades();
+		ReplaceCharacters::setSonicUpgrades();
 	} else if (CurrentCharacter == Characters_Knuckles) {
-		this->setKnucklesUpgrades();
+		ReplaceCharacters::setKnucklesUpgrades();
 	}
 }
 
@@ -148,20 +153,13 @@ void LoadKnuckles_h(int player) {
 
 void SetStageUpgrades() {
 	hStageLoad.Original();
-	ReplaceMod.setStageUpgrades();
+	ReplaceCharacters::setStageUpgrades();
 }
 
 int UpgradeHook(int upgrade) {
 	int upgrades = MainCharObj2[0]->Upgrades;
 	int ret = hUpgradeGet.Original(upgrade);
-	if (CurrentLevel != LevelIDs_DeathChamber) {
-		return ret;
-	}
-
-	if (MainCharObj2[0]->Upgrades != upgrades) {
-		MainCharObj2[0]->Upgrades |= Upgrades_RougeIronBoots;
-	}
-
+	ReplaceCharacters::setStageUpgrades();
 	return ret;
 }
 

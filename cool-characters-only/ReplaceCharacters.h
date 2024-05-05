@@ -1,7 +1,7 @@
 /**************************************************************************************
  *   ReplaceCharacters.h  --  This file is part of Cool Characters Only.              *
  *                                                                                    *
- *   Copyright (C) 2023 Queen Suzie                                                   *
+ *   Copyright (C) 2023 - 2024 Queen Suzie                                            *
  *                                                                                    *
  *   Cool Characters Only is free software: you can redistribute it and/or modify     *
  *   it under the terms of the GNU General Public License as published                *
@@ -22,13 +22,13 @@
 
 class ReplaceCharacters {
 	public:
-		void init();
-		void setStageUpgrades();
+		static void init();
+		static void setStageUpgrades();
 
 	private:
-		void initCharacterVoices();
-		void setSonicUpgrades();
-		void setKnucklesUpgrades();
+		static void initCharacterVoices();
+		static void setSonicUpgrades();
+		static void setKnucklesUpgrades();
 };
 
 void LoadSonic_h(int);

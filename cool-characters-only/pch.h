@@ -12,7 +12,7 @@
 #include "SA2ModLoader.h"
 #include "FunctionHook.h"
 #include "ReplaceCharacters.h"
+#include "ReplaceStages.h"
 #include "StartingPositions.h"
-#include "main.h"
 
 #endif //PCH_H

@@ -1,7 +1,7 @@
 /**************************************************************************************
  *   main.cpp  --  This file is part of Cool Characters Only.                         *
  *                                                                                    *
- *   Copyright (C) 2023 Queen Suzie                                                   *
+ *   Copyright (C) 2023 - 2024 Queen Suzie                                            *
  *                                                                                    *
  *   Cool Characters Only is free software: you can redistribute it and/or modify     *
  *   it under the terms of the GNU General Public License as published                *
@@ -21,12 +21,10 @@
 #include "pch.h"
 #include <vector>
 
-ReplaceCharacters ReplaceMod;
-
 extern "C" {
 	__declspec(dllexport) void __cdecl Init(const char* path, const HelperFunctions& helperFunctions) {
-		ReplaceMod.init();
-
+		ReplaceCharacters::init();
+		ReplaceStages::init();
 		StartingPositions pos;
 		pos.init();
 	}
