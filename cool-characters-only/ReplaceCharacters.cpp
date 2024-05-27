@@ -36,6 +36,8 @@ FunctionHook<void> hStageLoad((intptr_t)0x439610);
 FunctionHook<int, int> hUpgradeGet((intptr_t)LevelItem_Main);
 FunctionHook<void, ObjectMaster*> hInputColi((intptr_t)InputColi);
 
+FunctionHook<BYTE*, ObjectMaster*> hUpgradeDataGet((intptr_t)UpgradeDataGet);
+
 void ReplaceCharacters::init() {
 	// Sonic
 	hLoadSonic.Hook(LoadSonic_h);
@@ -51,9 +53,14 @@ void ReplaceCharacters::init() {
 	hStageLoad.Hook(SetStageUpgrades);
 	hUpgradeGet.Hook(UpgradeHook);
 	hInputColi.Hook(InputColi_h);
+	hUpgradeDataGet.Hook(UpgradeDataGet_h);
 
 	// PC HourGlass Fix
 	WriteData<char>((char*)0x7083F6, 0xEBu);
+
+	// Air Necklace Fix
+	WriteData<char>((char*)0x459FA5, 0x90u);
+	WriteData<char>((char*)0x459FA6, 0x90u);
 
 	// BB Box Break Fix
 	uint8_t opcode = 0x3Cu;
@@ -61,6 +68,7 @@ void ReplaceCharacters::init() {
 	WriteData((void*)0x46ECF8, { opcode, value});
 
 	ReplaceCharacters::initCharacterVoices();
+	ReplaceCharacters::remapUpgradeData();
 }
 
 void ReplaceCharacters::initCharacterVoices() {
@@ -84,6 +92,8 @@ void ReplaceCharacters::setStageUpgrades() {
 		ReplaceCharacters::setSonicUpgrades();
 	} else if (CurrentCharacter == Characters_Knuckles) {
 		ReplaceCharacters::setKnucklesUpgrades();
+	} else if (CurrentCharacter == Characters_Rouge && KnucklesAirNecklaceGot) {
+		MainCharObj2[0]->Upgrades |= Upgrades_KnucklesAirNecklace;
 	}
 }
 
@@ -135,6 +145,85 @@ void ReplaceCharacters::setKnucklesUpgrades() {
 	}
 }
 
+void ReplaceCharacters::remapUpgradeData() {
+	LevelItems[0].Character = Characters_Shadow; // Bounce
+	LevelItems[25].Character = Characters_Shadow; // Magic Gloves
+	LevelItems[14].Character = Characters_Rouge; // Air Necklace
+
+	// Idea is to override upgrade data but then restore actual upgrade values to not break upgrade handling.
+	// This should let upgrades show up in levelup object but not break how everything has worked up to now.
+
+	// Light Shows -> Air Shoes
+	LevelItems[1] = LevelItems[3];
+	LevelItems[1].Mask = Upgrades_SonicLightShoes;
+	LevelItems[1].Index = 0;
+
+	// Flame Ring
+	LevelItems[2] = LevelItems[4];
+	LevelItems[2].Mask = Upgrades_SonicFlameRing;
+	LevelItems[2].Index = 3;
+
+	// Sonic Mystic Melody
+	LevelItems[18] = LevelItems[19];
+	LevelItems[18].Mask = Upgrades_SonicMysticMelody;
+	LevelItems[18].Index = 5;
+
+	// Ancient Light
+	LevelItems[24] = LevelItems[27];
+	LevelItems[24].Mask = Upgrades_SonicAncientLight;
+	LevelItems[24].Index = 1;
+
+	// Shovel Claws -> Pick Nails
+	LevelItems[12] = LevelItems[16];
+	LevelItems[12].Mask = Upgrades_KnucklesShovelClaw;
+	LevelItems[12].Index = 0xA;
+
+	// Hammer Gloves -> Iron Boots
+	LevelItems[13] = LevelItems[17];
+	LevelItems[13].Mask = Upgrades_KnucklesHammerGloves;
+	LevelItems[13].Index = 0xC;
+
+	// Knuckles Mystic Melody
+	LevelItems[22] = LevelItems[23];
+	LevelItems[22].Mask = Upgrades_KnucklesMysticMelody;
+	LevelItems[22].Index = 0xE;
+
+	// Sunglasses -> Treasure Scope
+	LevelItems[26] = LevelItems[15];
+	LevelItems[26].Mask = Upgrades_KnucklesSunglasses;
+	LevelItems[26].Index = 0xB;
+}
+
+char ReplaceCharacters::remapUpgradeMsg(int msgID) {
+	switch (msgID) {
+		case 1: // Light Shoes
+			return (char)3;
+
+		case 2: // Flame Ring
+			return (char)4;
+
+		case 12: // Shovel Claws
+			return (char)16;
+
+		case 13: // Hammer Gloves
+			return (char)17;
+
+		case 18: // Sonic Mystic Melody
+			return (char)19;
+
+		case 22: // Knuckles Mystic Melody
+			return (char)23;
+
+		case 24: // Ancient Light
+			return (char)27;
+
+		case 26: // Sunglasses
+			return (char)15;
+	}
+
+	return (char)msgID;
+}
+
 void LoadSonic_h(int player) {
 	if (player == 0) {
 		hLoadShadow.Original(0);
@@ -159,7 +248,10 @@ void SetStageUpgrades() {
 int UpgradeHook(int upgrade) {
 	int upgrades = MainCharObj2[0]->Upgrades;
 	int ret = hUpgradeGet.Original(upgrade);
-	ReplaceCharacters::setStageUpgrades();
+	if (upgrades != MainCharObj2[0]->Upgrades) {
+		ReplaceCharacters::setStageUpgrades();
+	}
+
 	return ret;
 }
 
@@ -168,4 +260,16 @@ void __cdecl InputColi_h(ObjectMaster* obj) {
 	if (CurrentLevel == LevelIDs_CannonsCoreS) {
 		ControllerEnabled[0] = 1; // Allow Shadow to move in Cannon's Core
 	}
+}
+
+BYTE* UpgradeDataGet_h(ObjectMaster* a1) {
+	BYTE* ret = hUpgradeDataGet.Original(a1);
+	if (ret) {
+		ObjectMaster* v9 = (ObjectMaster*)*((_DWORD*)ret + 1);
+		if (v9) {
+			a1->Data1.Entity->NextAction = ReplaceCharacters::remapUpgradeMsg((int)a1->Data1.Entity->NextAction);
+		}
+	}
+
+	return ret;
 }

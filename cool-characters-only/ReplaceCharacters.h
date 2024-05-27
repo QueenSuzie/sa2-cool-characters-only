@@ -20,15 +20,19 @@
 
 #pragma once
 
+FunctionPointer(BYTE*, UpgradeDataGet, (ObjectMaster* a1), 0x486520);
+
 class ReplaceCharacters {
 	public:
 		static void init();
 		static void setStageUpgrades();
+		static char remapUpgradeMsg(int);
 
 	private:
 		static void initCharacterVoices();
 		static void setSonicUpgrades();
 		static void setKnucklesUpgrades();
+		static void remapUpgradeData();
 };
 
 void LoadSonic_h(int);
@@ -36,3 +40,4 @@ void LoadKnuckles_h(int);
 void SetStageUpgrades();
 int UpgradeHook(int);
 void InputColi_h(ObjectMaster*);
+BYTE* UpgradeDataGet_h(ObjectMaster*);
