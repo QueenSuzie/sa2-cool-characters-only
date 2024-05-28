@@ -27,6 +27,7 @@ class ReplaceCharacters {
 		static void init();
 		static void setStageUpgrades();
 		static char remapUpgradeMsg(int);
+		static inline bool CAN_MANIPULATE_ACTION_DATA = false;
 
 	private:
 		static void initCharacterVoices();

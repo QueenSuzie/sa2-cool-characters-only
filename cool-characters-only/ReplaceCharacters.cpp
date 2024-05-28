@@ -246,8 +246,11 @@ void SetStageUpgrades() {
 }
 
 int UpgradeHook(int upgrade) {
+	ReplaceCharacters::CAN_MANIPULATE_ACTION_DATA = true;
 	int upgrades = MainCharObj2[0]->Upgrades;
 	int ret = hUpgradeGet.Original(upgrade);
+	ReplaceCharacters::CAN_MANIPULATE_ACTION_DATA = false;
+
 	if (upgrades != MainCharObj2[0]->Upgrades) {
 		ReplaceCharacters::setStageUpgrades();
 	}
@@ -264,7 +267,7 @@ void __cdecl InputColi_h(ObjectMaster* obj) {
 
 BYTE* UpgradeDataGet_h(ObjectMaster* a1) {
 	BYTE* ret = hUpgradeDataGet.Original(a1);
-	if (ret) {
+	if (ret && ReplaceCharacters::CAN_MANIPULATE_ACTION_DATA) {
 		ObjectMaster* v9 = (ObjectMaster*)*((_DWORD*)ret + 1);
 		if (v9) {
 			a1->Data1.Entity->NextAction = ReplaceCharacters::remapUpgradeMsg((int)a1->Data1.Entity->NextAction);
