@@ -24,11 +24,18 @@
 FunctionHook<void> hStageLoadUnloadHandler((intptr_t)0x43D510);
 FunctionHook<signed int> hGameModeHandler((intptr_t)GameModeHandler);
 FunctionHook<void*> hSummaryBgLoad((intptr_t)0x678BB0);
+FunctionHook<int, char> hLoadSaveFile((intptr_t)ProbablyLoadsSave);
 
 void ReplaceStages::init() {
 	hStageLoadUnloadHandler.Hook(StageLoadUnloadHook);
 	hGameModeHandler.Hook(GameModeHandler_h);
 	hSummaryBgLoad.Hook(SummaryBgLoad);
+	hLoadSaveFile.Hook(LoadSaveFile);
+}
+
+void ReplaceStages::resetLevelCompletes() {
+	ReplaceStages::WHITE_JUNGLE_COMPLETE = false;
+	ReplaceStages::FINAL_CHASE_COMPLETE = false;
 }
 
 void StageLoadUnloadHook() {
@@ -72,6 +79,8 @@ signed int GameModeHandler_h() {
 			} else {
 				ReplaceStages::FINAL_CHASE_COMPLETE = true;
 			}
+		} else if (CurrentLevel != 0) {
+			ReplaceStages::resetLevelCompletes();
 		}
 
 		if (CurrentLevel != 0) {
@@ -138,4 +147,9 @@ void* SummaryBgLoad() {
 	}
 
 	return hSummaryBgLoad.Original();
+}
+
+int LoadSaveFile(char file) {
+	ReplaceStages::resetLevelCompletes();
+	return hLoadSaveFile.Original(file);
 }

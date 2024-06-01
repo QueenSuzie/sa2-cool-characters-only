@@ -31,8 +31,10 @@ class ReplaceStages {
 		static inline bool FINAL_CHASE_COMPLETE = false;
 		static inline bool WHITE_JUNGLE_COMPLETE = false;
 		static void init();
+		static void resetLevelCompletes();
 };
 
 void StageLoadUnloadHook();
 signed int GameModeHandler_h();
 void* SummaryBgLoad();
+int LoadSaveFile(char);
