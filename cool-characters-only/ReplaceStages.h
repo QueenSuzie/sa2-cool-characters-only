@@ -20,22 +20,20 @@
 
 #pragma once
 
-DataPointer(byte, CurrentStoryLevelCount, 0x1DEB31E);
-DataPointer(WORD, AllStoriesLevelCount, 0x1DEB31F);
-DataPointer(DWORD, SummaryBgCharacterID, 0x1D1C1B0);
-DataPointer(DWORD, SummarySceneID, 0x1D1C1B4);
+void MemCopyProtected(void*, const void*, size_t);
+
+#define WriteMemory(waddr, daddr, size) MemCopyProtected((void*)(waddr), (void*)(daddr), (size_t)(size))
+
+#define WritePData(addr, data, type) { type _v_ = (type)(data); WriteMemory((addr), &_v_, sizeof(type)); }
+#define WritePointer(addr, ptr) WritePData((addr), (ptr), void*)
 
 class ReplaceStages {
 	public:
 		static void init();
-		static void resetLevelCompletes();
-
-		static inline short LAST_LEVEL = 0;
-		static inline bool FINAL_CHASE_COMPLETE = false;
-		static inline bool WHITE_JUNGLE_COMPLETE = false;
+		static void initStorySequence();
+		static inline SeqSection* FallenHeroSequence = NULL;
+        static SeqAndSummarySection FallenHeroStory[];
 };
 
 void StageLoadUnloadHook();
-signed int GameModeHandler_h();
 void* SummaryBgLoad();
-int LoadSaveFile(char);

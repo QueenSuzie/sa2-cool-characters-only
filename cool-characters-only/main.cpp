@@ -29,5 +29,11 @@ extern "C" {
 		pos.init();
 	}
 
+	__declspec(dllexport) void __cdecl OnExit() {
+		if (ReplaceStages::FallenHeroSequence) {
+			delete ReplaceStages::FallenHeroSequence;
+		}
+	}
+
 	__declspec(dllexport) ModInfo SA2ModInfo = { ModLoaderVer }; // This is needed for the Mod Loader to recognize the DLL.
 }

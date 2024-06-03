@@ -22,27 +22,84 @@
 #include "ReplaceStages.h"
 
 FunctionHook<void> hStageLoadUnloadHandler((intptr_t)0x43D510);
-FunctionHook<signed int> hGameModeHandler((intptr_t)GameModeHandler);
 FunctionHook<void*> hSummaryBgLoad((intptr_t)0x678BB0);
-FunctionHook<int, char> hLoadSaveFile((intptr_t)ProbablyLoadsSave);
+
+SeqAndSummarySection ReplaceStages::FallenHeroStory[] = {
+	SeqEvent(Event::FREE_SHADOW, 0, 0),
+	SeqStage(Characters_Sonic, LevelIDs_CityEscape, Characters_Shadow, Summary::HOT_SHOT),
+	SeqStage(Characters_Sonic, LevelIDs_BigFoot, Characters_Shadow, Summary::HOT_SHOT),
+	SeqEvent(Event::BIG_FOOT_SHADOW_SONIC_DARK, Event::MASTER_EMERALD_BREAK_DARK, Characters_Shadow, Summary::HOT_SHOT),
+	SeqStage(Characters_Knuckles, LevelIDs_WildCanyon, Characters_Rouge, Summary::DRY_LAGOON),
+	SeqEvent(Event::TAILS_FINDS_AMY, Characters_Rouge, Summary::DRY_LAGOON),
+	SeqStage(Characters_MechTails, LevelIDs_TailsVsEggman1, Characters_MechTails, Summary::EGGMAN_1),
+	SeqEvent(Event::TAILS_RESCUED_AMY, Characters_MechTails, Summary::EGGMAN_1),
+	SeqStage(Characters_MechTails, LevelIDs_PrisonLane, Characters_MechTails, Summary::PRISON_LANE),
+	SeqEvent(Event::AMY_BREAKS_OUT_SONIC, Characters_MechTails, Summary::PRISON_LANE),
+	SeqStage(Characters_Sonic, LevelIDs_MetalHarbor, Characters_Shadow, Summary::WHITE_JUNGLE),
+	SeqEvent(Event::ROUGE_REPORTS_PROBLEM, Characters_Shadow, Summary::WHITE_JUNGLE),
+	SeqStage(Characters_Shadow, LevelIDs_WhiteJungle, Characters_Shadow, Summary::WHITE_JUNGLE),
+	SeqStage(Characters_Sonic, LevelIDs_SonicVsShadow1, Characters_Shadow, Summary::SONIC_1),
+	SeqStage(Characters_Sonic, LevelIDs_GreenForest, Characters_Shadow, Summary::SONIC_1),
+	SeqEvent(Event::SHADOW_RESCUES_ROUGE, Event::PRISON_ISLAND_BLOWS_UP, Event::TIMER_FOR_PUMPKIN_HILL, Characters_Shadow, Summary::SONIC_1),
+	SeqStage(Characters_Knuckles, LevelIDs_PumpkinHill, Characters_Rouge, Summary::DRY_LAGOON),
+	SeqEvent(Event::TIMER_FOR_RADICAL_HIGHWAY, Event::SHADOW_REVENGE_MEMORY, Characters_Rouge, Summary::DRY_LAGOON),
+	SeqStage(Characters_Shadow, LevelIDs_RadicalHighway, Characters_Shadow, Summary::RADICAL_HIGHWAY),
+	SeqEvent(Event::TIMER_FOR_AQUATIC_MINE, Characters_Shadow, Summary::RADICAL_HIGHWAY),
+	SeqStage(Characters_Knuckles, LevelIDs_AquaticMine, Characters_Rouge, Summary::DRY_LAGOON),
+	SeqStage(Characters_Shadow, LevelIDs_SkyRail, Characters_Shadow, Summary::SKY_RAIL),
+	SeqEvent(Event::LIMO_SCENE_HERO, Event::DESERT_AREA_ARRIVAL_HERO, Characters_Shadow, Summary::SKY_RAIL),
+	SeqStage(Characters_MechTails, LevelIDs_HiddenBase, Characters_MechTails, Summary::HIDDEN_BASE),
+	SeqStage(Characters_Sonic, LevelIDs_PyramidCave, Characters_Shadow, Summary::SKY_RAIL),
+	SeqStage(Characters_Knuckles, LevelIDs_DeathChamber, Characters_Rouge, Summary::EGG_QUARTERS),
+	SeqStage(Characters_Knuckles, LevelIDs_KingBoomBoo, Characters_Rouge, Summary::EGG_QUARTERS),
+	SeqEvent(Event::EGG_GOLEM_ENTRANCE_HERO, Characters_Rouge, Summary::EGG_QUARTERS),
+	SeqStage(Characters_Sonic, LevelIDs_EggGolemS, Characters_Shadow, Summary::SKY_RAIL),
+	SeqEvent(Event::SHUTTLE_LAUNCH_HERO, Event::TEAM_HERO_ARRIVES_AT_ARK, Characters_Shadow, Summary::SKY_RAIL),
+	SeqStage(Characters_MechTails, LevelIDs_EternalEngine, Characters_MechTails, Summary::ETERNAL_ENGINE),
+	SeqEvent(Event::ROUGE_HEADS_FOR_SPACE_EMERALDS, Event::AMY_GETS_CAUGHT_HERO, Characters_MechTails, Summary::ETERNAL_ENGINE),
+	SeqStage(Characters_Knuckles, LevelIDs_MeteorHerd, Characters_Rouge, Summary::MAD_SPACE),
+	SeqStage(Characters_Knuckles, LevelIDs_KnucklesVsRouge, Characters_Rouge, Summary::KNUCKLES_FIGHT),
+	SeqEvent(Event::KNUCKLES_RESCUES_ROUGE_DARK, Event::TIMER_FOR_CRAZY_GADGET, Characters_Rouge, Summary::KNUCKLES_FIGHT),
+	SeqStage(Characters_Sonic, LevelIDs_CrazyGadget, Characters_Shadow, Summary::FINAL_CHASE),
+	SeqStage(Characters_Shadow, LevelIDs_FinalChase, Characters_Shadow, Summary::FINAL_CHASE),
+	SeqEvent(Event::EGGMAN_OUTPLAYS_HEROES, Characters_Shadow, Summary::FINAL_CHASE),
+	SeqStage(Characters_MechTails, LevelIDs_TailsVsEggman2, Characters_MechTails, Summary::EGGMAN_2),
+	SeqEvent(Event::SHADOW_CONFRONTS_ROUGE, Event::SONIC_SURVIVES_AFTER_CHAOS_CONTROL, Characters_MechTails, Summary::EGGMAN_2),
+	SeqStage(Characters_Sonic, LevelIDs_FinalRush, Characters_Shadow, Summary::FINAL_CHASE),
+	SeqEvent(Event::SHADOW_VS_SONIC_2_DARK, Characters_Shadow, Summary::FINAL_CHASE),
+	SeqStage(Characters_Sonic, LevelIDs_SonicVsShadow2, Characters_Shadow, Summary::SONIC_2),
+	SeqEvent(Event::HERO_TEAM_VICTORY, Characters_Shadow, Summary::SONIC_2),
+	SeqCredits,
+	SeqEvent(Event::DARK_STORY_TRAILER, Characters_Shadow, Summary::SONIC_2),
+	SeqTitle
+};
 
 void ReplaceStages::init() {
 	hStageLoadUnloadHandler.Hook(StageLoadUnloadHook);
-	hGameModeHandler.Hook(GameModeHandler_h);
 	hSummaryBgLoad.Hook(SummaryBgLoad);
-	hLoadSaveFile.Hook(LoadSaveFile);
+	ReplaceStages::initStorySequence();
+	WritePointer((void*)0x4586C5, ReplaceStages::FallenHeroSequence);
 }
 
-void ReplaceStages::resetLevelCompletes() {
-	ReplaceStages::WHITE_JUNGLE_COMPLETE = false;
-	ReplaceStages::FINAL_CHASE_COMPLETE = false;
+void ReplaceStages::initStorySequence() {
+	int story_length = sizeof(ReplaceStages::FallenHeroStory) / sizeof(SeqAndSummarySection);
+	ReplaceStages::FallenHeroSequence = new SeqSection[story_length];
+	for (int i = 0; i < story_length; i++) {
+		ReplaceStages::FallenHeroSequence[i] = {
+			ReplaceStages::FallenHeroStory[i].type,
+			ReplaceStages::FallenHeroStory[i].player_num,
+			ReplaceStages::FallenHeroStory[i].stage_num,
+			{
+				ReplaceStages::FallenHeroStory[i].event_num[0],
+				ReplaceStages::FallenHeroStory[i].event_num[1],
+				ReplaceStages::FallenHeroStory[i].event_num[2],
+				ReplaceStages::FallenHeroStory[i].event_num[3]
+			}
+		};
+	}
 }
 
 void StageLoadUnloadHook() {
-	if (GameState == GameStates_NormalExit || GameState == GameStates_Pause) {
-		ReplaceStages::LAST_LEVEL = 0;
-	}
-
 	if (!TailsBoosterGot && GameState == GameStates_Exit_1 && CurrentLevel == LevelIDs_PrisonLane) {
 		TailsBoosterGot = '1';
 	}
@@ -50,106 +107,25 @@ void StageLoadUnloadHook() {
 	hStageLoadUnloadHandler.Original();
 }
 
-signed int GameModeHandler_h() {
-	bool settingLevel = GameMode == GameMode_LoadStory;
-	signed int ret = hGameModeHandler.Original();
-
-	if (settingLevel) {
-		if (CurrentLevel == LevelIDs_MissionStreet) {
-			CurrentLevel = LevelIDs_RadicalHighway;
-			CurrentCharacter = Characters_Shadow;
-		} else if (CurrentLevel == LevelIDs_Route101280 && CurrentCharacter == Characters_MechTails) {
-			CurrentLevel = LevelIDs_SkyRail;
-			CurrentCharacter = Characters_Shadow;
-		} else if (CurrentLevel == LevelIDs_SonicVsShadow1) {
-			if (!ReplaceStages::WHITE_JUNGLE_COMPLETE && (ReplaceStages::LAST_LEVEL == LevelIDs_MetalHarbor || ReplaceStages::LAST_LEVEL == 0)) {
-				CurrentLevel = LevelIDs_WhiteJungle;
-				CurrentCharacter = Characters_Shadow;
-				CurrentStoryLevelCount -= 1;
-				AllStoriesLevelCount -= 1;
-			} else {
-				ReplaceStages::WHITE_JUNGLE_COMPLETE = true;
-			}
-		} else if (CurrentLevel == LevelIDs_TailsVsEggman2) {
-			if (!ReplaceStages::FINAL_CHASE_COMPLETE && (ReplaceStages::LAST_LEVEL == LevelIDs_CrazyGadget || ReplaceStages::LAST_LEVEL == 0)) {
-				CurrentLevel = LevelIDs_FinalChase;
-				CurrentCharacter = Characters_Shadow;
-				CurrentStoryLevelCount -= 2;
-				AllStoriesLevelCount -= 2;
-			} else {
-				ReplaceStages::FINAL_CHASE_COMPLETE = true;
-			}
-		} else if (CurrentLevel != 0) {
-			ReplaceStages::resetLevelCompletes();
-		}
-
-		if (CurrentLevel != 0) {
-			ReplaceStages::LAST_LEVEL = CurrentLevel;
-		}
+void* SummaryBgLoad() {
+	if (CurrentSequenceNo != 1) {
+		return hSummaryBgLoad.Original();
 	}
 
-	return ret;
-}
-
-void* SummaryBgLoad() {
-	if (SummaryBgCharacterID == Characters_Sonic) {
-		SummaryBgCharacterID = Characters_Shadow;
-		switch (SummarySceneID) {
-			case 1: // Big Foot
-				SummarySceneID = 25; // Hot Shot
-				break;
-			case 6: // Shadow 1
-				if (ReplaceStages::WHITE_JUNGLE_COMPLETE) {
-					SummarySceneID = 36; // Sonic 1
-				} else {
-					SummarySceneID = 35; // White Jungle
-				}
-
-				break;
-			case 23: // Shadow 2
-				SummarySceneID = 45; // Sonic 2
-				break;
-		}
-	} else if (SummaryBgCharacterID == Characters_Knuckles) {
-		SummaryBgCharacterID = Characters_Rouge;
-		switch (SummarySceneID) {
-			case 2: // Wild Canyon
-				SummarySceneID = 26; // Dry Lagoon
-				break;
-			case 14: // Death Chamber
-				SummarySceneID = 29; // Egg Quarters
-				break;
-			case 18: // Meteor Herd
-				SummarySceneID = 40; // Mad Space
-				break;
-			case 19: // Rouge Fight
-				SummarySceneID = 41; // Knuckles Fight
-				break;
-		}
-	} else {
-		switch (SummarySceneID) {
-			case 9: // Mission Street
-				SummaryBgCharacterID = Characters_Shadow;
-				SummarySceneID = 28; // Radical Highway
-				break;
-			case 11: // Route 101
-				SummaryBgCharacterID = Characters_Shadow;
-				SummarySceneID = 38; // Sky Rail
-				break;
-			case 21: // Eggman 2
-				if (!ReplaceStages::FINAL_CHASE_COMPLETE) {
-					SummaryBgCharacterID = Characters_Shadow;
-					SummarySceneID = 44; // Final Chase
-				}
-
-				break;
-		}
+	SummaryBgCharacterID = Characters_Shadow;
+	SummarySceneID = Summary::SONIC_2;
+	int seq_index = (int)StorySequenceIndex;
+	int story_length = sizeof(ReplaceStages::FallenHeroStory) / sizeof(SeqAndSummarySection);
+	if (seq_index >= 0 && seq_index < story_length) {
+		SummaryBgCharacterID = ReplaceStages::FallenHeroStory[seq_index].summary_char;
+		SummarySceneID = ReplaceStages::FallenHeroStory[seq_index].summary_scene;
 	}
 
 	return hSummaryBgLoad.Original();
 }
 
-int LoadSaveFile(char file) {
-	ReplaceStages::resetLevelCompletes();
-	return hLoadSaveFile.Original(file);
+void MemCopyProtected(void* pDst, const void* pSrc, size_t nb) {
+	DWORD old_prot;
+	VirtualProtect(pDst, nb, PAGE_EXECUTE_READWRITE, &old_prot);
+	memcpy(pDst, pSrc, nb);
 }

@@ -21,6 +21,7 @@
 #pragma once
 
 FunctionPointer(BYTE*, UpgradeDataGet, (ObjectMaster* a1), 0x486520);
+DataArray(LevelCutscene, LevelCutscenes, 0x173A808, 16);
 
 class ReplaceCharacters {
 	public:
@@ -34,6 +35,7 @@ class ReplaceCharacters {
 		static void setSonicUpgrades();
 		static void setKnucklesUpgrades();
 		static void remapUpgradeData();
+		static void remapMiniCutscenes();
 };
 
 void LoadSonic_h(int);

@@ -69,6 +69,7 @@ void ReplaceCharacters::init() {
 
 	ReplaceCharacters::initCharacterVoices();
 	ReplaceCharacters::remapUpgradeData();
+	ReplaceCharacters::remapMiniCutscenes();
 }
 
 void ReplaceCharacters::initCharacterVoices() {
@@ -222,6 +223,12 @@ char ReplaceCharacters::remapUpgradeMsg(int msgID) {
 	}
 
 	return (char)msgID;
+}
+
+void ReplaceCharacters::remapMiniCutscenes() {
+	LevelCutscenes[1].Level = LevelIDs_DeathChamber;
+	LevelCutscenes[1].Character = Characters_Rouge;
+	LevelCutscenes[1].Cutscene = 108;
 }
 
 void LoadSonic_h(int player) {

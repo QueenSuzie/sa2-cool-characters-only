@@ -152,6 +152,7 @@
   <ItemGroup>
     <ClInclude Include="framework.h" />
     <ClInclude Include="pch.h" />
+	<ClInclude Include="SequenceData.h" />
     <ClInclude Include="ReplaceCharacters.h" />
     <ClInclude Include="ReplaceStages.h" />
     <ClInclude Include="StartingPositions.h" />
