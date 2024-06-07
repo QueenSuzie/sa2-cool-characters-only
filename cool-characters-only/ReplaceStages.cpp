@@ -21,8 +21,8 @@
 #include "pch.h"
 #include "ReplaceStages.h"
 
-FunctionHook<void> hStageLoadUnloadHandler((intptr_t)0x43D510);
 FunctionHook<void*> hSummaryBgLoad((intptr_t)0x678BB0);
+FunctionHook<int> hProcessWinTime((intptr_t)0x452A00);
 
 SeqAndSummarySection ReplaceStages::FallenHeroStory[] = {
 	SeqEvent(Event::FREE_SHADOW, 0, 0),
@@ -74,9 +74,12 @@ SeqAndSummarySection ReplaceStages::FallenHeroStory[] = {
 	SeqTitle
 };
 
+unsigned short ReplaceStages::FallenHeroStoryLength = (sizeof(ReplaceStages::FallenHeroStory) / sizeof(SeqAndSummarySection));
+unsigned short ReplaceStages::FallenHeroStoryLengthNoCredits = ReplaceStages::FallenHeroStoryLength - 3;
+
 void ReplaceStages::init() {
-	hStageLoadUnloadHandler.Hook(StageLoadUnloadHook);
 	hSummaryBgLoad.Hook(SummaryBgLoad);
+	hProcessWinTime.Hook(ProcessWinTime);
 	ReplaceStages::initStorySequence();
 	WritePointer((void*)0x4586C5, ReplaceStages::FallenHeroSequence);
 }
@@ -99,24 +102,15 @@ void ReplaceStages::initStorySequence() {
 	}
 }
 
-void StageLoadUnloadHook() {
-	if (!TailsBoosterGot && GameState == GameStates_Exit_1 && CurrentLevel == LevelIDs_PrisonLane) {
-		TailsBoosterGot = '1';
-	}
-
-	hStageLoadUnloadHandler.Original();
-}
-
 void* SummaryBgLoad() {
 	if (CurrentSequenceNo != 1) {
 		return hSummaryBgLoad.Original();
 	}
-
+	
 	SummaryBgCharacterID = Characters_Shadow;
 	SummarySceneID = Summary::SONIC_2;
 	int seq_index = (int)StorySequenceIndex;
-	int story_length = sizeof(ReplaceStages::FallenHeroStory) / sizeof(SeqAndSummarySection);
-	if (seq_index >= 0 && seq_index < story_length) {
+	if (seq_index >= 0 && seq_index <= ReplaceStages::FallenHeroStoryLengthNoCredits) {
 		SummaryBgCharacterID = ReplaceStages::FallenHeroStory[seq_index].summary_char;
 		SummarySceneID = ReplaceStages::FallenHeroStory[seq_index].summary_scene;
 	}
@@ -128,4 +122,15 @@ void MemCopyProtected(void* pDst, const void* pSrc, size_t nb) {
 	DWORD old_prot;
 	VirtualProtect(pDst, nb, PAGE_EXECUTE_READWRITE, &old_prot);
 	memcpy(pDst, pSrc, nb);
+}
+
+int ProcessWinTime() {
+	if (CurrentLevel == LevelIDs_PrisonLane && !TailsBoosterGot) {
+		MissionStreet_LevelData[0] = 1;
+		TailsBoosterGot = true;
+	} else if (CurrentLevel == LevelIDs_SkyRail && CurrentSequenceNo == 1 && Route101_LevelData[0] == 0) {
+		Route101_LevelData[0] = 1;
+	}
+
+	return hProcessWinTime.Original();
 }

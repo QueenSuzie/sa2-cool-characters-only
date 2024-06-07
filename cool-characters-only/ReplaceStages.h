@@ -27,13 +27,18 @@ void MemCopyProtected(void*, const void*, size_t);
 #define WritePData(addr, data, type) { type _v_ = (type)(data); WriteMemory((addr), &_v_, sizeof(type)); }
 #define WritePointer(addr, ptr) WritePData((addr), (ptr), void*)
 
+DataArray(char, MissionStreet_LevelData, 0x1DED33C, 196);
+DataArray(char, Route101_LevelData, 0x1DEF428, 196);
+
 class ReplaceStages {
 	public:
 		static void init();
 		static void initStorySequence();
 		static inline SeqSection* FallenHeroSequence = NULL;
         static SeqAndSummarySection FallenHeroStory[];
+		static unsigned short FallenHeroStoryLength;
+		static unsigned short FallenHeroStoryLengthNoCredits;
 };
 
-void StageLoadUnloadHook();
 void* SummaryBgLoad();
+int ProcessWinTime();
