@@ -34,7 +34,7 @@ class ReplaceStages {
 	public:
 		static void init();
 		static inline SeqSection* FallenHeroSequence = NULL;
-        static SeqAndSummarySection FallenHeroStory[];
+		static SeqAndSummarySection FallenHeroStory[];
 		static unsigned short FallenHeroStoryLength;
 		static unsigned short FallenHeroStoryLengthNoCredits;
 		static inline const char FallenHeroStoryScenesSelect[] = "\tYou can now select scenes\nfrom the Fallen Hero story.";
