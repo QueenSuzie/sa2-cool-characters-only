@@ -33,11 +33,16 @@ DataArray(char, Route101_LevelData, 0x1DEF428, 196);
 class ReplaceStages {
 	public:
 		static void init();
-		static void initStorySequence();
 		static inline SeqSection* FallenHeroSequence = NULL;
         static SeqAndSummarySection FallenHeroStory[];
 		static unsigned short FallenHeroStoryLength;
 		static unsigned short FallenHeroStoryLengthNoCredits;
+		static inline const char FallenHeroStoryScenesSelect[] = "\tYou can now select scenes\nfrom the Fallen Hero story.";
+		static inline const char FallenHeroStoryBossAttack[] = "\tNow select time attack\nboss stages in the Fallen Hero story.";
+
+	private:
+		static void initStorySequence();
+		static void replaceStoryStrings();
 };
 
 void* SummaryBgLoad();

@@ -80,7 +80,10 @@ unsigned short ReplaceStages::FallenHeroStoryLengthNoCredits = ReplaceStages::Fa
 void ReplaceStages::init() {
 	hSummaryBgLoad.Hook(SummaryBgLoad);
 	hProcessWinTime.Hook(ProcessWinTime);
+
 	ReplaceStages::initStorySequence();
+	ReplaceStages::replaceStoryStrings();
+
 	WritePointer((void*)0x4586C5, ReplaceStages::FallenHeroSequence);
 }
 
@@ -100,6 +103,11 @@ void ReplaceStages::initStorySequence() {
 			}
 		};
 	}
+}
+
+void ReplaceStages::replaceStoryStrings() {
+	WritePointer((void*)0xC50F48, ReplaceStages::FallenHeroStoryScenesSelect);
+	WritePointer((void*)0xC50F4C, ReplaceStages::FallenHeroStoryBossAttack);
 }
 
 void* SummaryBgLoad() {
@@ -126,9 +134,9 @@ void MemCopyProtected(void* pDst, const void* pSrc, size_t nb) {
 
 int ProcessWinTime() {
 	if (CurrentLevel == LevelIDs_PrisonLane && !TailsBoosterGot) {
-		MissionStreet_LevelData[0] = 1;
 		TailsBoosterGot = true;
-	} else if (CurrentLevel == LevelIDs_SkyRail && CurrentSequenceNo == 1 && Route101_LevelData[0] == 0) {
+		MissionStreet_LevelData[0] = 1;
+	} else if (CurrentLevel == LevelIDs_TailsVsEggman2 && CurrentSequenceNo == 1 && Route101_LevelData[0] == 0) {
 		Route101_LevelData[0] = 1;
 	}
 
