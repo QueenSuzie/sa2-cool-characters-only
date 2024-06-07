@@ -22,7 +22,7 @@
 #include "ReplaceStages.h"
 
 FunctionHook<void*> hSummaryBgLoad((intptr_t)0x678BB0);
-FunctionHook<int> hProcessWinTime((intptr_t)0x452A00);
+FunctionHook<void> hProcessWinTime((intptr_t)0x452A00);
 
 SeqAndSummarySection ReplaceStages::FallenHeroStory[] = {
 	SeqEvent(Event::FREE_SHADOW, 0, 0),
@@ -132,7 +132,7 @@ void MemCopyProtected(void* pDst, const void* pSrc, size_t nb) {
 	memcpy(pDst, pSrc, nb);
 }
 
-int ProcessWinTime() {
+void ProcessWinTime() {
 	if (CurrentLevel == LevelIDs_PrisonLane && !TailsBoosterGot) {
 		TailsBoosterGot = true;
 		MissionStreet_LevelData[0] = 1;
@@ -140,5 +140,5 @@ int ProcessWinTime() {
 		Route101_LevelData[0] = 1;
 	}
 
-	return hProcessWinTime.Original();
+	hProcessWinTime.Original();
 }

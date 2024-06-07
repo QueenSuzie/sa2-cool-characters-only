@@ -46,4 +46,4 @@ class ReplaceStages {
 };
 
 void* SummaryBgLoad();
-int ProcessWinTime();
+void ProcessWinTime();
