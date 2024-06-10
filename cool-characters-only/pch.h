@@ -11,6 +11,8 @@
 #include "framework.h"
 #include "SA2ModLoader.h"
 #include "FunctionHook.h"
+#include "UsercallFunctionHandler.h"
+#include "SteamReplace.h"
 #include "SequenceData.h"
 #include "ReplaceCharacters.h"
 #include "ReplaceStages.h"

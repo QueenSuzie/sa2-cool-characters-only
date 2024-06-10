@@ -1,7 +1,7 @@
 /**************************************************************************************
- *   main.cpp  --  This file is part of Cool Characters Only.                         *
+ *   SteamReplace.h  --  This file is part of Cool Characters Only.                   *
  *                                                                                    *
- *   Copyright (C) 2023 - 2024 Queen Suzie                                            *
+ *   Copyright (C) 2024 Queen Suzie                                                   *
  *                                                                                    *
  *   Cool Characters Only is free software: you can redistribute it and/or modify     *
  *   it under the terms of the GNU General Public License as published                *
@@ -18,22 +18,37 @@
  *                                                                                    *
  *************************************************************************************/
 
-#include "pch.h"
+#pragma once
 
-extern "C" {
-	__declspec(dllexport) void __cdecl Init(const char* path, const HelperFunctions& helperFunctions) {
-		SteamReplace::init();
-		ReplaceCharacters::init();
-		ReplaceStages::init();
-		StartingPositions pos;
-		pos.init();
-	}
+#include <psapi.h>
+#include <string>
 
-	__declspec(dllexport) void __cdecl OnExit() {
-		if (ReplaceStages::FallenHeroSequence) {
-			delete ReplaceStages::FallenHeroSequence;
-		}
-	}
+#ifndef UNICODE  
+typedef std::string TString;
+#else
+typedef std::wstring TString;
+#endif
 
-	__declspec(dllexport) ModInfo SA2ModInfo = { ModLoaderVer }; // This is needed for the Mod Loader to recognize the DLL.
-}
+DataPointer(DWORD, dword_1AF19FC, 0x1AF19FC);
+
+UsercallFuncVoid(SteamStats, (int a1, int a2), (a1, a2), (intptr_t)0x40E880, rEAX, rECX);
+UsercallFuncVoid(LeaderboardLoad, (int a1), (a1), (intptr_t)0x4108B0, rESI);
+UsercallFunc(signed int, LeaderboardsMenu, (int a1), (a1), (intptr_t)0x40F520, rEAX, rEBX);
+
+class SteamReplace
+{
+	public:
+		static void init();
+		static void LeaderboardDownload();
+		static void SteamStatistics(int, int);
+		static void LoadLeaderboard(int);
+		static signed int LeaderboardsMenuItem(int);
+		static void AchievementsMenu();
+		static bool CheckNoInternetConnection();
+		static void ShowNoInternetDialog();
+		static void RunCallbacks();
+
+	private:
+		static void FindSteam();
+		static void SteamInit(HMODULE);
+};
