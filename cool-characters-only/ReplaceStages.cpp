@@ -130,10 +130,6 @@ void __fastcall LoadSequence(int a1, SeqSection* story) {
 				EventVoiceData[443].InternalID = 118030;
 				break;
 			case 133:
-				EventVoiceData[441].InternalID = 133010;
-				EventVoiceData[442].InternalID = 133020;
-				EventVoiceData[443].InternalID = 134030;
-				break;
 			case 134:
 				EventVoiceData[441].InternalID = 133010;
 				EventVoiceData[442].InternalID = 133020;
