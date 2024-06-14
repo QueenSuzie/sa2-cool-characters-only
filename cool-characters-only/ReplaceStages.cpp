@@ -21,6 +21,7 @@
 #include "pch.h"
 #include "ReplaceStages.h"
 
+FastcallFunctionHook<void, int, SeqSection*> hLoadStoryEntry((intptr_t)LoadStoryEntry);
 FunctionHook<void*> hSummaryBgLoad((intptr_t)0x678BB0);
 FunctionHook<void> hProcessWinTime((intptr_t)0x452A00);
 
@@ -39,8 +40,9 @@ SeqAndSummarySection ReplaceStages::FallenHeroStory[] = {
 	SeqEvent(Event::ROUGE_REPORTS_PROBLEM, Characters_Shadow, Summary::WHITE_JUNGLE),
 	SeqStage(Characters_Shadow, LevelIDs_WhiteJungle, Characters_Shadow, Summary::WHITE_JUNGLE),
 	SeqStage(Characters_Sonic, LevelIDs_SonicVsShadow1, Characters_Shadow, Summary::SONIC_1),
+	SeqEvent(Event::SHADOW_RESCUES_ROUGE_PT1, Characters_Shadow, Summary::SONIC_1),
 	SeqStage(Characters_Sonic, LevelIDs_GreenForest, Characters_Shadow, Summary::SONIC_1),
-	SeqEvent(Event::SHADOW_RESCUES_ROUGE, Event::PRISON_ISLAND_BLOWS_UP, Event::TIMER_FOR_PUMPKIN_HILL, Characters_Shadow, Summary::SONIC_1),
+	SeqEvent(Event::SHADOW_RESCUES_ROUGE_PT2, Event::PRISON_ISLAND_BLOWS_UP, Event::TIMER_FOR_PUMPKIN_HILL, Characters_Shadow, Summary::SONIC_1),
 	SeqStage(Characters_Knuckles, LevelIDs_PumpkinHill, Characters_Rouge, Summary::DRY_LAGOON),
 	SeqEvent(Event::TIMER_FOR_RADICAL_HIGHWAY, Event::SHADOW_REVENGE_MEMORY, Characters_Rouge, Summary::DRY_LAGOON),
 	SeqStage(Characters_Shadow, LevelIDs_RadicalHighway, Characters_Shadow, Summary::RADICAL_HIGHWAY),
@@ -78,13 +80,21 @@ unsigned short ReplaceStages::FallenHeroStoryLength = (sizeof(ReplaceStages::Fal
 unsigned short ReplaceStages::FallenHeroStoryLengthNoCredits = ReplaceStages::FallenHeroStoryLength - 3;
 
 void ReplaceStages::init() {
+	hLoadStoryEntry.Hook(LoadSequence);
 	hSummaryBgLoad.Hook(SummaryBgLoad);
 	hProcessWinTime.Hook(ProcessWinTime);
 
+	ReplaceStages::initEventData();
 	ReplaceStages::initStorySequence();
 	ReplaceStages::replaceStoryStrings();
 
 	WritePointer((void*)0x4586C5, ReplaceStages::FallenHeroSequence);
+}
+
+void ReplaceStages::initEventData() {
+	EventVoiceData[441].InternalID = 133010;
+	EventVoiceData[442].InternalID = 133020;
+	EventVoiceData[443].InternalID = 134030;
 }
 
 void ReplaceStages::initStorySequence() {
@@ -108,6 +118,27 @@ void ReplaceStages::initStorySequence() {
 void ReplaceStages::replaceStoryStrings() {
 	WritePointer((void*)0xC50F48, ReplaceStages::FallenHeroStoryScenesSelect);
 	WritePointer((void*)0xC50F4C, ReplaceStages::FallenHeroStoryBossAttack);
+}
+
+void __fastcall LoadSequence(int a1, SeqSection* story) {
+	if (story && story->type == SEQ_TYPE_EVENT) {
+		// InternalID = (EventID * 1000) + VoiceID
+		switch (story->event_num[0]) {
+			case 118:
+				EventVoiceData[441].InternalID = 118010;
+				EventVoiceData[442].InternalID = 118020;
+				EventVoiceData[443].InternalID = 118030;
+				break;
+			case 133:
+			case 134:
+				EventVoiceData[441].InternalID = 133010;
+				EventVoiceData[442].InternalID = 133020;
+				EventVoiceData[443].InternalID = 134030;
+				break;
+		}
+	}
+
+	hLoadStoryEntry.Original(a1, story);
 }
 
 void* SummaryBgLoad() {
