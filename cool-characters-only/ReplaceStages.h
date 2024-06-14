@@ -29,6 +29,7 @@ void MemCopyProtected(void*, const void*, size_t);
 
 DataArray(char, MissionStreet_LevelData, 0x1DED33C, 196);
 DataArray(char, Route101_LevelData, 0x1DEF428, 196);
+DataArray(CutsceneVoices, EventVoiceData, 0x1716720, 720);
 
 class ReplaceStages {
 	public:
@@ -41,9 +42,11 @@ class ReplaceStages {
 		static inline const char FallenHeroStoryBossAttack[] = "\tNow select time attack\nboss stages in the Fallen Hero story.";
 
 	private:
+		static void initEventData();
 		static void initStorySequence();
 		static void replaceStoryStrings();
 };
 
+void __fastcall LoadSequence(int, SeqSection*);
 void* SummaryBgLoad();
 void ProcessWinTime();

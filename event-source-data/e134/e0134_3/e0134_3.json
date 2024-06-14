@@ -1,0 +1,5137 @@
+{
+  "Name": "e0118_3",
+  "Game": "SA2B",
+  "BigEndian": true,
+  "BattleFormat": true,
+  "LanguageOnly": true,
+  "Subtitles": [
+    {
+      "FrameStart": 250,
+      "VisibleTime": 100
+    },
+    {
+      "FrameStart": 0,
+      "VisibleTime": 0
+    },
+    {
+      "FrameStart": 0,
+      "VisibleTime": 0
+    },
+    {
+      "FrameStart": 0,
+      "VisibleTime": 0
+    },
+    {
+      "FrameStart": 0,
+      "VisibleTime": 0
+    },
+    {
+      "FrameStart": 0,
+      "VisibleTime": 0
+    },
+    {
+      "FrameStart": 0,
+      "VisibleTime": 0
+    },
+    {
+      "FrameStart": 0,
+      "VisibleTime": 0
+    },
+    {
+      "FrameStart": 0,
+      "VisibleTime": 0
+    },
+    {
+      "FrameStart": 0,
+      "VisibleTime": 0
+    },
+    {
+      "FrameStart": 0,
+      "VisibleTime": 0
+    },
+    {
+      "FrameStart": 0,
+      "VisibleTime": 0
+    },
+    {
+      "FrameStart": 0,
+      "VisibleTime": 0
+    },
+    {
+      "FrameStart": 0,
+      "VisibleTime": 0
+    },
+    {
+      "FrameStart": 0,
+      "VisibleTime": 0
+    },
+    {
+      "FrameStart": 0,
+      "VisibleTime": 0
+    },
+    {
+      "FrameStart": 0,
+      "VisibleTime": 0
+    },
+    {
+      "FrameStart": 0,
+      "VisibleTime": 0
+    },
+    {
+      "FrameStart": 0,
+      "VisibleTime": 0
+    },
+    {
+      "FrameStart": 0,
+      "VisibleTime": 0
+    },
+    {
+      "FrameStart": 0,
+      "VisibleTime": 0
+    },
+    {
+      "FrameStart": 0,
+      "VisibleTime": 0
+    },
+    {
+      "FrameStart": 0,
+      "VisibleTime": 0
+    },
+    {
+      "FrameStart": 0,
+      "VisibleTime": 0
+    },
+    {
+      "FrameStart": 0,
+      "VisibleTime": 0
+    },
+    {
+      "FrameStart": 0,
+      "VisibleTime": 0
+    },
+    {
+      "FrameStart": 0,
+      "VisibleTime": 0
+    },
+    {
+      "FrameStart": 0,
+      "VisibleTime": 0
+    },
+    {
+      "FrameStart": 0,
+      "VisibleTime": 0
+    },
+    {
+      "FrameStart": 0,
+      "VisibleTime": 0
+    },
+    {
+      "FrameStart": 0,
+      "VisibleTime": 0
+    },
+    {
+      "FrameStart": 0,
+      "VisibleTime": 0
+    },
+    {
+      "FrameStart": 0,
+      "VisibleTime": 0
+    },
+    {
+      "FrameStart": 0,
+      "VisibleTime": 0
+    },
+    {
+      "FrameStart": 0,
+      "VisibleTime": 0
+    },
+    {
+      "FrameStart": 0,
+      "VisibleTime": 0
+    },
+    {
+      "FrameStart": 0,
+      "VisibleTime": 0
+    },
+    {
+      "FrameStart": 0,
+      "VisibleTime": 0
+    },
+    {
+      "FrameStart": 0,
+      "VisibleTime": 0
+    },
+    {
+      "FrameStart": 0,
+      "VisibleTime": 0
+    },
+    {
+      "FrameStart": 0,
+      "VisibleTime": 0
+    },
+    {
+      "FrameStart": 0,
+      "VisibleTime": 0
+    },
+    {
+      "FrameStart": 0,
+      "VisibleTime": 0
+    },
+    {
+      "FrameStart": 0,
+      "VisibleTime": 0
+    },
+    {
+      "FrameStart": 0,
+      "VisibleTime": 0
+    },
+    {
+      "FrameStart": 0,
+      "VisibleTime": 0
+    },
+    {
+      "FrameStart": 0,
+      "VisibleTime": 0
+    },
+    {
+      "FrameStart": 0,
+      "VisibleTime": 0
+    },
+    {
+      "FrameStart": 0,
+      "VisibleTime": 0
+    },
+    {
+      "FrameStart": 0,
+      "VisibleTime": 0
+    },
+    {
+      "FrameStart": 0,
+      "VisibleTime": 0
+    },
+    {
+      "FrameStart": 0,
+      "VisibleTime": 0
+    },
+    {
+      "FrameStart": 0,
+      "VisibleTime": 0
+    },
+    {
+      "FrameStart": 0,
+      "VisibleTime": 0
+    },
+    {
+      "FrameStart": 0,
+      "VisibleTime": 0
+    },
+    {
+      "FrameStart": 0,
+      "VisibleTime": 0
+    },
+    {
+      "FrameStart": 0,
+      "VisibleTime": 0
+    },
+    {
+      "FrameStart": 0,
+      "VisibleTime": 0
+    },
+    {
+      "FrameStart": 0,
+      "VisibleTime": 0
+    },
+    {
+      "FrameStart": 0,
+      "VisibleTime": 0
+    },
+    {
+      "FrameStart": 0,
+      "VisibleTime": 0
+    },
+    {
+      "FrameStart": 0,
+      "VisibleTime": 0
+    },
+    {
+      "FrameStart": 0,
+      "VisibleTime": 0
+    },
+    {
+      "FrameStart": 0,
+      "VisibleTime": 0
+    },
+    {
+      "FrameStart": 0,
+      "VisibleTime": 0
+    },
+    {
+      "FrameStart": 0,
+      "VisibleTime": 0
+    },
+    {
+      "FrameStart": 0,
+      "VisibleTime": 0
+    },
+    {
+      "FrameStart": 0,
+      "VisibleTime": 0
+    },
+    {
+      "FrameStart": 0,
+      "VisibleTime": 0
+    },
+    {
+      "FrameStart": 0,
+      "VisibleTime": 0
+    },
+    {
+      "FrameStart": 0,
+      "VisibleTime": 0
+    },
+    {
+      "FrameStart": 0,
+      "VisibleTime": 0
+    },
+    {
+      "FrameStart": 0,
+      "VisibleTime": 0
+    },
+    {
+      "FrameStart": 0,
+      "VisibleTime": 0
+    },
+    {
+      "FrameStart": 0,
+      "VisibleTime": 0
+    },
+    {
+      "FrameStart": 0,
+      "VisibleTime": 0
+    },
+    {
+      "FrameStart": 0,
+      "VisibleTime": 0
+    },
+    {
+      "FrameStart": 0,
+      "VisibleTime": 0
+    },
+    {
+      "FrameStart": 0,
+      "VisibleTime": 0
+    },
+    {
+      "FrameStart": 0,
+      "VisibleTime": 0
+    },
+    {
+      "FrameStart": 0,
+      "VisibleTime": 0
+    },
+    {
+      "FrameStart": 0,
+      "VisibleTime": 0
+    },
+    {
+      "FrameStart": 0,
+      "VisibleTime": 0
+    },
+    {
+      "FrameStart": 0,
+      "VisibleTime": 0
+    },
+    {
+      "FrameStart": 0,
+      "VisibleTime": 0
+    },
+    {
+      "FrameStart": 0,
+      "VisibleTime": 0
+    },
+    {
+      "FrameStart": 0,
+      "VisibleTime": 0
+    },
+    {
+      "FrameStart": 0,
+      "VisibleTime": 0
+    },
+    {
+      "FrameStart": 0,
+      "VisibleTime": 0
+    },
+    {
+      "FrameStart": 0,
+      "VisibleTime": 0
+    },
+    {
+      "FrameStart": 0,
+      "VisibleTime": 0
+    },
+    {
+      "FrameStart": 0,
+      "VisibleTime": 0
+    },
+    {
+      "FrameStart": 0,
+      "VisibleTime": 0
+    },
+    {
+      "FrameStart": 0,
+      "VisibleTime": 0
+    },
+    {
+      "FrameStart": 0,
+      "VisibleTime": 0
+    },
+    {
+      "FrameStart": 0,
+      "VisibleTime": 0
+    },
+    {
+      "FrameStart": 0,
+      "VisibleTime": 0
+    },
+    {
+      "FrameStart": 0,
+      "VisibleTime": 0
+    },
+    {
+      "FrameStart": 0,
+      "VisibleTime": 0
+    },
+    {
+      "FrameStart": 0,
+      "VisibleTime": 0
+    },
+    {
+      "FrameStart": 0,
+      "VisibleTime": 0
+    },
+    {
+      "FrameStart": 0,
+      "VisibleTime": 0
+    },
+    {
+      "FrameStart": 0,
+      "VisibleTime": 0
+    },
+    {
+      "FrameStart": 0,
+      "VisibleTime": 0
+    },
+    {
+      "FrameStart": 0,
+      "VisibleTime": 0
+    },
+    {
+      "FrameStart": 0,
+      "VisibleTime": 0
+    },
+    {
+      "FrameStart": 0,
+      "VisibleTime": 0
+    },
+    {
+      "FrameStart": 0,
+      "VisibleTime": 0
+    },
+    {
+      "FrameStart": 0,
+      "VisibleTime": 0
+    },
+    {
+      "FrameStart": 0,
+      "VisibleTime": 0
+    },
+    {
+      "FrameStart": 0,
+      "VisibleTime": 0
+    },
+    {
+      "FrameStart": 0,
+      "VisibleTime": 0
+    },
+    {
+      "FrameStart": 0,
+      "VisibleTime": 0
+    },
+    {
+      "FrameStart": 0,
+      "VisibleTime": 0
+    },
+    {
+      "FrameStart": 0,
+      "VisibleTime": 0
+    },
+    {
+      "FrameStart": 0,
+      "VisibleTime": 0
+    },
+    {
+      "FrameStart": 0,
+      "VisibleTime": 0
+    },
+    {
+      "FrameStart": 0,
+      "VisibleTime": 0
+    },
+    {
+      "FrameStart": 0,
+      "VisibleTime": 0
+    },
+    {
+      "FrameStart": 0,
+      "VisibleTime": 0
+    },
+    {
+      "FrameStart": 0,
+      "VisibleTime": 0
+    },
+    {
+      "FrameStart": 0,
+      "VisibleTime": 0
+    },
+    {
+      "FrameStart": 0,
+      "VisibleTime": 0
+    },
+    {
+      "FrameStart": 0,
+      "VisibleTime": 0
+    },
+    {
+      "FrameStart": 0,
+      "VisibleTime": 0
+    },
+    {
+      "FrameStart": 0,
+      "VisibleTime": 0
+    },
+    {
+      "FrameStart": 0,
+      "VisibleTime": 0
+    },
+    {
+      "FrameStart": 0,
+      "VisibleTime": 0
+    },
+    {
+      "FrameStart": 0,
+      "VisibleTime": 0
+    },
+    {
+      "FrameStart": 0,
+      "VisibleTime": 0
+    },
+    {
+      "FrameStart": 0,
+      "VisibleTime": 0
+    },
+    {
+      "FrameStart": 0,
+      "VisibleTime": 0
+    },
+    {
+      "FrameStart": 0,
+      "VisibleTime": 0
+    },
+    {
+      "FrameStart": 0,
+      "VisibleTime": 0
+    },
+    {
+      "FrameStart": 0,
+      "VisibleTime": 0
+    },
+    {
+      "FrameStart": 0,
+      "VisibleTime": 0
+    },
+    {
+      "FrameStart": 0,
+      "VisibleTime": 0
+    },
+    {
+      "FrameStart": 0,
+      "VisibleTime": 0
+    },
+    {
+      "FrameStart": 0,
+      "VisibleTime": 0
+    },
+    {
+      "FrameStart": 0,
+      "VisibleTime": 0
+    },
+    {
+      "FrameStart": 0,
+      "VisibleTime": 0
+    },
+    {
+      "FrameStart": 0,
+      "VisibleTime": 0
+    },
+    {
+      "FrameStart": 0,
+      "VisibleTime": 0
+    },
+    {
+      "FrameStart": 0,
+      "VisibleTime": 0
+    },
+    {
+      "FrameStart": 0,
+      "VisibleTime": 0
+    },
+    {
+      "FrameStart": 0,
+      "VisibleTime": 0
+    },
+    {
+      "FrameStart": 0,
+      "VisibleTime": 0
+    },
+    {
+      "FrameStart": 0,
+      "VisibleTime": 0
+    },
+    {
+      "FrameStart": 0,
+      "VisibleTime": 0
+    },
+    {
+      "FrameStart": 0,
+      "VisibleTime": 0
+    },
+    {
+      "FrameStart": 0,
+      "VisibleTime": 0
+    },
+    {
+      "FrameStart": 0,
+      "VisibleTime": 0
+    },
+    {
+      "FrameStart": 0,
+      "VisibleTime": 0
+    },
+    {
+      "FrameStart": 0,
+      "VisibleTime": 0
+    },
+    {
+      "FrameStart": 0,
+      "VisibleTime": 0
+    },
+    {
+      "FrameStart": 0,
+      "VisibleTime": 0
+    },
+    {
+      "FrameStart": 0,
+      "VisibleTime": 0
+    },
+    {
+      "FrameStart": 0,
+      "VisibleTime": 0
+    },
+    {
+      "FrameStart": 0,
+      "VisibleTime": 0
+    },
+    {
+      "FrameStart": 0,
+      "VisibleTime": 0
+    },
+    {
+      "FrameStart": 0,
+      "VisibleTime": 0
+    },
+    {
+      "FrameStart": 0,
+      "VisibleTime": 0
+    },
+    {
+      "FrameStart": 0,
+      "VisibleTime": 0
+    },
+    {
+      "FrameStart": 0,
+      "VisibleTime": 0
+    },
+    {
+      "FrameStart": 0,
+      "VisibleTime": 0
+    },
+    {
+      "FrameStart": 0,
+      "VisibleTime": 0
+    },
+    {
+      "FrameStart": 0,
+      "VisibleTime": 0
+    },
+    {
+      "FrameStart": 0,
+      "VisibleTime": 0
+    },
+    {
+      "FrameStart": 0,
+      "VisibleTime": 0
+    },
+    {
+      "FrameStart": 0,
+      "VisibleTime": 0
+    },
+    {
+      "FrameStart": 0,
+      "VisibleTime": 0
+    },
+    {
+      "FrameStart": 0,
+      "VisibleTime": 0
+    },
+    {
+      "FrameStart": 0,
+      "VisibleTime": 0
+    },
+    {
+      "FrameStart": 0,
+      "VisibleTime": 0
+    },
+    {
+      "FrameStart": 0,
+      "VisibleTime": 0
+    },
+    {
+      "FrameStart": 0,
+      "VisibleTime": 0
+    },
+    {
+      "FrameStart": 0,
+      "VisibleTime": 0
+    },
+    {
+      "FrameStart": 0,
+      "VisibleTime": 0
+    },
+    {
+      "FrameStart": 0,
+      "VisibleTime": 0
+    },
+    {
+      "FrameStart": 0,
+      "VisibleTime": 0
+    },
+    {
+      "FrameStart": 0,
+      "VisibleTime": 0
+    },
+    {
+      "FrameStart": 0,
+      "VisibleTime": 0
+    },
+    {
+      "FrameStart": 0,
+      "VisibleTime": 0
+    },
+    {
+      "FrameStart": 0,
+      "VisibleTime": 0
+    },
+    {
+      "FrameStart": 0,
+      "VisibleTime": 0
+    },
+    {
+      "FrameStart": 0,
+      "VisibleTime": 0
+    },
+    {
+      "FrameStart": 0,
+      "VisibleTime": 0
+    },
+    {
+      "FrameStart": 0,
+      "VisibleTime": 0
+    },
+    {
+      "FrameStart": 0,
+      "VisibleTime": 0
+    },
+    {
+      "FrameStart": 0,
+      "VisibleTime": 0
+    },
+    {
+      "FrameStart": 0,
+      "VisibleTime": 0
+    },
+    {
+      "FrameStart": 0,
+      "VisibleTime": 0
+    },
+    {
+      "FrameStart": 0,
+      "VisibleTime": 0
+    },
+    {
+      "FrameStart": 0,
+      "VisibleTime": 0
+    },
+    {
+      "FrameStart": 0,
+      "VisibleTime": 0
+    },
+    {
+      "FrameStart": 0,
+      "VisibleTime": 0
+    },
+    {
+      "FrameStart": 0,
+      "VisibleTime": 0
+    },
+    {
+      "FrameStart": 0,
+      "VisibleTime": 0
+    },
+    {
+      "FrameStart": 0,
+      "VisibleTime": 0
+    },
+    {
+      "FrameStart": 0,
+      "VisibleTime": 0
+    },
+    {
+      "FrameStart": 0,
+      "VisibleTime": 0
+    },
+    {
+      "FrameStart": 0,
+      "VisibleTime": 0
+    },
+    {
+      "FrameStart": 0,
+      "VisibleTime": 0
+    },
+    {
+      "FrameStart": 0,
+      "VisibleTime": 0
+    },
+    {
+      "FrameStart": 0,
+      "VisibleTime": 0
+    },
+    {
+      "FrameStart": 0,
+      "VisibleTime": 0
+    },
+    {
+      "FrameStart": 0,
+      "VisibleTime": 0
+    },
+    {
+      "FrameStart": 0,
+      "VisibleTime": 0
+    },
+    {
+      "FrameStart": 0,
+      "VisibleTime": 0
+    },
+    {
+      "FrameStart": 0,
+      "VisibleTime": 0
+    },
+    {
+      "FrameStart": 0,
+      "VisibleTime": 0
+    },
+    {
+      "FrameStart": 0,
+      "VisibleTime": 0
+    },
+    {
+      "FrameStart": 0,
+      "VisibleTime": 0
+    },
+    {
+      "FrameStart": 0,
+      "VisibleTime": 0
+    },
+    {
+      "FrameStart": 0,
+      "VisibleTime": 0
+    },
+    {
+      "FrameStart": 0,
+      "VisibleTime": 0
+    },
+    {
+      "FrameStart": 0,
+      "VisibleTime": 0
+    },
+    {
+      "FrameStart": 0,
+      "VisibleTime": 0
+    },
+    {
+      "FrameStart": 0,
+      "VisibleTime": 0
+    },
+    {
+      "FrameStart": 0,
+      "VisibleTime": 0
+    },
+    {
+      "FrameStart": 0,
+      "VisibleTime": 0
+    },
+    {
+      "FrameStart": 0,
+      "VisibleTime": 0
+    },
+    {
+      "FrameStart": 0,
+      "VisibleTime": 0
+    },
+    {
+      "FrameStart": 0,
+      "VisibleTime": 0
+    },
+    {
+      "FrameStart": 0,
+      "VisibleTime": 0
+    },
+    {
+      "FrameStart": 0,
+      "VisibleTime": 0
+    },
+    {
+      "FrameStart": 0,
+      "VisibleTime": 0
+    },
+    {
+      "FrameStart": 0,
+      "VisibleTime": 0
+    },
+    {
+      "FrameStart": 0,
+      "VisibleTime": 0
+    },
+    {
+      "FrameStart": 0,
+      "VisibleTime": 0
+    },
+    {
+      "FrameStart": 0,
+      "VisibleTime": 0
+    },
+    {
+      "FrameStart": 0,
+      "VisibleTime": 0
+    },
+    {
+      "FrameStart": 0,
+      "VisibleTime": 0
+    },
+    {
+      "FrameStart": 0,
+      "VisibleTime": 0
+    },
+    {
+      "FrameStart": 0,
+      "VisibleTime": 0
+    },
+    {
+      "FrameStart": 0,
+      "VisibleTime": 0
+    },
+    {
+      "FrameStart": 0,
+      "VisibleTime": 0
+    },
+    {
+      "FrameStart": 0,
+      "VisibleTime": 0
+    },
+    {
+      "FrameStart": 0,
+      "VisibleTime": 0
+    },
+    {
+      "FrameStart": 0,
+      "VisibleTime": 0
+    },
+    {
+      "FrameStart": 0,
+      "VisibleTime": 0
+    },
+    {
+      "FrameStart": 0,
+      "VisibleTime": 0
+    },
+    {
+      "FrameStart": 0,
+      "VisibleTime": 0
+    },
+    {
+      "FrameStart": 0,
+      "VisibleTime": 0
+    },
+    {
+      "FrameStart": 0,
+      "VisibleTime": 0
+    },
+    {
+      "FrameStart": 0,
+      "VisibleTime": 0
+    },
+    {
+      "FrameStart": 0,
+      "VisibleTime": 0
+    },
+    {
+      "FrameStart": 0,
+      "VisibleTime": 0
+    },
+    {
+      "FrameStart": 0,
+      "VisibleTime": 0
+    },
+    {
+      "FrameStart": 0,
+      "VisibleTime": 0
+    },
+    {
+      "FrameStart": 0,
+      "VisibleTime": 0
+    },
+    {
+      "FrameStart": 0,
+      "VisibleTime": 0
+    },
+    {
+      "FrameStart": 0,
+      "VisibleTime": 0
+    },
+    {
+      "FrameStart": 0,
+      "VisibleTime": 0
+    },
+    {
+      "FrameStart": 0,
+      "VisibleTime": 0
+    },
+    {
+      "FrameStart": 0,
+      "VisibleTime": 0
+    }
+  ],
+  "AudioInfo": [
+    {
+      "FrameStart": 1,
+      "SFXInit": 0,
+      "CreditsControl": 255,
+      "VoiceEntry": -1,
+      "MusicEntry": "0",
+      "JingleEntry": ""
+    },
+    {
+      "FrameStart": 1,
+      "SFXInit": 255,
+      "CreditsControl": 255,
+      "VoiceEntry": -1,
+      "MusicEntry": "T3_SHADO2.ADX",
+      "JingleEntry": ""
+    },
+    {
+      "FrameStart": 250,
+      "SFXInit": 255,
+      "CreditsControl": 255,
+      "VoiceEntry": 30,
+      "MusicEntry": "",
+      "JingleEntry": ""
+    },
+    {
+      "FrameStart": 397,
+      "SFXInit": 255,
+      "CreditsControl": 255,
+      "VoiceEntry": -1,
+      "MusicEntry": "0",
+      "JingleEntry": ""
+    },
+    {
+      "FrameStart": 0,
+      "SFXInit": 255,
+      "CreditsControl": 255,
+      "VoiceEntry": -1,
+      "MusicEntry": "",
+      "JingleEntry": ""
+    },
+    {
+      "FrameStart": 0,
+      "SFXInit": 255,
+      "CreditsControl": 255,
+      "VoiceEntry": -1,
+      "MusicEntry": "",
+      "JingleEntry": ""
+    },
+    {
+      "FrameStart": 0,
+      "SFXInit": 255,
+      "CreditsControl": 255,
+      "VoiceEntry": -1,
+      "MusicEntry": "",
+      "JingleEntry": ""
+    },
+    {
+      "FrameStart": 0,
+      "SFXInit": 255,
+      "CreditsControl": 255,
+      "VoiceEntry": -1,
+      "MusicEntry": "",
+      "JingleEntry": ""
+    },
+    {
+      "FrameStart": 0,
+      "SFXInit": 255,
+      "CreditsControl": 255,
+      "VoiceEntry": -1,
+      "MusicEntry": "",
+      "JingleEntry": ""
+    },
+    {
+      "FrameStart": 0,
+      "SFXInit": 255,
+      "CreditsControl": 255,
+      "VoiceEntry": -1,
+      "MusicEntry": "",
+      "JingleEntry": ""
+    },
+    {
+      "FrameStart": 0,
+      "SFXInit": 255,
+      "CreditsControl": 255,
+      "VoiceEntry": -1,
+      "MusicEntry": "",
+      "JingleEntry": ""
+    },
+    {
+      "FrameStart": 0,
+      "SFXInit": 255,
+      "CreditsControl": 255,
+      "VoiceEntry": -1,
+      "MusicEntry": "",
+      "JingleEntry": ""
+    },
+    {
+      "FrameStart": 0,
+      "SFXInit": 255,
+      "CreditsControl": 255,
+      "VoiceEntry": -1,
+      "MusicEntry": "",
+      "JingleEntry": ""
+    },
+    {
+      "FrameStart": 0,
+      "SFXInit": 255,
+      "CreditsControl": 255,
+      "VoiceEntry": -1,
+      "MusicEntry": "",
+      "JingleEntry": ""
+    },
+    {
+      "FrameStart": 0,
+      "SFXInit": 255,
+      "CreditsControl": 255,
+      "VoiceEntry": -1,
+      "MusicEntry": "",
+      "JingleEntry": ""
+    },
+    {
+      "FrameStart": 0,
+      "SFXInit": 255,
+      "CreditsControl": 255,
+      "VoiceEntry": -1,
+      "MusicEntry": "",
+      "JingleEntry": ""
+    },
+    {
+      "FrameStart": 0,
+      "SFXInit": 255,
+      "CreditsControl": 255,
+      "VoiceEntry": -1,
+      "MusicEntry": "",
+      "JingleEntry": ""
+    },
+    {
+      "FrameStart": 0,
+      "SFXInit": 255,
+      "CreditsControl": 255,
+      "VoiceEntry": -1,
+      "MusicEntry": "",
+      "JingleEntry": ""
+    },
+    {
+      "FrameStart": 0,
+      "SFXInit": 255,
+      "CreditsControl": 255,
+      "VoiceEntry": -1,
+      "MusicEntry": "",
+      "JingleEntry": ""
+    },
+    {
+      "FrameStart": 0,
+      "SFXInit": 255,
+      "CreditsControl": 255,
+      "VoiceEntry": -1,
+      "MusicEntry": "",
+      "JingleEntry": ""
+    },
+    {
+      "FrameStart": 0,
+      "SFXInit": 255,
+      "CreditsControl": 255,
+      "VoiceEntry": -1,
+      "MusicEntry": "",
+      "JingleEntry": ""
+    },
+    {
+      "FrameStart": 0,
+      "SFXInit": 255,
+      "CreditsControl": 255,
+      "VoiceEntry": -1,
+      "MusicEntry": "",
+      "JingleEntry": ""
+    },
+    {
+      "FrameStart": 0,
+      "SFXInit": 255,
+      "CreditsControl": 255,
+      "VoiceEntry": -1,
+      "MusicEntry": "",
+      "JingleEntry": ""
+    },
+    {
+      "FrameStart": 0,
+      "SFXInit": 255,
+      "CreditsControl": 255,
+      "VoiceEntry": -1,
+      "MusicEntry": "",
+      "JingleEntry": ""
+    },
+    {
+      "FrameStart": 0,
+      "SFXInit": 255,
+      "CreditsControl": 255,
+      "VoiceEntry": -1,
+      "MusicEntry": "",
+      "JingleEntry": ""
+    },
+    {
+      "FrameStart": 0,
+      "SFXInit": 255,
+      "CreditsControl": 255,
+      "VoiceEntry": -1,
+      "MusicEntry": "",
+      "JingleEntry": ""
+    },
+    {
+      "FrameStart": 0,
+      "SFXInit": 255,
+      "CreditsControl": 255,
+      "VoiceEntry": -1,
+      "MusicEntry": "",
+      "JingleEntry": ""
+    },
+    {
+      "FrameStart": 0,
+      "SFXInit": 255,
+      "CreditsControl": 255,
+      "VoiceEntry": -1,
+      "MusicEntry": "",
+      "JingleEntry": ""
+    },
+    {
+      "FrameStart": 0,
+      "SFXInit": 255,
+      "CreditsControl": 255,
+      "VoiceEntry": -1,
+      "MusicEntry": "",
+      "JingleEntry": ""
+    },
+    {
+      "FrameStart": 0,
+      "SFXInit": 255,
+      "CreditsControl": 255,
+      "VoiceEntry": -1,
+      "MusicEntry": "",
+      "JingleEntry": ""
+    },
+    {
+      "FrameStart": 0,
+      "SFXInit": 255,
+      "CreditsControl": 255,
+      "VoiceEntry": -1,
+      "MusicEntry": "",
+      "JingleEntry": ""
+    },
+    {
+      "FrameStart": 0,
+      "SFXInit": 255,
+      "CreditsControl": 255,
+      "VoiceEntry": -1,
+      "MusicEntry": "",
+      "JingleEntry": ""
+    },
+    {
+      "FrameStart": 0,
+      "SFXInit": 255,
+      "CreditsControl": 255,
+      "VoiceEntry": -1,
+      "MusicEntry": "",
+      "JingleEntry": ""
+    },
+    {
+      "FrameStart": 0,
+      "SFXInit": 255,
+      "CreditsControl": 255,
+      "VoiceEntry": -1,
+      "MusicEntry": "",
+      "JingleEntry": ""
+    },
+    {
+      "FrameStart": 0,
+      "SFXInit": 255,
+      "CreditsControl": 255,
+      "VoiceEntry": -1,
+      "MusicEntry": "",
+      "JingleEntry": ""
+    },
+    {
+      "FrameStart": 0,
+      "SFXInit": 255,
+      "CreditsControl": 255,
+      "VoiceEntry": -1,
+      "MusicEntry": "",
+      "JingleEntry": ""
+    },
+    {
+      "FrameStart": 0,
+      "SFXInit": 255,
+      "CreditsControl": 255,
+      "VoiceEntry": -1,
+      "MusicEntry": "",
+      "JingleEntry": ""
+    },
+    {
+      "FrameStart": 0,
+      "SFXInit": 255,
+      "CreditsControl": 255,
+      "VoiceEntry": -1,
+      "MusicEntry": "",
+      "JingleEntry": ""
+    },
+    {
+      "FrameStart": 0,
+      "SFXInit": 255,
+      "CreditsControl": 255,
+      "VoiceEntry": -1,
+      "MusicEntry": "",
+      "JingleEntry": ""
+    },
+    {
+      "FrameStart": 0,
+      "SFXInit": 255,
+      "CreditsControl": 255,
+      "VoiceEntry": -1,
+      "MusicEntry": "",
+      "JingleEntry": ""
+    },
+    {
+      "FrameStart": 0,
+      "SFXInit": 255,
+      "CreditsControl": 255,
+      "VoiceEntry": -1,
+      "MusicEntry": "",
+      "JingleEntry": ""
+    },
+    {
+      "FrameStart": 0,
+      "SFXInit": 255,
+      "CreditsControl": 255,
+      "VoiceEntry": -1,
+      "MusicEntry": "",
+      "JingleEntry": ""
+    },
+    {
+      "FrameStart": 0,
+      "SFXInit": 255,
+      "CreditsControl": 255,
+      "VoiceEntry": -1,
+      "MusicEntry": "",
+      "JingleEntry": ""
+    },
+    {
+      "FrameStart": 0,
+      "SFXInit": 255,
+      "CreditsControl": 255,
+      "VoiceEntry": -1,
+      "MusicEntry": "",
+      "JingleEntry": ""
+    },
+    {
+      "FrameStart": 0,
+      "SFXInit": 255,
+      "CreditsControl": 255,
+      "VoiceEntry": -1,
+      "MusicEntry": "",
+      "JingleEntry": ""
+    },
+    {
+      "FrameStart": 0,
+      "SFXInit": 255,
+      "CreditsControl": 255,
+      "VoiceEntry": -1,
+      "MusicEntry": "",
+      "JingleEntry": ""
+    },
+    {
+      "FrameStart": 0,
+      "SFXInit": 255,
+      "CreditsControl": 255,
+      "VoiceEntry": -1,
+      "MusicEntry": "",
+      "JingleEntry": ""
+    },
+    {
+      "FrameStart": 0,
+      "SFXInit": 255,
+      "CreditsControl": 255,
+      "VoiceEntry": -1,
+      "MusicEntry": "",
+      "JingleEntry": ""
+    },
+    {
+      "FrameStart": 0,
+      "SFXInit": 255,
+      "CreditsControl": 255,
+      "VoiceEntry": -1,
+      "MusicEntry": "",
+      "JingleEntry": ""
+    },
+    {
+      "FrameStart": 0,
+      "SFXInit": 255,
+      "CreditsControl": 255,
+      "VoiceEntry": -1,
+      "MusicEntry": "",
+      "JingleEntry": ""
+    },
+    {
+      "FrameStart": 0,
+      "SFXInit": 255,
+      "CreditsControl": 255,
+      "VoiceEntry": -1,
+      "MusicEntry": "",
+      "JingleEntry": ""
+    },
+    {
+      "FrameStart": 0,
+      "SFXInit": 255,
+      "CreditsControl": 255,
+      "VoiceEntry": -1,
+      "MusicEntry": "",
+      "JingleEntry": ""
+    },
+    {
+      "FrameStart": 0,
+      "SFXInit": 255,
+      "CreditsControl": 255,
+      "VoiceEntry": -1,
+      "MusicEntry": "",
+      "JingleEntry": ""
+    },
+    {
+      "FrameStart": 0,
+      "SFXInit": 255,
+      "CreditsControl": 255,
+      "VoiceEntry": -1,
+      "MusicEntry": "",
+      "JingleEntry": ""
+    },
+    {
+      "FrameStart": 0,
+      "SFXInit": 255,
+      "CreditsControl": 255,
+      "VoiceEntry": -1,
+      "MusicEntry": "",
+      "JingleEntry": ""
+    },
+    {
+      "FrameStart": 0,
+      "SFXInit": 255,
+      "CreditsControl": 255,
+      "VoiceEntry": -1,
+      "MusicEntry": "",
+      "JingleEntry": ""
+    },
+    {
+      "FrameStart": 0,
+      "SFXInit": 255,
+      "CreditsControl": 255,
+      "VoiceEntry": -1,
+      "MusicEntry": "",
+      "JingleEntry": ""
+    },
+    {
+      "FrameStart": 0,
+      "SFXInit": 255,
+      "CreditsControl": 255,
+      "VoiceEntry": -1,
+      "MusicEntry": "",
+      "JingleEntry": ""
+    },
+    {
+      "FrameStart": 0,
+      "SFXInit": 255,
+      "CreditsControl": 255,
+      "VoiceEntry": -1,
+      "MusicEntry": "",
+      "JingleEntry": ""
+    },
+    {
+      "FrameStart": 0,
+      "SFXInit": 255,
+      "CreditsControl": 255,
+      "VoiceEntry": -1,
+      "MusicEntry": "",
+      "JingleEntry": ""
+    },
+    {
+      "FrameStart": 0,
+      "SFXInit": 255,
+      "CreditsControl": 255,
+      "VoiceEntry": -1,
+      "MusicEntry": "",
+      "JingleEntry": ""
+    },
+    {
+      "FrameStart": 0,
+      "SFXInit": 255,
+      "CreditsControl": 255,
+      "VoiceEntry": -1,
+      "MusicEntry": "",
+      "JingleEntry": ""
+    },
+    {
+      "FrameStart": 0,
+      "SFXInit": 255,
+      "CreditsControl": 255,
+      "VoiceEntry": -1,
+      "MusicEntry": "",
+      "JingleEntry": ""
+    },
+    {
+      "FrameStart": 0,
+      "SFXInit": 255,
+      "CreditsControl": 255,
+      "VoiceEntry": -1,
+      "MusicEntry": "",
+      "JingleEntry": ""
+    },
+    {
+      "FrameStart": 0,
+      "SFXInit": 255,
+      "CreditsControl": 255,
+      "VoiceEntry": -1,
+      "MusicEntry": "",
+      "JingleEntry": ""
+    },
+    {
+      "FrameStart": 0,
+      "SFXInit": 255,
+      "CreditsControl": 255,
+      "VoiceEntry": -1,
+      "MusicEntry": "",
+      "JingleEntry": ""
+    },
+    {
+      "FrameStart": 0,
+      "SFXInit": 255,
+      "CreditsControl": 255,
+      "VoiceEntry": -1,
+      "MusicEntry": "",
+      "JingleEntry": ""
+    },
+    {
+      "FrameStart": 0,
+      "SFXInit": 255,
+      "CreditsControl": 255,
+      "VoiceEntry": -1,
+      "MusicEntry": "",
+      "JingleEntry": ""
+    },
+    {
+      "FrameStart": 0,
+      "SFXInit": 255,
+      "CreditsControl": 255,
+      "VoiceEntry": -1,
+      "MusicEntry": "",
+      "JingleEntry": ""
+    },
+    {
+      "FrameStart": 0,
+      "SFXInit": 255,
+      "CreditsControl": 255,
+      "VoiceEntry": -1,
+      "MusicEntry": "",
+      "JingleEntry": ""
+    },
+    {
+      "FrameStart": 0,
+      "SFXInit": 255,
+      "CreditsControl": 255,
+      "VoiceEntry": -1,
+      "MusicEntry": "",
+      "JingleEntry": ""
+    },
+    {
+      "FrameStart": 0,
+      "SFXInit": 255,
+      "CreditsControl": 255,
+      "VoiceEntry": -1,
+      "MusicEntry": "",
+      "JingleEntry": ""
+    },
+    {
+      "FrameStart": 0,
+      "SFXInit": 255,
+      "CreditsControl": 255,
+      "VoiceEntry": -1,
+      "MusicEntry": "",
+      "JingleEntry": ""
+    },
+    {
+      "FrameStart": 0,
+      "SFXInit": 255,
+      "CreditsControl": 255,
+      "VoiceEntry": -1,
+      "MusicEntry": "",
+      "JingleEntry": ""
+    },
+    {
+      "FrameStart": 0,
+      "SFXInit": 255,
+      "CreditsControl": 255,
+      "VoiceEntry": -1,
+      "MusicEntry": "",
+      "JingleEntry": ""
+    },
+    {
+      "FrameStart": 0,
+      "SFXInit": 255,
+      "CreditsControl": 255,
+      "VoiceEntry": -1,
+      "MusicEntry": "",
+      "JingleEntry": ""
+    },
+    {
+      "FrameStart": 0,
+      "SFXInit": 255,
+      "CreditsControl": 255,
+      "VoiceEntry": -1,
+      "MusicEntry": "",
+      "JingleEntry": ""
+    },
+    {
+      "FrameStart": 0,
+      "SFXInit": 255,
+      "CreditsControl": 255,
+      "VoiceEntry": -1,
+      "MusicEntry": "",
+      "JingleEntry": ""
+    },
+    {
+      "FrameStart": 0,
+      "SFXInit": 255,
+      "CreditsControl": 255,
+      "VoiceEntry": -1,
+      "MusicEntry": "",
+      "JingleEntry": ""
+    },
+    {
+      "FrameStart": 0,
+      "SFXInit": 255,
+      "CreditsControl": 255,
+      "VoiceEntry": -1,
+      "MusicEntry": "",
+      "JingleEntry": ""
+    },
+    {
+      "FrameStart": 0,
+      "SFXInit": 255,
+      "CreditsControl": 255,
+      "VoiceEntry": -1,
+      "MusicEntry": "",
+      "JingleEntry": ""
+    },
+    {
+      "FrameStart": 0,
+      "SFXInit": 255,
+      "CreditsControl": 255,
+      "VoiceEntry": -1,
+      "MusicEntry": "",
+      "JingleEntry": ""
+    },
+    {
+      "FrameStart": 0,
+      "SFXInit": 255,
+      "CreditsControl": 255,
+      "VoiceEntry": -1,
+      "MusicEntry": "",
+      "JingleEntry": ""
+    },
+    {
+      "FrameStart": 0,
+      "SFXInit": 255,
+      "CreditsControl": 255,
+      "VoiceEntry": -1,
+      "MusicEntry": "",
+      "JingleEntry": ""
+    },
+    {
+      "FrameStart": 0,
+      "SFXInit": 255,
+      "CreditsControl": 255,
+      "VoiceEntry": -1,
+      "MusicEntry": "",
+      "JingleEntry": ""
+    },
+    {
+      "FrameStart": 0,
+      "SFXInit": 255,
+      "CreditsControl": 255,
+      "VoiceEntry": -1,
+      "MusicEntry": "",
+      "JingleEntry": ""
+    },
+    {
+      "FrameStart": 0,
+      "SFXInit": 255,
+      "CreditsControl": 255,
+      "VoiceEntry": -1,
+      "MusicEntry": "",
+      "JingleEntry": ""
+    },
+    {
+      "FrameStart": 0,
+      "SFXInit": 255,
+      "CreditsControl": 255,
+      "VoiceEntry": -1,
+      "MusicEntry": "",
+      "JingleEntry": ""
+    },
+    {
+      "FrameStart": 0,
+      "SFXInit": 255,
+      "CreditsControl": 255,
+      "VoiceEntry": -1,
+      "MusicEntry": "",
+      "JingleEntry": ""
+    },
+    {
+      "FrameStart": 0,
+      "SFXInit": 255,
+      "CreditsControl": 255,
+      "VoiceEntry": -1,
+      "MusicEntry": "",
+      "JingleEntry": ""
+    },
+    {
+      "FrameStart": 0,
+      "SFXInit": 255,
+      "CreditsControl": 255,
+      "VoiceEntry": -1,
+      "MusicEntry": "",
+      "JingleEntry": ""
+    },
+    {
+      "FrameStart": 0,
+      "SFXInit": 255,
+      "CreditsControl": 255,
+      "VoiceEntry": -1,
+      "MusicEntry": "",
+      "JingleEntry": ""
+    },
+    {
+      "FrameStart": 0,
+      "SFXInit": 255,
+      "CreditsControl": 255,
+      "VoiceEntry": -1,
+      "MusicEntry": "",
+      "JingleEntry": ""
+    },
+    {
+      "FrameStart": 0,
+      "SFXInit": 255,
+      "CreditsControl": 255,
+      "VoiceEntry": -1,
+      "MusicEntry": "",
+      "JingleEntry": ""
+    },
+    {
+      "FrameStart": 0,
+      "SFXInit": 255,
+      "CreditsControl": 255,
+      "VoiceEntry": -1,
+      "MusicEntry": "",
+      "JingleEntry": ""
+    },
+    {
+      "FrameStart": 0,
+      "SFXInit": 255,
+      "CreditsControl": 255,
+      "VoiceEntry": -1,
+      "MusicEntry": "",
+      "JingleEntry": ""
+    },
+    {
+      "FrameStart": 0,
+      "SFXInit": 255,
+      "CreditsControl": 255,
+      "VoiceEntry": -1,
+      "MusicEntry": "",
+      "JingleEntry": ""
+    },
+    {
+      "FrameStart": 0,
+      "SFXInit": 255,
+      "CreditsControl": 255,
+      "VoiceEntry": -1,
+      "MusicEntry": "",
+      "JingleEntry": ""
+    },
+    {
+      "FrameStart": 0,
+      "SFXInit": 255,
+      "CreditsControl": 255,
+      "VoiceEntry": -1,
+      "MusicEntry": "",
+      "JingleEntry": ""
+    },
+    {
+      "FrameStart": 0,
+      "SFXInit": 255,
+      "CreditsControl": 255,
+      "VoiceEntry": -1,
+      "MusicEntry": "",
+      "JingleEntry": ""
+    },
+    {
+      "FrameStart": 0,
+      "SFXInit": 255,
+      "CreditsControl": 255,
+      "VoiceEntry": -1,
+      "MusicEntry": "",
+      "JingleEntry": ""
+    },
+    {
+      "FrameStart": 0,
+      "SFXInit": 255,
+      "CreditsControl": 255,
+      "VoiceEntry": -1,
+      "MusicEntry": "",
+      "JingleEntry": ""
+    },
+    {
+      "FrameStart": 0,
+      "SFXInit": 255,
+      "CreditsControl": 255,
+      "VoiceEntry": -1,
+      "MusicEntry": "",
+      "JingleEntry": ""
+    },
+    {
+      "FrameStart": 0,
+      "SFXInit": 255,
+      "CreditsControl": 255,
+      "VoiceEntry": -1,
+      "MusicEntry": "",
+      "JingleEntry": ""
+    },
+    {
+      "FrameStart": 0,
+      "SFXInit": 255,
+      "CreditsControl": 255,
+      "VoiceEntry": -1,
+      "MusicEntry": "",
+      "JingleEntry": ""
+    },
+    {
+      "FrameStart": 0,
+      "SFXInit": 255,
+      "CreditsControl": 255,
+      "VoiceEntry": -1,
+      "MusicEntry": "",
+      "JingleEntry": ""
+    },
+    {
+      "FrameStart": 0,
+      "SFXInit": 255,
+      "CreditsControl": 255,
+      "VoiceEntry": -1,
+      "MusicEntry": "",
+      "JingleEntry": ""
+    },
+    {
+      "FrameStart": 0,
+      "SFXInit": 255,
+      "CreditsControl": 255,
+      "VoiceEntry": -1,
+      "MusicEntry": "",
+      "JingleEntry": ""
+    },
+    {
+      "FrameStart": 0,
+      "SFXInit": 255,
+      "CreditsControl": 255,
+      "VoiceEntry": -1,
+      "MusicEntry": "",
+      "JingleEntry": ""
+    },
+    {
+      "FrameStart": 0,
+      "SFXInit": 255,
+      "CreditsControl": 255,
+      "VoiceEntry": -1,
+      "MusicEntry": "",
+      "JingleEntry": ""
+    },
+    {
+      "FrameStart": 0,
+      "SFXInit": 255,
+      "CreditsControl": 255,
+      "VoiceEntry": -1,
+      "MusicEntry": "",
+      "JingleEntry": ""
+    },
+    {
+      "FrameStart": 0,
+      "SFXInit": 255,
+      "CreditsControl": 255,
+      "VoiceEntry": -1,
+      "MusicEntry": "",
+      "JingleEntry": ""
+    },
+    {
+      "FrameStart": 0,
+      "SFXInit": 255,
+      "CreditsControl": 255,
+      "VoiceEntry": -1,
+      "MusicEntry": "",
+      "JingleEntry": ""
+    },
+    {
+      "FrameStart": 0,
+      "SFXInit": 255,
+      "CreditsControl": 255,
+      "VoiceEntry": -1,
+      "MusicEntry": "",
+      "JingleEntry": ""
+    },
+    {
+      "FrameStart": 0,
+      "SFXInit": 255,
+      "CreditsControl": 255,
+      "VoiceEntry": -1,
+      "MusicEntry": "",
+      "JingleEntry": ""
+    },
+    {
+      "FrameStart": 0,
+      "SFXInit": 255,
+      "CreditsControl": 255,
+      "VoiceEntry": -1,
+      "MusicEntry": "",
+      "JingleEntry": ""
+    },
+    {
+      "FrameStart": 0,
+      "SFXInit": 255,
+      "CreditsControl": 255,
+      "VoiceEntry": -1,
+      "MusicEntry": "",
+      "JingleEntry": ""
+    },
+    {
+      "FrameStart": 0,
+      "SFXInit": 255,
+      "CreditsControl": 255,
+      "VoiceEntry": -1,
+      "MusicEntry": "",
+      "JingleEntry": ""
+    },
+    {
+      "FrameStart": 0,
+      "SFXInit": 255,
+      "CreditsControl": 255,
+      "VoiceEntry": -1,
+      "MusicEntry": "",
+      "JingleEntry": ""
+    },
+    {
+      "FrameStart": 0,
+      "SFXInit": 255,
+      "CreditsControl": 255,
+      "VoiceEntry": -1,
+      "MusicEntry": "",
+      "JingleEntry": ""
+    },
+    {
+      "FrameStart": 0,
+      "SFXInit": 255,
+      "CreditsControl": 255,
+      "VoiceEntry": -1,
+      "MusicEntry": "",
+      "JingleEntry": ""
+    },
+    {
+      "FrameStart": 0,
+      "SFXInit": 255,
+      "CreditsControl": 255,
+      "VoiceEntry": -1,
+      "MusicEntry": "",
+      "JingleEntry": ""
+    },
+    {
+      "FrameStart": 0,
+      "SFXInit": 255,
+      "CreditsControl": 255,
+      "VoiceEntry": -1,
+      "MusicEntry": "",
+      "JingleEntry": ""
+    },
+    {
+      "FrameStart": 0,
+      "SFXInit": 255,
+      "CreditsControl": 255,
+      "VoiceEntry": -1,
+      "MusicEntry": "",
+      "JingleEntry": ""
+    },
+    {
+      "FrameStart": 0,
+      "SFXInit": 255,
+      "CreditsControl": 255,
+      "VoiceEntry": -1,
+      "MusicEntry": "",
+      "JingleEntry": ""
+    },
+    {
+      "FrameStart": 0,
+      "SFXInit": 255,
+      "CreditsControl": 255,
+      "VoiceEntry": -1,
+      "MusicEntry": "",
+      "JingleEntry": ""
+    },
+    {
+      "FrameStart": 0,
+      "SFXInit": 255,
+      "CreditsControl": 255,
+      "VoiceEntry": -1,
+      "MusicEntry": "",
+      "JingleEntry": ""
+    },
+    {
+      "FrameStart": 0,
+      "SFXInit": 255,
+      "CreditsControl": 255,
+      "VoiceEntry": -1,
+      "MusicEntry": "",
+      "JingleEntry": ""
+    },
+    {
+      "FrameStart": 0,
+      "SFXInit": 255,
+      "CreditsControl": 255,
+      "VoiceEntry": -1,
+      "MusicEntry": "",
+      "JingleEntry": ""
+    },
+    {
+      "FrameStart": 0,
+      "SFXInit": 255,
+      "CreditsControl": 255,
+      "VoiceEntry": -1,
+      "MusicEntry": "",
+      "JingleEntry": ""
+    },
+    {
+      "FrameStart": 0,
+      "SFXInit": 255,
+      "CreditsControl": 255,
+      "VoiceEntry": -1,
+      "MusicEntry": "",
+      "JingleEntry": ""
+    },
+    {
+      "FrameStart": 0,
+      "SFXInit": 255,
+      "CreditsControl": 255,
+      "VoiceEntry": -1,
+      "MusicEntry": "",
+      "JingleEntry": ""
+    },
+    {
+      "FrameStart": 0,
+      "SFXInit": 255,
+      "CreditsControl": 255,
+      "VoiceEntry": -1,
+      "MusicEntry": "",
+      "JingleEntry": ""
+    },
+    {
+      "FrameStart": 0,
+      "SFXInit": 255,
+      "CreditsControl": 255,
+      "VoiceEntry": -1,
+      "MusicEntry": "",
+      "JingleEntry": ""
+    },
+    {
+      "FrameStart": 0,
+      "SFXInit": 255,
+      "CreditsControl": 255,
+      "VoiceEntry": -1,
+      "MusicEntry": "",
+      "JingleEntry": ""
+    },
+    {
+      "FrameStart": 0,
+      "SFXInit": 255,
+      "CreditsControl": 255,
+      "VoiceEntry": -1,
+      "MusicEntry": "",
+      "JingleEntry": ""
+    },
+    {
+      "FrameStart": 0,
+      "SFXInit": 255,
+      "CreditsControl": 255,
+      "VoiceEntry": -1,
+      "MusicEntry": "",
+      "JingleEntry": ""
+    },
+    {
+      "FrameStart": 0,
+      "SFXInit": 255,
+      "CreditsControl": 255,
+      "VoiceEntry": -1,
+      "MusicEntry": "",
+      "JingleEntry": ""
+    },
+    {
+      "FrameStart": 0,
+      "SFXInit": 255,
+      "CreditsControl": 255,
+      "VoiceEntry": -1,
+      "MusicEntry": "",
+      "JingleEntry": ""
+    },
+    {
+      "FrameStart": 0,
+      "SFXInit": 255,
+      "CreditsControl": 255,
+      "VoiceEntry": -1,
+      "MusicEntry": "",
+      "JingleEntry": ""
+    },
+    {
+      "FrameStart": 0,
+      "SFXInit": 255,
+      "CreditsControl": 255,
+      "VoiceEntry": -1,
+      "MusicEntry": "",
+      "JingleEntry": ""
+    },
+    {
+      "FrameStart": 0,
+      "SFXInit": 255,
+      "CreditsControl": 255,
+      "VoiceEntry": -1,
+      "MusicEntry": "",
+      "JingleEntry": ""
+    },
+    {
+      "FrameStart": 0,
+      "SFXInit": 255,
+      "CreditsControl": 255,
+      "VoiceEntry": -1,
+      "MusicEntry": "",
+      "JingleEntry": ""
+    },
+    {
+      "FrameStart": 0,
+      "SFXInit": 255,
+      "CreditsControl": 255,
+      "VoiceEntry": -1,
+      "MusicEntry": "",
+      "JingleEntry": ""
+    },
+    {
+      "FrameStart": 0,
+      "SFXInit": 255,
+      "CreditsControl": 255,
+      "VoiceEntry": -1,
+      "MusicEntry": "",
+      "JingleEntry": ""
+    },
+    {
+      "FrameStart": 0,
+      "SFXInit": 255,
+      "CreditsControl": 255,
+      "VoiceEntry": -1,
+      "MusicEntry": "",
+      "JingleEntry": ""
+    },
+    {
+      "FrameStart": 0,
+      "SFXInit": 255,
+      "CreditsControl": 255,
+      "VoiceEntry": -1,
+      "MusicEntry": "",
+      "JingleEntry": ""
+    },
+    {
+      "FrameStart": 0,
+      "SFXInit": 255,
+      "CreditsControl": 255,
+      "VoiceEntry": -1,
+      "MusicEntry": "",
+      "JingleEntry": ""
+    },
+    {
+      "FrameStart": 0,
+      "SFXInit": 255,
+      "CreditsControl": 255,
+      "VoiceEntry": -1,
+      "MusicEntry": "",
+      "JingleEntry": ""
+    },
+    {
+      "FrameStart": 0,
+      "SFXInit": 255,
+      "CreditsControl": 255,
+      "VoiceEntry": -1,
+      "MusicEntry": "",
+      "JingleEntry": ""
+    },
+    {
+      "FrameStart": 0,
+      "SFXInit": 255,
+      "CreditsControl": 255,
+      "VoiceEntry": -1,
+      "MusicEntry": "",
+      "JingleEntry": ""
+    },
+    {
+      "FrameStart": 0,
+      "SFXInit": 255,
+      "CreditsControl": 255,
+      "VoiceEntry": -1,
+      "MusicEntry": "",
+      "JingleEntry": ""
+    },
+    {
+      "FrameStart": 0,
+      "SFXInit": 255,
+      "CreditsControl": 255,
+      "VoiceEntry": -1,
+      "MusicEntry": "",
+      "JingleEntry": ""
+    },
+    {
+      "FrameStart": 0,
+      "SFXInit": 255,
+      "CreditsControl": 255,
+      "VoiceEntry": -1,
+      "MusicEntry": "",
+      "JingleEntry": ""
+    },
+    {
+      "FrameStart": 0,
+      "SFXInit": 255,
+      "CreditsControl": 255,
+      "VoiceEntry": -1,
+      "MusicEntry": "",
+      "JingleEntry": ""
+    },
+    {
+      "FrameStart": 0,
+      "SFXInit": 255,
+      "CreditsControl": 255,
+      "VoiceEntry": -1,
+      "MusicEntry": "",
+      "JingleEntry": ""
+    },
+    {
+      "FrameStart": 0,
+      "SFXInit": 255,
+      "CreditsControl": 255,
+      "VoiceEntry": -1,
+      "MusicEntry": "",
+      "JingleEntry": ""
+    },
+    {
+      "FrameStart": 0,
+      "SFXInit": 255,
+      "CreditsControl": 255,
+      "VoiceEntry": -1,
+      "MusicEntry": "",
+      "JingleEntry": ""
+    },
+    {
+      "FrameStart": 0,
+      "SFXInit": 255,
+      "CreditsControl": 255,
+      "VoiceEntry": -1,
+      "MusicEntry": "",
+      "JingleEntry": ""
+    },
+    {
+      "FrameStart": 0,
+      "SFXInit": 255,
+      "CreditsControl": 255,
+      "VoiceEntry": -1,
+      "MusicEntry": "",
+      "JingleEntry": ""
+    },
+    {
+      "FrameStart": 0,
+      "SFXInit": 255,
+      "CreditsControl": 255,
+      "VoiceEntry": -1,
+      "MusicEntry": "",
+      "JingleEntry": ""
+    },
+    {
+      "FrameStart": 0,
+      "SFXInit": 255,
+      "CreditsControl": 255,
+      "VoiceEntry": -1,
+      "MusicEntry": "",
+      "JingleEntry": ""
+    },
+    {
+      "FrameStart": 0,
+      "SFXInit": 255,
+      "CreditsControl": 255,
+      "VoiceEntry": -1,
+      "MusicEntry": "",
+      "JingleEntry": ""
+    },
+    {
+      "FrameStart": 0,
+      "SFXInit": 255,
+      "CreditsControl": 255,
+      "VoiceEntry": -1,
+      "MusicEntry": "",
+      "JingleEntry": ""
+    },
+    {
+      "FrameStart": 0,
+      "SFXInit": 255,
+      "CreditsControl": 255,
+      "VoiceEntry": -1,
+      "MusicEntry": "",
+      "JingleEntry": ""
+    },
+    {
+      "FrameStart": 0,
+      "SFXInit": 255,
+      "CreditsControl": 255,
+      "VoiceEntry": -1,
+      "MusicEntry": "",
+      "JingleEntry": ""
+    },
+    {
+      "FrameStart": 0,
+      "SFXInit": 255,
+      "CreditsControl": 255,
+      "VoiceEntry": -1,
+      "MusicEntry": "",
+      "JingleEntry": ""
+    },
+    {
+      "FrameStart": 0,
+      "SFXInit": 255,
+      "CreditsControl": 255,
+      "VoiceEntry": -1,
+      "MusicEntry": "",
+      "JingleEntry": ""
+    },
+    {
+      "FrameStart": 0,
+      "SFXInit": 255,
+      "CreditsControl": 255,
+      "VoiceEntry": -1,
+      "MusicEntry": "",
+      "JingleEntry": ""
+    },
+    {
+      "FrameStart": 0,
+      "SFXInit": 255,
+      "CreditsControl": 255,
+      "VoiceEntry": -1,
+      "MusicEntry": "",
+      "JingleEntry": ""
+    },
+    {
+      "FrameStart": 0,
+      "SFXInit": 255,
+      "CreditsControl": 255,
+      "VoiceEntry": -1,
+      "MusicEntry": "",
+      "JingleEntry": ""
+    },
+    {
+      "FrameStart": 0,
+      "SFXInit": 255,
+      "CreditsControl": 255,
+      "VoiceEntry": -1,
+      "MusicEntry": "",
+      "JingleEntry": ""
+    },
+    {
+      "FrameStart": 0,
+      "SFXInit": 255,
+      "CreditsControl": 255,
+      "VoiceEntry": -1,
+      "MusicEntry": "",
+      "JingleEntry": ""
+    },
+    {
+      "FrameStart": 0,
+      "SFXInit": 255,
+      "CreditsControl": 255,
+      "VoiceEntry": -1,
+      "MusicEntry": "",
+      "JingleEntry": ""
+    },
+    {
+      "FrameStart": 0,
+      "SFXInit": 255,
+      "CreditsControl": 255,
+      "VoiceEntry": -1,
+      "MusicEntry": "",
+      "JingleEntry": ""
+    },
+    {
+      "FrameStart": 0,
+      "SFXInit": 255,
+      "CreditsControl": 255,
+      "VoiceEntry": -1,
+      "MusicEntry": "",
+      "JingleEntry": ""
+    },
+    {
+      "FrameStart": 0,
+      "SFXInit": 255,
+      "CreditsControl": 255,
+      "VoiceEntry": -1,
+      "MusicEntry": "",
+      "JingleEntry": ""
+    },
+    {
+      "FrameStart": 0,
+      "SFXInit": 255,
+      "CreditsControl": 255,
+      "VoiceEntry": -1,
+      "MusicEntry": "",
+      "JingleEntry": ""
+    },
+    {
+      "FrameStart": 0,
+      "SFXInit": 255,
+      "CreditsControl": 255,
+      "VoiceEntry": -1,
+      "MusicEntry": "",
+      "JingleEntry": ""
+    },
+    {
+      "FrameStart": 0,
+      "SFXInit": 255,
+      "CreditsControl": 255,
+      "VoiceEntry": -1,
+      "MusicEntry": "",
+      "JingleEntry": ""
+    },
+    {
+      "FrameStart": 0,
+      "SFXInit": 255,
+      "CreditsControl": 255,
+      "VoiceEntry": -1,
+      "MusicEntry": "",
+      "JingleEntry": ""
+    },
+    {
+      "FrameStart": 0,
+      "SFXInit": 255,
+      "CreditsControl": 255,
+      "VoiceEntry": -1,
+      "MusicEntry": "",
+      "JingleEntry": ""
+    },
+    {
+      "FrameStart": 0,
+      "SFXInit": 255,
+      "CreditsControl": 255,
+      "VoiceEntry": -1,
+      "MusicEntry": "",
+      "JingleEntry": ""
+    },
+    {
+      "FrameStart": 0,
+      "SFXInit": 255,
+      "CreditsControl": 255,
+      "VoiceEntry": -1,
+      "MusicEntry": "",
+      "JingleEntry": ""
+    },
+    {
+      "FrameStart": 0,
+      "SFXInit": 255,
+      "CreditsControl": 255,
+      "VoiceEntry": -1,
+      "MusicEntry": "",
+      "JingleEntry": ""
+    },
+    {
+      "FrameStart": 0,
+      "SFXInit": 255,
+      "CreditsControl": 255,
+      "VoiceEntry": -1,
+      "MusicEntry": "",
+      "JingleEntry": ""
+    },
+    {
+      "FrameStart": 0,
+      "SFXInit": 255,
+      "CreditsControl": 255,
+      "VoiceEntry": -1,
+      "MusicEntry": "",
+      "JingleEntry": ""
+    },
+    {
+      "FrameStart": 0,
+      "SFXInit": 255,
+      "CreditsControl": 255,
+      "VoiceEntry": -1,
+      "MusicEntry": "",
+      "JingleEntry": ""
+    },
+    {
+      "FrameStart": 0,
+      "SFXInit": 255,
+      "CreditsControl": 255,
+      "VoiceEntry": -1,
+      "MusicEntry": "",
+      "JingleEntry": ""
+    },
+    {
+      "FrameStart": 0,
+      "SFXInit": 255,
+      "CreditsControl": 255,
+      "VoiceEntry": -1,
+      "MusicEntry": "",
+      "JingleEntry": ""
+    },
+    {
+      "FrameStart": 0,
+      "SFXInit": 255,
+      "CreditsControl": 255,
+      "VoiceEntry": -1,
+      "MusicEntry": "",
+      "JingleEntry": ""
+    },
+    {
+      "FrameStart": 0,
+      "SFXInit": 255,
+      "CreditsControl": 255,
+      "VoiceEntry": -1,
+      "MusicEntry": "",
+      "JingleEntry": ""
+    },
+    {
+      "FrameStart": 0,
+      "SFXInit": 255,
+      "CreditsControl": 255,
+      "VoiceEntry": -1,
+      "MusicEntry": "",
+      "JingleEntry": ""
+    },
+    {
+      "FrameStart": 0,
+      "SFXInit": 255,
+      "CreditsControl": 255,
+      "VoiceEntry": -1,
+      "MusicEntry": "",
+      "JingleEntry": ""
+    },
+    {
+      "FrameStart": 0,
+      "SFXInit": 255,
+      "CreditsControl": 255,
+      "VoiceEntry": -1,
+      "MusicEntry": "",
+      "JingleEntry": ""
+    },
+    {
+      "FrameStart": 0,
+      "SFXInit": 255,
+      "CreditsControl": 255,
+      "VoiceEntry": -1,
+      "MusicEntry": "",
+      "JingleEntry": ""
+    },
+    {
+      "FrameStart": 0,
+      "SFXInit": 255,
+      "CreditsControl": 255,
+      "VoiceEntry": -1,
+      "MusicEntry": "",
+      "JingleEntry": ""
+    },
+    {
+      "FrameStart": 0,
+      "SFXInit": 255,
+      "CreditsControl": 255,
+      "VoiceEntry": -1,
+      "MusicEntry": "",
+      "JingleEntry": ""
+    },
+    {
+      "FrameStart": 0,
+      "SFXInit": 255,
+      "CreditsControl": 255,
+      "VoiceEntry": -1,
+      "MusicEntry": "",
+      "JingleEntry": ""
+    },
+    {
+      "FrameStart": 0,
+      "SFXInit": 255,
+      "CreditsControl": 255,
+      "VoiceEntry": -1,
+      "MusicEntry": "",
+      "JingleEntry": ""
+    },
+    {
+      "FrameStart": 0,
+      "SFXInit": 255,
+      "CreditsControl": 255,
+      "VoiceEntry": -1,
+      "MusicEntry": "",
+      "JingleEntry": ""
+    },
+    {
+      "FrameStart": 0,
+      "SFXInit": 255,
+      "CreditsControl": 255,
+      "VoiceEntry": -1,
+      "MusicEntry": "",
+      "JingleEntry": ""
+    },
+    {
+      "FrameStart": 0,
+      "SFXInit": 255,
+      "CreditsControl": 255,
+      "VoiceEntry": -1,
+      "MusicEntry": "",
+      "JingleEntry": ""
+    },
+    {
+      "FrameStart": 0,
+      "SFXInit": 255,
+      "CreditsControl": 255,
+      "VoiceEntry": -1,
+      "MusicEntry": "",
+      "JingleEntry": ""
+    },
+    {
+      "FrameStart": 0,
+      "SFXInit": 255,
+      "CreditsControl": 255,
+      "VoiceEntry": -1,
+      "MusicEntry": "",
+      "JingleEntry": ""
+    },
+    {
+      "FrameStart": 0,
+      "SFXInit": 255,
+      "CreditsControl": 255,
+      "VoiceEntry": -1,
+      "MusicEntry": "",
+      "JingleEntry": ""
+    },
+    {
+      "FrameStart": 0,
+      "SFXInit": 255,
+      "CreditsControl": 255,
+      "VoiceEntry": -1,
+      "MusicEntry": "",
+      "JingleEntry": ""
+    },
+    {
+      "FrameStart": 0,
+      "SFXInit": 255,
+      "CreditsControl": 255,
+      "VoiceEntry": -1,
+      "MusicEntry": "",
+      "JingleEntry": ""
+    },
+    {
+      "FrameStart": 0,
+      "SFXInit": 255,
+      "CreditsControl": 255,
+      "VoiceEntry": -1,
+      "MusicEntry": "",
+      "JingleEntry": ""
+    },
+    {
+      "FrameStart": 0,
+      "SFXInit": 255,
+      "CreditsControl": 255,
+      "VoiceEntry": -1,
+      "MusicEntry": "",
+      "JingleEntry": ""
+    },
+    {
+      "FrameStart": 0,
+      "SFXInit": 255,
+      "CreditsControl": 255,
+      "VoiceEntry": -1,
+      "MusicEntry": "",
+      "JingleEntry": ""
+    },
+    {
+      "FrameStart": 0,
+      "SFXInit": 255,
+      "CreditsControl": 255,
+      "VoiceEntry": -1,
+      "MusicEntry": "",
+      "JingleEntry": ""
+    },
+    {
+      "FrameStart": 0,
+      "SFXInit": 255,
+      "CreditsControl": 255,
+      "VoiceEntry": -1,
+      "MusicEntry": "",
+      "JingleEntry": ""
+    },
+    {
+      "FrameStart": 0,
+      "SFXInit": 255,
+      "CreditsControl": 255,
+      "VoiceEntry": -1,
+      "MusicEntry": "",
+      "JingleEntry": ""
+    },
+    {
+      "FrameStart": 0,
+      "SFXInit": 255,
+      "CreditsControl": 255,
+      "VoiceEntry": -1,
+      "MusicEntry": "",
+      "JingleEntry": ""
+    },
+    {
+      "FrameStart": 0,
+      "SFXInit": 255,
+      "CreditsControl": 255,
+      "VoiceEntry": -1,
+      "MusicEntry": "",
+      "JingleEntry": ""
+    },
+    {
+      "FrameStart": 0,
+      "SFXInit": 255,
+      "CreditsControl": 255,
+      "VoiceEntry": -1,
+      "MusicEntry": "",
+      "JingleEntry": ""
+    },
+    {
+      "FrameStart": 0,
+      "SFXInit": 255,
+      "CreditsControl": 255,
+      "VoiceEntry": -1,
+      "MusicEntry": "",
+      "JingleEntry": ""
+    },
+    {
+      "FrameStart": 0,
+      "SFXInit": 255,
+      "CreditsControl": 255,
+      "VoiceEntry": -1,
+      "MusicEntry": "",
+      "JingleEntry": ""
+    },
+    {
+      "FrameStart": 0,
+      "SFXInit": 255,
+      "CreditsControl": 255,
+      "VoiceEntry": -1,
+      "MusicEntry": "",
+      "JingleEntry": ""
+    },
+    {
+      "FrameStart": 0,
+      "SFXInit": 255,
+      "CreditsControl": 255,
+      "VoiceEntry": -1,
+      "MusicEntry": "",
+      "JingleEntry": ""
+    },
+    {
+      "FrameStart": 0,
+      "SFXInit": 255,
+      "CreditsControl": 255,
+      "VoiceEntry": -1,
+      "MusicEntry": "",
+      "JingleEntry": ""
+    },
+    {
+      "FrameStart": 0,
+      "SFXInit": 255,
+      "CreditsControl": 255,
+      "VoiceEntry": -1,
+      "MusicEntry": "",
+      "JingleEntry": ""
+    },
+    {
+      "FrameStart": 0,
+      "SFXInit": 255,
+      "CreditsControl": 255,
+      "VoiceEntry": -1,
+      "MusicEntry": "",
+      "JingleEntry": ""
+    },
+    {
+      "FrameStart": 0,
+      "SFXInit": 255,
+      "CreditsControl": 255,
+      "VoiceEntry": -1,
+      "MusicEntry": "",
+      "JingleEntry": ""
+    },
+    {
+      "FrameStart": 0,
+      "SFXInit": 255,
+      "CreditsControl": 255,
+      "VoiceEntry": -1,
+      "MusicEntry": "",
+      "JingleEntry": ""
+    },
+    {
+      "FrameStart": 0,
+      "SFXInit": 255,
+      "CreditsControl": 255,
+      "VoiceEntry": -1,
+      "MusicEntry": "",
+      "JingleEntry": ""
+    },
+    {
+      "FrameStart": 0,
+      "SFXInit": 255,
+      "CreditsControl": 255,
+      "VoiceEntry": -1,
+      "MusicEntry": "",
+      "JingleEntry": ""
+    },
+    {
+      "FrameStart": 0,
+      "SFXInit": 255,
+      "CreditsControl": 255,
+      "VoiceEntry": -1,
+      "MusicEntry": "",
+      "JingleEntry": ""
+    },
+    {
+      "FrameStart": 0,
+      "SFXInit": 255,
+      "CreditsControl": 255,
+      "VoiceEntry": -1,
+      "MusicEntry": "",
+      "JingleEntry": ""
+    },
+    {
+      "FrameStart": 0,
+      "SFXInit": 255,
+      "CreditsControl": 255,
+      "VoiceEntry": -1,
+      "MusicEntry": "",
+      "JingleEntry": ""
+    },
+    {
+      "FrameStart": 0,
+      "SFXInit": 255,
+      "CreditsControl": 255,
+      "VoiceEntry": -1,
+      "MusicEntry": "",
+      "JingleEntry": ""
+    },
+    {
+      "FrameStart": 0,
+      "SFXInit": 255,
+      "CreditsControl": 255,
+      "VoiceEntry": -1,
+      "MusicEntry": "",
+      "JingleEntry": ""
+    },
+    {
+      "FrameStart": 0,
+      "SFXInit": 255,
+      "CreditsControl": 255,
+      "VoiceEntry": -1,
+      "MusicEntry": "",
+      "JingleEntry": ""
+    },
+    {
+      "FrameStart": 0,
+      "SFXInit": 255,
+      "CreditsControl": 255,
+      "VoiceEntry": -1,
+      "MusicEntry": "",
+      "JingleEntry": ""
+    },
+    {
+      "FrameStart": 0,
+      "SFXInit": 255,
+      "CreditsControl": 255,
+      "VoiceEntry": -1,
+      "MusicEntry": "",
+      "JingleEntry": ""
+    },
+    {
+      "FrameStart": 0,
+      "SFXInit": 255,
+      "CreditsControl": 255,
+      "VoiceEntry": -1,
+      "MusicEntry": "",
+      "JingleEntry": ""
+    },
+    {
+      "FrameStart": 0,
+      "SFXInit": 255,
+      "CreditsControl": 255,
+      "VoiceEntry": -1,
+      "MusicEntry": "",
+      "JingleEntry": ""
+    },
+    {
+      "FrameStart": 0,
+      "SFXInit": 255,
+      "CreditsControl": 255,
+      "VoiceEntry": -1,
+      "MusicEntry": "",
+      "JingleEntry": ""
+    },
+    {
+      "FrameStart": 0,
+      "SFXInit": 255,
+      "CreditsControl": 255,
+      "VoiceEntry": -1,
+      "MusicEntry": "",
+      "JingleEntry": ""
+    },
+    {
+      "FrameStart": 0,
+      "SFXInit": 255,
+      "CreditsControl": 255,
+      "VoiceEntry": -1,
+      "MusicEntry": "",
+      "JingleEntry": ""
+    },
+    {
+      "FrameStart": 0,
+      "SFXInit": 255,
+      "CreditsControl": 255,
+      "VoiceEntry": -1,
+      "MusicEntry": "",
+      "JingleEntry": ""
+    },
+    {
+      "FrameStart": 0,
+      "SFXInit": 255,
+      "CreditsControl": 255,
+      "VoiceEntry": -1,
+      "MusicEntry": "",
+      "JingleEntry": ""
+    },
+    {
+      "FrameStart": 0,
+      "SFXInit": 255,
+      "CreditsControl": 255,
+      "VoiceEntry": -1,
+      "MusicEntry": "",
+      "JingleEntry": ""
+    },
+    {
+      "FrameStart": 0,
+      "SFXInit": 255,
+      "CreditsControl": 255,
+      "VoiceEntry": -1,
+      "MusicEntry": "",
+      "JingleEntry": ""
+    },
+    {
+      "FrameStart": 0,
+      "SFXInit": 255,
+      "CreditsControl": 255,
+      "VoiceEntry": -1,
+      "MusicEntry": "",
+      "JingleEntry": ""
+    },
+    {
+      "FrameStart": 0,
+      "SFXInit": 255,
+      "CreditsControl": 255,
+      "VoiceEntry": -1,
+      "MusicEntry": "",
+      "JingleEntry": ""
+    },
+    {
+      "FrameStart": 0,
+      "SFXInit": 255,
+      "CreditsControl": 255,
+      "VoiceEntry": -1,
+      "MusicEntry": "",
+      "JingleEntry": ""
+    },
+    {
+      "FrameStart": 0,
+      "SFXInit": 255,
+      "CreditsControl": 255,
+      "VoiceEntry": -1,
+      "MusicEntry": "",
+      "JingleEntry": ""
+    },
+    {
+      "FrameStart": 0,
+      "SFXInit": 255,
+      "CreditsControl": 255,
+      "VoiceEntry": -1,
+      "MusicEntry": "",
+      "JingleEntry": ""
+    },
+    {
+      "FrameStart": 0,
+      "SFXInit": 255,
+      "CreditsControl": 255,
+      "VoiceEntry": -1,
+      "MusicEntry": "",
+      "JingleEntry": ""
+    },
+    {
+      "FrameStart": 0,
+      "SFXInit": 255,
+      "CreditsControl": 255,
+      "VoiceEntry": -1,
+      "MusicEntry": "",
+      "JingleEntry": ""
+    },
+    {
+      "FrameStart": 0,
+      "SFXInit": 255,
+      "CreditsControl": 255,
+      "VoiceEntry": -1,
+      "MusicEntry": "",
+      "JingleEntry": ""
+    },
+    {
+      "FrameStart": 0,
+      "SFXInit": 255,
+      "CreditsControl": 255,
+      "VoiceEntry": -1,
+      "MusicEntry": "",
+      "JingleEntry": ""
+    },
+    {
+      "FrameStart": 0,
+      "SFXInit": 255,
+      "CreditsControl": 255,
+      "VoiceEntry": -1,
+      "MusicEntry": "",
+      "JingleEntry": ""
+    },
+    {
+      "FrameStart": 0,
+      "SFXInit": 255,
+      "CreditsControl": 255,
+      "VoiceEntry": -1,
+      "MusicEntry": "",
+      "JingleEntry": ""
+    },
+    {
+      "FrameStart": 0,
+      "SFXInit": 255,
+      "CreditsControl": 255,
+      "VoiceEntry": -1,
+      "MusicEntry": "",
+      "JingleEntry": ""
+    },
+    {
+      "FrameStart": 0,
+      "SFXInit": 255,
+      "CreditsControl": 255,
+      "VoiceEntry": -1,
+      "MusicEntry": "",
+      "JingleEntry": ""
+    },
+    {
+      "FrameStart": 0,
+      "SFXInit": 255,
+      "CreditsControl": 255,
+      "VoiceEntry": -1,
+      "MusicEntry": "",
+      "JingleEntry": ""
+    },
+    {
+      "FrameStart": 0,
+      "SFXInit": 255,
+      "CreditsControl": 255,
+      "VoiceEntry": -1,
+      "MusicEntry": "",
+      "JingleEntry": ""
+    },
+    {
+      "FrameStart": 0,
+      "SFXInit": 255,
+      "CreditsControl": 255,
+      "VoiceEntry": -1,
+      "MusicEntry": "",
+      "JingleEntry": ""
+    },
+    {
+      "FrameStart": 0,
+      "SFXInit": 255,
+      "CreditsControl": 255,
+      "VoiceEntry": -1,
+      "MusicEntry": "",
+      "JingleEntry": ""
+    },
+    {
+      "FrameStart": 0,
+      "SFXInit": 255,
+      "CreditsControl": 255,
+      "VoiceEntry": -1,
+      "MusicEntry": "",
+      "JingleEntry": ""
+    },
+    {
+      "FrameStart": 0,
+      "SFXInit": 255,
+      "CreditsControl": 255,
+      "VoiceEntry": -1,
+      "MusicEntry": "",
+      "JingleEntry": ""
+    },
+    {
+      "FrameStart": 0,
+      "SFXInit": 255,
+      "CreditsControl": 255,
+      "VoiceEntry": -1,
+      "MusicEntry": "",
+      "JingleEntry": ""
+    },
+    {
+      "FrameStart": 0,
+      "SFXInit": 255,
+      "CreditsControl": 255,
+      "VoiceEntry": -1,
+      "MusicEntry": "",
+      "JingleEntry": ""
+    },
+    {
+      "FrameStart": 0,
+      "SFXInit": 255,
+      "CreditsControl": 255,
+      "VoiceEntry": -1,
+      "MusicEntry": "",
+      "JingleEntry": ""
+    },
+    {
+      "FrameStart": 0,
+      "SFXInit": 255,
+      "CreditsControl": 255,
+      "VoiceEntry": -1,
+      "MusicEntry": "",
+      "JingleEntry": ""
+    },
+    {
+      "FrameStart": 0,
+      "SFXInit": 255,
+      "CreditsControl": 255,
+      "VoiceEntry": -1,
+      "MusicEntry": "",
+      "JingleEntry": ""
+    },
+    {
+      "FrameStart": 0,
+      "SFXInit": 255,
+      "CreditsControl": 255,
+      "VoiceEntry": -1,
+      "MusicEntry": "",
+      "JingleEntry": ""
+    },
+    {
+      "FrameStart": 0,
+      "SFXInit": 255,
+      "CreditsControl": 255,
+      "VoiceEntry": -1,
+      "MusicEntry": "",
+      "JingleEntry": ""
+    },
+    {
+      "FrameStart": 0,
+      "SFXInit": 255,
+      "CreditsControl": 255,
+      "VoiceEntry": -1,
+      "MusicEntry": "",
+      "JingleEntry": ""
+    },
+    {
+      "FrameStart": 0,
+      "SFXInit": 255,
+      "CreditsControl": 255,
+      "VoiceEntry": -1,
+      "MusicEntry": "",
+      "JingleEntry": ""
+    },
+    {
+      "FrameStart": 0,
+      "SFXInit": 255,
+      "CreditsControl": 255,
+      "VoiceEntry": -1,
+      "MusicEntry": "",
+      "JingleEntry": ""
+    },
+    {
+      "FrameStart": 0,
+      "SFXInit": 255,
+      "CreditsControl": 255,
+      "VoiceEntry": -1,
+      "MusicEntry": "",
+      "JingleEntry": ""
+    },
+    {
+      "FrameStart": 0,
+      "SFXInit": 255,
+      "CreditsControl": 255,
+      "VoiceEntry": -1,
+      "MusicEntry": "",
+      "JingleEntry": ""
+    },
+    {
+      "FrameStart": 0,
+      "SFXInit": 255,
+      "CreditsControl": 255,
+      "VoiceEntry": -1,
+      "MusicEntry": "",
+      "JingleEntry": ""
+    },
+    {
+      "FrameStart": 0,
+      "SFXInit": 255,
+      "CreditsControl": 255,
+      "VoiceEntry": -1,
+      "MusicEntry": "",
+      "JingleEntry": ""
+    },
+    {
+      "FrameStart": 0,
+      "SFXInit": 255,
+      "CreditsControl": 255,
+      "VoiceEntry": -1,
+      "MusicEntry": "",
+      "JingleEntry": ""
+    },
+    {
+      "FrameStart": 0,
+      "SFXInit": 255,
+      "CreditsControl": 255,
+      "VoiceEntry": -1,
+      "MusicEntry": "",
+      "JingleEntry": ""
+    },
+    {
+      "FrameStart": 0,
+      "SFXInit": 255,
+      "CreditsControl": 255,
+      "VoiceEntry": -1,
+      "MusicEntry": "",
+      "JingleEntry": ""
+    },
+    {
+      "FrameStart": 0,
+      "SFXInit": 255,
+      "CreditsControl": 255,
+      "VoiceEntry": -1,
+      "MusicEntry": "",
+      "JingleEntry": ""
+    },
+    {
+      "FrameStart": 0,
+      "SFXInit": 255,
+      "CreditsControl": 255,
+      "VoiceEntry": -1,
+      "MusicEntry": "",
+      "JingleEntry": ""
+    },
+    {
+      "FrameStart": 0,
+      "SFXInit": 255,
+      "CreditsControl": 255,
+      "VoiceEntry": -1,
+      "MusicEntry": "",
+      "JingleEntry": ""
+    },
+    {
+      "FrameStart": 0,
+      "SFXInit": 255,
+      "CreditsControl": 255,
+      "VoiceEntry": -1,
+      "MusicEntry": "",
+      "JingleEntry": ""
+    },
+    {
+      "FrameStart": 0,
+      "SFXInit": 255,
+      "CreditsControl": 255,
+      "VoiceEntry": -1,
+      "MusicEntry": "",
+      "JingleEntry": ""
+    },
+    {
+      "FrameStart": 0,
+      "SFXInit": 255,
+      "CreditsControl": 255,
+      "VoiceEntry": -1,
+      "MusicEntry": "",
+      "JingleEntry": ""
+    },
+    {
+      "FrameStart": 0,
+      "SFXInit": 255,
+      "CreditsControl": 255,
+      "VoiceEntry": -1,
+      "MusicEntry": "",
+      "JingleEntry": ""
+    },
+    {
+      "FrameStart": 0,
+      "SFXInit": 255,
+      "CreditsControl": 255,
+      "VoiceEntry": -1,
+      "MusicEntry": "",
+      "JingleEntry": ""
+    },
+    {
+      "FrameStart": 0,
+      "SFXInit": 255,
+      "CreditsControl": 255,
+      "VoiceEntry": -1,
+      "MusicEntry": "",
+      "JingleEntry": ""
+    },
+    {
+      "FrameStart": 0,
+      "SFXInit": 255,
+      "CreditsControl": 255,
+      "VoiceEntry": -1,
+      "MusicEntry": "",
+      "JingleEntry": ""
+    },
+    {
+      "FrameStart": 0,
+      "SFXInit": 255,
+      "CreditsControl": 255,
+      "VoiceEntry": -1,
+      "MusicEntry": "",
+      "JingleEntry": ""
+    },
+    {
+      "FrameStart": 0,
+      "SFXInit": 255,
+      "CreditsControl": 255,
+      "VoiceEntry": -1,
+      "MusicEntry": "",
+      "JingleEntry": ""
+    },
+    {
+      "FrameStart": 0,
+      "SFXInit": 255,
+      "CreditsControl": 255,
+      "VoiceEntry": -1,
+      "MusicEntry": "",
+      "JingleEntry": ""
+    },
+    {
+      "FrameStart": 0,
+      "SFXInit": 255,
+      "CreditsControl": 255,
+      "VoiceEntry": -1,
+      "MusicEntry": "",
+      "JingleEntry": ""
+    },
+    {
+      "FrameStart": 0,
+      "SFXInit": 255,
+      "CreditsControl": 255,
+      "VoiceEntry": -1,
+      "MusicEntry": "",
+      "JingleEntry": ""
+    },
+    {
+      "FrameStart": 0,
+      "SFXInit": 255,
+      "CreditsControl": 255,
+      "VoiceEntry": -1,
+      "MusicEntry": "",
+      "JingleEntry": ""
+    },
+    {
+      "FrameStart": 0,
+      "SFXInit": 255,
+      "CreditsControl": 255,
+      "VoiceEntry": -1,
+      "MusicEntry": "",
+      "JingleEntry": ""
+    },
+    {
+      "FrameStart": 0,
+      "SFXInit": 255,
+      "CreditsControl": 255,
+      "VoiceEntry": -1,
+      "MusicEntry": "",
+      "JingleEntry": ""
+    },
+    {
+      "FrameStart": 0,
+      "SFXInit": 255,
+      "CreditsControl": 255,
+      "VoiceEntry": -1,
+      "MusicEntry": "",
+      "JingleEntry": ""
+    },
+    {
+      "FrameStart": 0,
+      "SFXInit": 255,
+      "CreditsControl": 255,
+      "VoiceEntry": -1,
+      "MusicEntry": "",
+      "JingleEntry": ""
+    },
+    {
+      "FrameStart": 0,
+      "SFXInit": 255,
+      "CreditsControl": 255,
+      "VoiceEntry": -1,
+      "MusicEntry": "",
+      "JingleEntry": ""
+    },
+    {
+      "FrameStart": 0,
+      "SFXInit": 255,
+      "CreditsControl": 255,
+      "VoiceEntry": -1,
+      "MusicEntry": "",
+      "JingleEntry": ""
+    },
+    {
+      "FrameStart": 0,
+      "SFXInit": 255,
+      "CreditsControl": 255,
+      "VoiceEntry": -1,
+      "MusicEntry": "",
+      "JingleEntry": ""
+    },
+    {
+      "FrameStart": 0,
+      "SFXInit": 255,
+      "CreditsControl": 255,
+      "VoiceEntry": -1,
+      "MusicEntry": "",
+      "JingleEntry": ""
+    },
+    {
+      "FrameStart": 0,
+      "SFXInit": 255,
+      "CreditsControl": 255,
+      "VoiceEntry": -1,
+      "MusicEntry": "",
+      "JingleEntry": ""
+    },
+    {
+      "FrameStart": 0,
+      "SFXInit": 255,
+      "CreditsControl": 255,
+      "VoiceEntry": -1,
+      "MusicEntry": "",
+      "JingleEntry": ""
+    },
+    {
+      "FrameStart": 0,
+      "SFXInit": 255,
+      "CreditsControl": 255,
+      "VoiceEntry": -1,
+      "MusicEntry": "",
+      "JingleEntry": ""
+    },
+    {
+      "FrameStart": 0,
+      "SFXInit": 255,
+      "CreditsControl": 255,
+      "VoiceEntry": -1,
+      "MusicEntry": "",
+      "JingleEntry": ""
+    },
+    {
+      "FrameStart": 0,
+      "SFXInit": 255,
+      "CreditsControl": 255,
+      "VoiceEntry": -1,
+      "MusicEntry": "",
+      "JingleEntry": ""
+    },
+    {
+      "FrameStart": 0,
+      "SFXInit": 255,
+      "CreditsControl": 255,
+      "VoiceEntry": -1,
+      "MusicEntry": "",
+      "JingleEntry": ""
+    },
+    {
+      "FrameStart": 0,
+      "SFXInit": 255,
+      "CreditsControl": 255,
+      "VoiceEntry": -1,
+      "MusicEntry": "",
+      "JingleEntry": ""
+    },
+    {
+      "FrameStart": 0,
+      "SFXInit": 255,
+      "CreditsControl": 255,
+      "VoiceEntry": -1,
+      "MusicEntry": "",
+      "JingleEntry": ""
+    },
+    {
+      "FrameStart": 0,
+      "SFXInit": 255,
+      "CreditsControl": 255,
+      "VoiceEntry": -1,
+      "MusicEntry": "",
+      "JingleEntry": ""
+    },
+    {
+      "FrameStart": 0,
+      "SFXInit": 255,
+      "CreditsControl": 255,
+      "VoiceEntry": -1,
+      "MusicEntry": "",
+      "JingleEntry": ""
+    },
+    {
+      "FrameStart": 0,
+      "SFXInit": 255,
+      "CreditsControl": 255,
+      "VoiceEntry": -1,
+      "MusicEntry": "",
+      "JingleEntry": ""
+    },
+    {
+      "FrameStart": 0,
+      "SFXInit": 255,
+      "CreditsControl": 255,
+      "VoiceEntry": -1,
+      "MusicEntry": "",
+      "JingleEntry": ""
+    },
+    {
+      "FrameStart": 0,
+      "SFXInit": 255,
+      "CreditsControl": 255,
+      "VoiceEntry": -1,
+      "MusicEntry": "",
+      "JingleEntry": ""
+    },
+    {
+      "FrameStart": 0,
+      "SFXInit": 255,
+      "CreditsControl": 255,
+      "VoiceEntry": -1,
+      "MusicEntry": "",
+      "JingleEntry": ""
+    },
+    {
+      "FrameStart": 0,
+      "SFXInit": 255,
+      "CreditsControl": 255,
+      "VoiceEntry": -1,
+      "MusicEntry": "",
+      "JingleEntry": ""
+    },
+    {
+      "FrameStart": 0,
+      "SFXInit": 255,
+      "CreditsControl": 255,
+      "VoiceEntry": -1,
+      "MusicEntry": "",
+      "JingleEntry": ""
+    },
+    {
+      "FrameStart": 0,
+      "SFXInit": 255,
+      "CreditsControl": 255,
+      "VoiceEntry": -1,
+      "MusicEntry": "",
+      "JingleEntry": ""
+    },
+    {
+      "FrameStart": 0,
+      "SFXInit": 255,
+      "CreditsControl": 255,
+      "VoiceEntry": -1,
+      "MusicEntry": "",
+      "JingleEntry": ""
+    },
+    {
+      "FrameStart": 0,
+      "SFXInit": 255,
+      "CreditsControl": 255,
+      "VoiceEntry": -1,
+      "MusicEntry": "",
+      "JingleEntry": ""
+    },
+    {
+      "FrameStart": 0,
+      "SFXInit": 255,
+      "CreditsControl": 255,
+      "VoiceEntry": -1,
+      "MusicEntry": "",
+      "JingleEntry": ""
+    },
+    {
+      "FrameStart": 0,
+      "SFXInit": 255,
+      "CreditsControl": 255,
+      "VoiceEntry": -1,
+      "MusicEntry": "",
+      "JingleEntry": ""
+    },
+    {
+      "FrameStart": 0,
+      "SFXInit": 255,
+      "CreditsControl": 255,
+      "VoiceEntry": -1,
+      "MusicEntry": "",
+      "JingleEntry": ""
+    },
+    {
+      "FrameStart": 0,
+      "SFXInit": 255,
+      "CreditsControl": 255,
+      "VoiceEntry": -1,
+      "MusicEntry": "",
+      "JingleEntry": ""
+    },
+    {
+      "FrameStart": 0,
+      "SFXInit": 255,
+      "CreditsControl": 255,
+      "VoiceEntry": -1,
+      "MusicEntry": "",
+      "JingleEntry": ""
+    },
+    {
+      "FrameStart": 0,
+      "SFXInit": 255,
+      "CreditsControl": 255,
+      "VoiceEntry": -1,
+      "MusicEntry": "",
+      "JingleEntry": ""
+    },
+    {
+      "FrameStart": 0,
+      "SFXInit": 255,
+      "CreditsControl": 255,
+      "VoiceEntry": -1,
+      "MusicEntry": "",
+      "JingleEntry": ""
+    },
+    {
+      "FrameStart": 0,
+      "SFXInit": 255,
+      "CreditsControl": 255,
+      "VoiceEntry": -1,
+      "MusicEntry": "",
+      "JingleEntry": ""
+    },
+    {
+      "FrameStart": 0,
+      "SFXInit": 255,
+      "CreditsControl": 255,
+      "VoiceEntry": -1,
+      "MusicEntry": "",
+      "JingleEntry": ""
+    },
+    {
+      "FrameStart": 0,
+      "SFXInit": 255,
+      "CreditsControl": 255,
+      "VoiceEntry": -1,
+      "MusicEntry": "",
+      "JingleEntry": ""
+    },
+    {
+      "FrameStart": 0,
+      "SFXInit": 255,
+      "CreditsControl": 255,
+      "VoiceEntry": -1,
+      "MusicEntry": "",
+      "JingleEntry": ""
+    },
+    {
+      "FrameStart": 0,
+      "SFXInit": 255,
+      "CreditsControl": 255,
+      "VoiceEntry": -1,
+      "MusicEntry": "",
+      "JingleEntry": ""
+    },
+    {
+      "FrameStart": 0,
+      "SFXInit": 255,
+      "CreditsControl": 255,
+      "VoiceEntry": -1,
+      "MusicEntry": "",
+      "JingleEntry": ""
+    },
+    {
+      "FrameStart": 0,
+      "SFXInit": 255,
+      "CreditsControl": 255,
+      "VoiceEntry": -1,
+      "MusicEntry": "",
+      "JingleEntry": ""
+    },
+    {
+      "FrameStart": 0,
+      "SFXInit": 255,
+      "CreditsControl": 255,
+      "VoiceEntry": -1,
+      "MusicEntry": "",
+      "JingleEntry": ""
+    },
+    {
+      "FrameStart": 0,
+      "SFXInit": 255,
+      "CreditsControl": 255,
+      "VoiceEntry": -1,
+      "MusicEntry": "",
+      "JingleEntry": ""
+    },
+    {
+      "FrameStart": 0,
+      "SFXInit": 255,
+      "CreditsControl": 255,
+      "VoiceEntry": -1,
+      "MusicEntry": "",
+      "JingleEntry": ""
+    },
+    {
+      "FrameStart": 0,
+      "SFXInit": 255,
+      "CreditsControl": 255,
+      "VoiceEntry": -1,
+      "MusicEntry": "",
+      "JingleEntry": ""
+    },
+    {
+      "FrameStart": 0,
+      "SFXInit": 255,
+      "CreditsControl": 255,
+      "VoiceEntry": -1,
+      "MusicEntry": "",
+      "JingleEntry": ""
+    },
+    {
+      "FrameStart": 0,
+      "SFXInit": 255,
+      "CreditsControl": 255,
+      "VoiceEntry": -1,
+      "MusicEntry": "",
+      "JingleEntry": ""
+    },
+    {
+      "FrameStart": 0,
+      "SFXInit": 255,
+      "CreditsControl": 255,
+      "VoiceEntry": -1,
+      "MusicEntry": "",
+      "JingleEntry": ""
+    },
+    {
+      "FrameStart": 0,
+      "SFXInit": 255,
+      "CreditsControl": 255,
+      "VoiceEntry": -1,
+      "MusicEntry": "",
+      "JingleEntry": ""
+    },
+    {
+      "FrameStart": 0,
+      "SFXInit": 255,
+      "CreditsControl": 255,
+      "VoiceEntry": -1,
+      "MusicEntry": "",
+      "JingleEntry": ""
+    },
+    {
+      "FrameStart": 0,
+      "SFXInit": 255,
+      "CreditsControl": 255,
+      "VoiceEntry": -1,
+      "MusicEntry": "",
+      "JingleEntry": ""
+    },
+    {
+      "FrameStart": 0,
+      "SFXInit": 255,
+      "CreditsControl": 255,
+      "VoiceEntry": -1,
+      "MusicEntry": "",
+      "JingleEntry": ""
+    },
+    {
+      "FrameStart": 0,
+      "SFXInit": 255,
+      "CreditsControl": 255,
+      "VoiceEntry": -1,
+      "MusicEntry": "",
+      "JingleEntry": ""
+    },
+    {
+      "FrameStart": 0,
+      "SFXInit": 255,
+      "CreditsControl": 255,
+      "VoiceEntry": -1,
+      "MusicEntry": "",
+      "JingleEntry": ""
+    },
+    {
+      "FrameStart": 0,
+      "SFXInit": 255,
+      "CreditsControl": 255,
+      "VoiceEntry": -1,
+      "MusicEntry": "",
+      "JingleEntry": ""
+    },
+    {
+      "FrameStart": 0,
+      "SFXInit": 255,
+      "CreditsControl": 255,
+      "VoiceEntry": -1,
+      "MusicEntry": "",
+      "JingleEntry": ""
+    },
+    {
+      "FrameStart": 0,
+      "SFXInit": 255,
+      "CreditsControl": 255,
+      "VoiceEntry": -1,
+      "MusicEntry": "",
+      "JingleEntry": ""
+    },
+    {
+      "FrameStart": 0,
+      "SFXInit": 255,
+      "CreditsControl": 255,
+      "VoiceEntry": -1,
+      "MusicEntry": "",
+      "JingleEntry": ""
+    },
+    {
+      "FrameStart": 0,
+      "SFXInit": 255,
+      "CreditsControl": 255,
+      "VoiceEntry": -1,
+      "MusicEntry": "",
+      "JingleEntry": ""
+    },
+    {
+      "FrameStart": 0,
+      "SFXInit": 255,
+      "CreditsControl": 255,
+      "VoiceEntry": -1,
+      "MusicEntry": "",
+      "JingleEntry": ""
+    },
+    {
+      "FrameStart": 0,
+      "SFXInit": 255,
+      "CreditsControl": 255,
+      "VoiceEntry": -1,
+      "MusicEntry": "",
+      "JingleEntry": ""
+    },
+    {
+      "FrameStart": 0,
+      "SFXInit": 255,
+      "CreditsControl": 255,
+      "VoiceEntry": -1,
+      "MusicEntry": "",
+      "JingleEntry": ""
+    },
+    {
+      "FrameStart": 0,
+      "SFXInit": 255,
+      "CreditsControl": 255,
+      "VoiceEntry": -1,
+      "MusicEntry": "",
+      "JingleEntry": ""
+    },
+    {
+      "FrameStart": 0,
+      "SFXInit": 255,
+      "CreditsControl": 255,
+      "VoiceEntry": -1,
+      "MusicEntry": "",
+      "JingleEntry": ""
+    },
+    {
+      "FrameStart": 0,
+      "SFXInit": 255,
+      "CreditsControl": 255,
+      "VoiceEntry": -1,
+      "MusicEntry": "",
+      "JingleEntry": ""
+    },
+    {
+      "FrameStart": 0,
+      "SFXInit": 255,
+      "CreditsControl": 255,
+      "VoiceEntry": -1,
+      "MusicEntry": "",
+      "JingleEntry": ""
+    },
+    {
+      "FrameStart": 0,
+      "SFXInit": 255,
+      "CreditsControl": 255,
+      "VoiceEntry": -1,
+      "MusicEntry": "",
+      "JingleEntry": ""
+    },
+    {
+      "FrameStart": 0,
+      "SFXInit": 255,
+      "CreditsControl": 255,
+      "VoiceEntry": -1,
+      "MusicEntry": "",
+      "JingleEntry": ""
+    },
+    {
+      "FrameStart": 0,
+      "SFXInit": 255,
+      "CreditsControl": 255,
+      "VoiceEntry": -1,
+      "MusicEntry": "",
+      "JingleEntry": ""
+    },
+    {
+      "FrameStart": 0,
+      "SFXInit": 255,
+      "CreditsControl": 255,
+      "VoiceEntry": -1,
+      "MusicEntry": "",
+      "JingleEntry": ""
+    },
+    {
+      "FrameStart": 0,
+      "SFXInit": 255,
+      "CreditsControl": 255,
+      "VoiceEntry": -1,
+      "MusicEntry": "",
+      "JingleEntry": ""
+    },
+    {
+      "FrameStart": 0,
+      "SFXInit": 255,
+      "CreditsControl": 255,
+      "VoiceEntry": -1,
+      "MusicEntry": "",
+      "JingleEntry": ""
+    },
+    {
+      "FrameStart": 0,
+      "SFXInit": 255,
+      "CreditsControl": 255,
+      "VoiceEntry": -1,
+      "MusicEntry": "",
+      "JingleEntry": ""
+    },
+    {
+      "FrameStart": 0,
+      "SFXInit": 255,
+      "CreditsControl": 255,
+      "VoiceEntry": -1,
+      "MusicEntry": "",
+      "JingleEntry": ""
+    },
+    {
+      "FrameStart": 0,
+      "SFXInit": 255,
+      "CreditsControl": 255,
+      "VoiceEntry": -1,
+      "MusicEntry": "",
+      "JingleEntry": ""
+    },
+    {
+      "FrameStart": 0,
+      "SFXInit": 255,
+      "CreditsControl": 255,
+      "VoiceEntry": -1,
+      "MusicEntry": "",
+      "JingleEntry": ""
+    },
+    {
+      "FrameStart": 0,
+      "SFXInit": 255,
+      "CreditsControl": 255,
+      "VoiceEntry": -1,
+      "MusicEntry": "",
+      "JingleEntry": ""
+    },
+    {
+      "FrameStart": 0,
+      "SFXInit": 255,
+      "CreditsControl": 255,
+      "VoiceEntry": -1,
+      "MusicEntry": "",
+      "JingleEntry": ""
+    },
+    {
+      "FrameStart": 0,
+      "SFXInit": 255,
+      "CreditsControl": 255,
+      "VoiceEntry": -1,
+      "MusicEntry": "",
+      "JingleEntry": ""
+    },
+    {
+      "FrameStart": 0,
+      "SFXInit": 255,
+      "CreditsControl": 255,
+      "VoiceEntry": -1,
+      "MusicEntry": "",
+      "JingleEntry": ""
+    },
+    {
+      "FrameStart": 0,
+      "SFXInit": 255,
+      "CreditsControl": 255,
+      "VoiceEntry": -1,
+      "MusicEntry": "",
+      "JingleEntry": ""
+    },
+    {
+      "FrameStart": 0,
+      "SFXInit": 255,
+      "CreditsControl": 255,
+      "VoiceEntry": -1,
+      "MusicEntry": "",
+      "JingleEntry": ""
+    },
+    {
+      "FrameStart": 0,
+      "SFXInit": 255,
+      "CreditsControl": 255,
+      "VoiceEntry": -1,
+      "MusicEntry": "",
+      "JingleEntry": ""
+    },
+    {
+      "FrameStart": 0,
+      "SFXInit": 255,
+      "CreditsControl": 255,
+      "VoiceEntry": -1,
+      "MusicEntry": "",
+      "JingleEntry": ""
+    },
+    {
+      "FrameStart": 0,
+      "SFXInit": 255,
+      "CreditsControl": 255,
+      "VoiceEntry": -1,
+      "MusicEntry": "",
+      "JingleEntry": ""
+    },
+    {
+      "FrameStart": 0,
+      "SFXInit": 255,
+      "CreditsControl": 255,
+      "VoiceEntry": -1,
+      "MusicEntry": "",
+      "JingleEntry": ""
+    },
+    {
+      "FrameStart": 0,
+      "SFXInit": 255,
+      "CreditsControl": 255,
+      "VoiceEntry": -1,
+      "MusicEntry": "",
+      "JingleEntry": ""
+    },
+    {
+      "FrameStart": 0,
+      "SFXInit": 255,
+      "CreditsControl": 255,
+      "VoiceEntry": -1,
+      "MusicEntry": "",
+      "JingleEntry": ""
+    },
+    {
+      "FrameStart": 0,
+      "SFXInit": 255,
+      "CreditsControl": 255,
+      "VoiceEntry": -1,
+      "MusicEntry": "",
+      "JingleEntry": ""
+    },
+    {
+      "FrameStart": 0,
+      "SFXInit": 255,
+      "CreditsControl": 255,
+      "VoiceEntry": -1,
+      "MusicEntry": "",
+      "JingleEntry": ""
+    },
+    {
+      "FrameStart": 0,
+      "SFXInit": 255,
+      "CreditsControl": 255,
+      "VoiceEntry": -1,
+      "MusicEntry": "",
+      "JingleEntry": ""
+    },
+    {
+      "FrameStart": 0,
+      "SFXInit": 255,
+      "CreditsControl": 255,
+      "VoiceEntry": -1,
+      "MusicEntry": "",
+      "JingleEntry": ""
+    },
+    {
+      "FrameStart": 0,
+      "SFXInit": 255,
+      "CreditsControl": 255,
+      "VoiceEntry": -1,
+      "MusicEntry": "",
+      "JingleEntry": ""
+    },
+    {
+      "FrameStart": 0,
+      "SFXInit": 255,
+      "CreditsControl": 255,
+      "VoiceEntry": -1,
+      "MusicEntry": "",
+      "JingleEntry": ""
+    },
+    {
+      "FrameStart": 0,
+      "SFXInit": 255,
+      "CreditsControl": 255,
+      "VoiceEntry": -1,
+      "MusicEntry": "",
+      "JingleEntry": ""
+    },
+    {
+      "FrameStart": 0,
+      "SFXInit": 255,
+      "CreditsControl": 255,
+      "VoiceEntry": -1,
+      "MusicEntry": "",
+      "JingleEntry": ""
+    },
+    {
+      "FrameStart": 0,
+      "SFXInit": 255,
+      "CreditsControl": 255,
+      "VoiceEntry": -1,
+      "MusicEntry": "",
+      "JingleEntry": ""
+    },
+    {
+      "FrameStart": 0,
+      "SFXInit": 255,
+      "CreditsControl": 255,
+      "VoiceEntry": -1,
+      "MusicEntry": "",
+      "JingleEntry": ""
+    },
+    {
+      "FrameStart": 0,
+      "SFXInit": 255,
+      "CreditsControl": 255,
+      "VoiceEntry": -1,
+      "MusicEntry": "",
+      "JingleEntry": ""
+    },
+    {
+      "FrameStart": 0,
+      "SFXInit": 255,
+      "CreditsControl": 255,
+      "VoiceEntry": -1,
+      "MusicEntry": "",
+      "JingleEntry": ""
+    },
+    {
+      "FrameStart": 0,
+      "SFXInit": 255,
+      "CreditsControl": 255,
+      "VoiceEntry": -1,
+      "MusicEntry": "",
+      "JingleEntry": ""
+    },
+    {
+      "FrameStart": 0,
+      "SFXInit": 255,
+      "CreditsControl": 255,
+      "VoiceEntry": -1,
+      "MusicEntry": "",
+      "JingleEntry": ""
+    },
+    {
+      "FrameStart": 0,
+      "SFXInit": 255,
+      "CreditsControl": 255,
+      "VoiceEntry": -1,
+      "MusicEntry": "",
+      "JingleEntry": ""
+    },
+    {
+      "FrameStart": 0,
+      "SFXInit": 255,
+      "CreditsControl": 255,
+      "VoiceEntry": -1,
+      "MusicEntry": "",
+      "JingleEntry": ""
+    },
+    {
+      "FrameStart": 0,
+      "SFXInit": 255,
+      "CreditsControl": 255,
+      "VoiceEntry": -1,
+      "MusicEntry": "",
+      "JingleEntry": ""
+    },
+    {
+      "FrameStart": 0,
+      "SFXInit": 255,
+      "CreditsControl": 255,
+      "VoiceEntry": -1,
+      "MusicEntry": "",
+      "JingleEntry": ""
+    },
+    {
+      "FrameStart": 0,
+      "SFXInit": 255,
+      "CreditsControl": 255,
+      "VoiceEntry": -1,
+      "MusicEntry": "",
+      "JingleEntry": ""
+    },
+    {
+      "FrameStart": 0,
+      "SFXInit": 255,
+      "CreditsControl": 255,
+      "VoiceEntry": -1,
+      "MusicEntry": "",
+      "JingleEntry": ""
+    },
+    {
+      "FrameStart": 0,
+      "SFXInit": 255,
+      "CreditsControl": 255,
+      "VoiceEntry": -1,
+      "MusicEntry": "",
+      "JingleEntry": ""
+    },
+    {
+      "FrameStart": 0,
+      "SFXInit": 255,
+      "CreditsControl": 255,
+      "VoiceEntry": -1,
+      "MusicEntry": "",
+      "JingleEntry": ""
+    },
+    {
+      "FrameStart": 0,
+      "SFXInit": 255,
+      "CreditsControl": 255,
+      "VoiceEntry": -1,
+      "MusicEntry": "",
+      "JingleEntry": ""
+    },
+    {
+      "FrameStart": 0,
+      "SFXInit": 255,
+      "CreditsControl": 255,
+      "VoiceEntry": -1,
+      "MusicEntry": "",
+      "JingleEntry": ""
+    },
+    {
+      "FrameStart": 0,
+      "SFXInit": 255,
+      "CreditsControl": 255,
+      "VoiceEntry": -1,
+      "MusicEntry": "",
+      "JingleEntry": ""
+    },
+    {
+      "FrameStart": 0,
+      "SFXInit": 255,
+      "CreditsControl": 255,
+      "VoiceEntry": -1,
+      "MusicEntry": "",
+      "JingleEntry": ""
+    },
+    {
+      "FrameStart": 0,
+      "SFXInit": 255,
+      "CreditsControl": 255,
+      "VoiceEntry": -1,
+      "MusicEntry": "",
+      "JingleEntry": ""
+    },
+    {
+      "FrameStart": 0,
+      "SFXInit": 255,
+      "CreditsControl": 255,
+      "VoiceEntry": -1,
+      "MusicEntry": "",
+      "JingleEntry": ""
+    },
+    {
+      "FrameStart": 0,
+      "SFXInit": 255,
+      "CreditsControl": 255,
+      "VoiceEntry": -1,
+      "MusicEntry": "",
+      "JingleEntry": ""
+    },
+    {
+      "FrameStart": 0,
+      "SFXInit": 255,
+      "CreditsControl": 255,
+      "VoiceEntry": -1,
+      "MusicEntry": "",
+      "JingleEntry": ""
+    },
+    {
+      "FrameStart": 0,
+      "SFXInit": 255,
+      "CreditsControl": 255,
+      "VoiceEntry": -1,
+      "MusicEntry": "",
+      "JingleEntry": ""
+    },
+    {
+      "FrameStart": 0,
+      "SFXInit": 255,
+      "CreditsControl": 255,
+      "VoiceEntry": -1,
+      "MusicEntry": "",
+      "JingleEntry": ""
+    },
+    {
+      "FrameStart": 0,
+      "SFXInit": 255,
+      "CreditsControl": 255,
+      "VoiceEntry": -1,
+      "MusicEntry": "",
+      "JingleEntry": ""
+    },
+    {
+      "FrameStart": 0,
+      "SFXInit": 255,
+      "CreditsControl": 255,
+      "VoiceEntry": -1,
+      "MusicEntry": "",
+      "JingleEntry": ""
+    },
+    {
+      "FrameStart": 0,
+      "SFXInit": 255,
+      "CreditsControl": 255,
+      "VoiceEntry": -1,
+      "MusicEntry": "",
+      "JingleEntry": ""
+    },
+    {
+      "FrameStart": 0,
+      "SFXInit": 255,
+      "CreditsControl": 255,
+      "VoiceEntry": -1,
+      "MusicEntry": "",
+      "JingleEntry": ""
+    },
+    {
+      "FrameStart": 0,
+      "SFXInit": 255,
+      "CreditsControl": 255,
+      "VoiceEntry": -1,
+      "MusicEntry": "",
+      "JingleEntry": ""
+    },
+    {
+      "FrameStart": 0,
+      "SFXInit": 255,
+      "CreditsControl": 255,
+      "VoiceEntry": -1,
+      "MusicEntry": "",
+      "JingleEntry": ""
+    },
+    {
+      "FrameStart": 0,
+      "SFXInit": 255,
+      "CreditsControl": 255,
+      "VoiceEntry": -1,
+      "MusicEntry": "",
+      "JingleEntry": ""
+    },
+    {
+      "FrameStart": 0,
+      "SFXInit": 255,
+      "CreditsControl": 255,
+      "VoiceEntry": -1,
+      "MusicEntry": "",
+      "JingleEntry": ""
+    },
+    {
+      "FrameStart": 0,
+      "SFXInit": 255,
+      "CreditsControl": 255,
+      "VoiceEntry": -1,
+      "MusicEntry": "",
+      "JingleEntry": ""
+    },
+    {
+      "FrameStart": 0,
+      "SFXInit": 255,
+      "CreditsControl": 255,
+      "VoiceEntry": -1,
+      "MusicEntry": "",
+      "JingleEntry": ""
+    },
+    {
+      "FrameStart": 0,
+      "SFXInit": 255,
+      "CreditsControl": 255,
+      "VoiceEntry": -1,
+      "MusicEntry": "",
+      "JingleEntry": ""
+    },
+    {
+      "FrameStart": 0,
+      "SFXInit": 255,
+      "CreditsControl": 255,
+      "VoiceEntry": -1,
+      "MusicEntry": "",
+      "JingleEntry": ""
+    },
+    {
+      "FrameStart": 0,
+      "SFXInit": 255,
+      "CreditsControl": 255,
+      "VoiceEntry": -1,
+      "MusicEntry": "",
+      "JingleEntry": ""
+    },
+    {
+      "FrameStart": 0,
+      "SFXInit": 255,
+      "CreditsControl": 255,
+      "VoiceEntry": -1,
+      "MusicEntry": "",
+      "JingleEntry": ""
+    },
+    {
+      "FrameStart": 0,
+      "SFXInit": 255,
+      "CreditsControl": 255,
+      "VoiceEntry": -1,
+      "MusicEntry": "",
+      "JingleEntry": ""
+    },
+    {
+      "FrameStart": 0,
+      "SFXInit": 255,
+      "CreditsControl": 255,
+      "VoiceEntry": -1,
+      "MusicEntry": "",
+      "JingleEntry": ""
+    },
+    {
+      "FrameStart": 0,
+      "SFXInit": 255,
+      "CreditsControl": 255,
+      "VoiceEntry": -1,
+      "MusicEntry": "",
+      "JingleEntry": ""
+    },
+    {
+      "FrameStart": 0,
+      "SFXInit": 255,
+      "CreditsControl": 255,
+      "VoiceEntry": -1,
+      "MusicEntry": "",
+      "JingleEntry": ""
+    },
+    {
+      "FrameStart": 0,
+      "SFXInit": 255,
+      "CreditsControl": 255,
+      "VoiceEntry": -1,
+      "MusicEntry": "",
+      "JingleEntry": ""
+    },
+    {
+      "FrameStart": 0,
+      "SFXInit": 255,
+      "CreditsControl": 255,
+      "VoiceEntry": -1,
+      "MusicEntry": "",
+      "JingleEntry": ""
+    },
+    {
+      "FrameStart": 0,
+      "SFXInit": 255,
+      "CreditsControl": 255,
+      "VoiceEntry": -1,
+      "MusicEntry": "",
+      "JingleEntry": ""
+    },
+    {
+      "FrameStart": 0,
+      "SFXInit": 255,
+      "CreditsControl": 255,
+      "VoiceEntry": -1,
+      "MusicEntry": "",
+      "JingleEntry": ""
+    },
+    {
+      "FrameStart": 0,
+      "SFXInit": 255,
+      "CreditsControl": 255,
+      "VoiceEntry": -1,
+      "MusicEntry": "",
+      "JingleEntry": ""
+    },
+    {
+      "FrameStart": 0,
+      "SFXInit": 255,
+      "CreditsControl": 255,
+      "VoiceEntry": -1,
+      "MusicEntry": "",
+      "JingleEntry": ""
+    },
+    {
+      "FrameStart": 0,
+      "SFXInit": 255,
+      "CreditsControl": 255,
+      "VoiceEntry": -1,
+      "MusicEntry": "",
+      "JingleEntry": ""
+    },
+    {
+      "FrameStart": 0,
+      "SFXInit": 255,
+      "CreditsControl": 255,
+      "VoiceEntry": -1,
+      "MusicEntry": "",
+      "JingleEntry": ""
+    },
+    {
+      "FrameStart": 0,
+      "SFXInit": 255,
+      "CreditsControl": 255,
+      "VoiceEntry": -1,
+      "MusicEntry": "",
+      "JingleEntry": ""
+    },
+    {
+      "FrameStart": 0,
+      "SFXInit": 255,
+      "CreditsControl": 255,
+      "VoiceEntry": -1,
+      "MusicEntry": "",
+      "JingleEntry": ""
+    },
+    {
+      "FrameStart": 0,
+      "SFXInit": 255,
+      "CreditsControl": 255,
+      "VoiceEntry": -1,
+      "MusicEntry": "",
+      "JingleEntry": ""
+    },
+    {
+      "FrameStart": 0,
+      "SFXInit": 255,
+      "CreditsControl": 255,
+      "VoiceEntry": -1,
+      "MusicEntry": "",
+      "JingleEntry": ""
+    },
+    {
+      "FrameStart": 0,
+      "SFXInit": 255,
+      "CreditsControl": 255,
+      "VoiceEntry": -1,
+      "MusicEntry": "",
+      "JingleEntry": ""
+    },
+    {
+      "FrameStart": 0,
+      "SFXInit": 255,
+      "CreditsControl": 255,
+      "VoiceEntry": -1,
+      "MusicEntry": "",
+      "JingleEntry": ""
+    },
+    {
+      "FrameStart": 0,
+      "SFXInit": 255,
+      "CreditsControl": 255,
+      "VoiceEntry": -1,
+      "MusicEntry": "",
+      "JingleEntry": ""
+    },
+    {
+      "FrameStart": 0,
+      "SFXInit": 255,
+      "CreditsControl": 255,
+      "VoiceEntry": -1,
+      "MusicEntry": "",
+      "JingleEntry": ""
+    },
+    {
+      "FrameStart": 0,
+      "SFXInit": 255,
+      "CreditsControl": 255,
+      "VoiceEntry": -1,
+      "MusicEntry": "",
+      "JingleEntry": ""
+    },
+    {
+      "FrameStart": 0,
+      "SFXInit": 255,
+      "CreditsControl": 255,
+      "VoiceEntry": -1,
+      "MusicEntry": "",
+      "JingleEntry": ""
+    },
+    {
+      "FrameStart": 0,
+      "SFXInit": 255,
+      "CreditsControl": 255,
+      "VoiceEntry": -1,
+      "MusicEntry": "",
+      "JingleEntry": ""
+    },
+    {
+      "FrameStart": 0,
+      "SFXInit": 255,
+      "CreditsControl": 255,
+      "VoiceEntry": -1,
+      "MusicEntry": "",
+      "JingleEntry": ""
+    },
+    {
+      "FrameStart": 0,
+      "SFXInit": 255,
+      "CreditsControl": 255,
+      "VoiceEntry": -1,
+      "MusicEntry": "",
+      "JingleEntry": ""
+    },
+    {
+      "FrameStart": 0,
+      "SFXInit": 255,
+      "CreditsControl": 255,
+      "VoiceEntry": -1,
+      "MusicEntry": "",
+      "JingleEntry": ""
+    },
+    {
+      "FrameStart": 0,
+      "SFXInit": 255,
+      "CreditsControl": 255,
+      "VoiceEntry": -1,
+      "MusicEntry": "",
+      "JingleEntry": ""
+    },
+    {
+      "FrameStart": 0,
+      "SFXInit": 255,
+      "CreditsControl": 255,
+      "VoiceEntry": -1,
+      "MusicEntry": "",
+      "JingleEntry": ""
+    },
+    {
+      "FrameStart": 0,
+      "SFXInit": 255,
+      "CreditsControl": 255,
+      "VoiceEntry": -1,
+      "MusicEntry": "",
+      "JingleEntry": ""
+    },
+    {
+      "FrameStart": 0,
+      "SFXInit": 255,
+      "CreditsControl": 255,
+      "VoiceEntry": -1,
+      "MusicEntry": "",
+      "JingleEntry": ""
+    },
+    {
+      "FrameStart": 0,
+      "SFXInit": 255,
+      "CreditsControl": 255,
+      "VoiceEntry": -1,
+      "MusicEntry": "",
+      "JingleEntry": ""
+    },
+    {
+      "FrameStart": 0,
+      "SFXInit": 255,
+      "CreditsControl": 255,
+      "VoiceEntry": -1,
+      "MusicEntry": "",
+      "JingleEntry": ""
+    },
+    {
+      "FrameStart": 0,
+      "SFXInit": 255,
+      "CreditsControl": 255,
+      "VoiceEntry": -1,
+      "MusicEntry": "",
+      "JingleEntry": ""
+    },
+    {
+      "FrameStart": 0,
+      "SFXInit": 255,
+      "CreditsControl": 255,
+      "VoiceEntry": -1,
+      "MusicEntry": "",
+      "JingleEntry": ""
+    },
+    {
+      "FrameStart": 0,
+      "SFXInit": 255,
+      "CreditsControl": 255,
+      "VoiceEntry": -1,
+      "MusicEntry": "",
+      "JingleEntry": ""
+    },
+    {
+      "FrameStart": 0,
+      "SFXInit": 255,
+      "CreditsControl": 255,
+      "VoiceEntry": -1,
+      "MusicEntry": "",
+      "JingleEntry": ""
+    },
+    {
+      "FrameStart": 0,
+      "SFXInit": 255,
+      "CreditsControl": 255,
+      "VoiceEntry": -1,
+      "MusicEntry": "",
+      "JingleEntry": ""
+    },
+    {
+      "FrameStart": 0,
+      "SFXInit": 255,
+      "CreditsControl": 255,
+      "VoiceEntry": -1,
+      "MusicEntry": "",
+      "JingleEntry": ""
+    },
+    {
+      "FrameStart": 0,
+      "SFXInit": 255,
+      "CreditsControl": 255,
+      "VoiceEntry": -1,
+      "MusicEntry": "",
+      "JingleEntry": ""
+    },
+    {
+      "FrameStart": 0,
+      "SFXInit": 255,
+      "CreditsControl": 255,
+      "VoiceEntry": -1,
+      "MusicEntry": "",
+      "JingleEntry": ""
+    },
+    {
+      "FrameStart": 0,
+      "SFXInit": 255,
+      "CreditsControl": 255,
+      "VoiceEntry": -1,
+      "MusicEntry": "",
+      "JingleEntry": ""
+    },
+    {
+      "FrameStart": 0,
+      "SFXInit": 255,
+      "CreditsControl": 255,
+      "VoiceEntry": -1,
+      "MusicEntry": "",
+      "JingleEntry": ""
+    },
+    {
+      "FrameStart": 0,
+      "SFXInit": 255,
+      "CreditsControl": 255,
+      "VoiceEntry": -1,
+      "MusicEntry": "",
+      "JingleEntry": ""
+    },
+    {
+      "FrameStart": 0,
+      "SFXInit": 255,
+      "CreditsControl": 255,
+      "VoiceEntry": -1,
+      "MusicEntry": "",
+      "JingleEntry": ""
+    },
+    {
+      "FrameStart": 0,
+      "SFXInit": 255,
+      "CreditsControl": 255,
+      "VoiceEntry": -1,
+      "MusicEntry": "",
+      "JingleEntry": ""
+    },
+    {
+      "FrameStart": 0,
+      "SFXInit": 255,
+      "CreditsControl": 255,
+      "VoiceEntry": -1,
+      "MusicEntry": "",
+      "JingleEntry": ""
+    },
+    {
+      "FrameStart": 0,
+      "SFXInit": 255,
+      "CreditsControl": 255,
+      "VoiceEntry": -1,
+      "MusicEntry": "",
+      "JingleEntry": ""
+    },
+    {
+      "FrameStart": 0,
+      "SFXInit": 255,
+      "CreditsControl": 255,
+      "VoiceEntry": -1,
+      "MusicEntry": "",
+      "JingleEntry": ""
+    },
+    {
+      "FrameStart": 0,
+      "SFXInit": 255,
+      "CreditsControl": 255,
+      "VoiceEntry": -1,
+      "MusicEntry": "",
+      "JingleEntry": ""
+    },
+    {
+      "FrameStart": 0,
+      "SFXInit": 255,
+      "CreditsControl": 255,
+      "VoiceEntry": -1,
+      "MusicEntry": "",
+      "JingleEntry": ""
+    },
+    {
+      "FrameStart": 0,
+      "SFXInit": 255,
+      "CreditsControl": 255,
+      "VoiceEntry": -1,
+      "MusicEntry": "",
+      "JingleEntry": ""
+    },
+    {
+      "FrameStart": 0,
+      "SFXInit": 255,
+      "CreditsControl": 255,
+      "VoiceEntry": -1,
+      "MusicEntry": "",
+      "JingleEntry": ""
+    },
+    {
+      "FrameStart": 0,
+      "SFXInit": 255,
+      "CreditsControl": 255,
+      "VoiceEntry": -1,
+      "MusicEntry": "",
+      "JingleEntry": ""
+    },
+    {
+      "FrameStart": 0,
+      "SFXInit": 255,
+      "CreditsControl": 255,
+      "VoiceEntry": -1,
+      "MusicEntry": "",
+      "JingleEntry": ""
+    },
+    {
+      "FrameStart": 0,
+      "SFXInit": 255,
+      "CreditsControl": 255,
+      "VoiceEntry": -1,
+      "MusicEntry": "",
+      "JingleEntry": ""
+    },
+    {
+      "FrameStart": 0,
+      "SFXInit": 255,
+      "CreditsControl": 255,
+      "VoiceEntry": -1,
+      "MusicEntry": "",
+      "JingleEntry": ""
+    },
+    {
+      "FrameStart": 0,
+      "SFXInit": 255,
+      "CreditsControl": 255,
+      "VoiceEntry": -1,
+      "MusicEntry": "",
+      "JingleEntry": ""
+    },
+    {
+      "FrameStart": 0,
+      "SFXInit": 255,
+      "CreditsControl": 255,
+      "VoiceEntry": -1,
+      "MusicEntry": "",
+      "JingleEntry": ""
+    },
+    {
+      "FrameStart": 0,
+      "SFXInit": 255,
+      "CreditsControl": 255,
+      "VoiceEntry": -1,
+      "MusicEntry": "",
+      "JingleEntry": ""
+    },
+    {
+      "FrameStart": 0,
+      "SFXInit": 255,
+      "CreditsControl": 255,
+      "VoiceEntry": -1,
+      "MusicEntry": "",
+      "JingleEntry": ""
+    },
+    {
+      "FrameStart": 0,
+      "SFXInit": 255,
+      "CreditsControl": 255,
+      "VoiceEntry": -1,
+      "MusicEntry": "",
+      "JingleEntry": ""
+    },
+    {
+      "FrameStart": 0,
+      "SFXInit": 255,
+      "CreditsControl": 255,
+      "VoiceEntry": -1,
+      "MusicEntry": "",
+      "JingleEntry": ""
+    },
+    {
+      "FrameStart": 0,
+      "SFXInit": 255,
+      "CreditsControl": 255,
+      "VoiceEntry": -1,
+      "MusicEntry": "",
+      "JingleEntry": ""
+    },
+    {
+      "FrameStart": 0,
+      "SFXInit": 255,
+      "CreditsControl": 255,
+      "VoiceEntry": -1,
+      "MusicEntry": "",
+      "JingleEntry": ""
+    },
+    {
+      "FrameStart": 0,
+      "SFXInit": 255,
+      "CreditsControl": 255,
+      "VoiceEntry": -1,
+      "MusicEntry": "",
+      "JingleEntry": ""
+    },
+    {
+      "FrameStart": 0,
+      "SFXInit": 255,
+      "CreditsControl": 255,
+      "VoiceEntry": -1,
+      "MusicEntry": "",
+      "JingleEntry": ""
+    },
+    {
+      "FrameStart": 0,
+      "SFXInit": 255,
+      "CreditsControl": 255,
+      "VoiceEntry": -1,
+      "MusicEntry": "",
+      "JingleEntry": ""
+    },
+    {
+      "FrameStart": 0,
+      "SFXInit": 255,
+      "CreditsControl": 255,
+      "VoiceEntry": -1,
+      "MusicEntry": "",
+      "JingleEntry": ""
+    },
+    {
+      "FrameStart": 0,
+      "SFXInit": 255,
+      "CreditsControl": 255,
+      "VoiceEntry": -1,
+      "MusicEntry": "",
+      "JingleEntry": ""
+    },
+    {
+      "FrameStart": 0,
+      "SFXInit": 255,
+      "CreditsControl": 255,
+      "VoiceEntry": -1,
+      "MusicEntry": "",
+      "JingleEntry": ""
+    },
+    {
+      "FrameStart": 0,
+      "SFXInit": 255,
+      "CreditsControl": 255,
+      "VoiceEntry": -1,
+      "MusicEntry": "",
+      "JingleEntry": ""
+    },
+    {
+      "FrameStart": 0,
+      "SFXInit": 255,
+      "CreditsControl": 255,
+      "VoiceEntry": -1,
+      "MusicEntry": "",
+      "JingleEntry": ""
+    },
+    {
+      "FrameStart": 0,
+      "SFXInit": 255,
+      "CreditsControl": 255,
+      "VoiceEntry": -1,
+      "MusicEntry": "",
+      "JingleEntry": ""
+    },
+    {
+      "FrameStart": 0,
+      "SFXInit": 255,
+      "CreditsControl": 255,
+      "VoiceEntry": -1,
+      "MusicEntry": "",
+      "JingleEntry": ""
+    },
+    {
+      "FrameStart": 0,
+      "SFXInit": 255,
+      "CreditsControl": 255,
+      "VoiceEntry": -1,
+      "MusicEntry": "",
+      "JingleEntry": ""
+    },
+    {
+      "FrameStart": 0,
+      "SFXInit": 255,
+      "CreditsControl": 255,
+      "VoiceEntry": -1,
+      "MusicEntry": "",
+      "JingleEntry": ""
+    },
+    {
+      "FrameStart": 0,
+      "SFXInit": 255,
+      "CreditsControl": 255,
+      "VoiceEntry": -1,
+      "MusicEntry": "",
+      "JingleEntry": ""
+    },
+    {
+      "FrameStart": 0,
+      "SFXInit": 255,
+      "CreditsControl": 255,
+      "VoiceEntry": -1,
+      "MusicEntry": "",
+      "JingleEntry": ""
+    },
+    {
+      "FrameStart": 0,
+      "SFXInit": 255,
+      "CreditsControl": 255,
+      "VoiceEntry": -1,
+      "MusicEntry": "",
+      "JingleEntry": ""
+    },
+    {
+      "FrameStart": 0,
+      "SFXInit": 255,
+      "CreditsControl": 255,
+      "VoiceEntry": -1,
+      "MusicEntry": "",
+      "JingleEntry": ""
+    },
+    {
+      "FrameStart": 0,
+      "SFXInit": 255,
+      "CreditsControl": 255,
+      "VoiceEntry": -1,
+      "MusicEntry": "",
+      "JingleEntry": ""
+    }
+  ],
+  "ScreenEffects": [],
+  "ParticleEffects": [],
+  "Lighting": [],
+  "BlurInfo": [],
+  "ParticleGenerators": [],
+  "VideoInfo": []
+}
