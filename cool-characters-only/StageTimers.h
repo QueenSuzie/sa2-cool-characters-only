@@ -1,7 +1,7 @@
 /**************************************************************************************
- *   main.cpp  --  This file is part of Cool Characters Only.                         *
+ *   StageTimers.h  --  This file is part of Cool Characters Only.                    *
  *                                                                                    *
- *   Copyright (C) 2023 - 2024 Queen Suzie                                            *
+ *   Copyright (C) 2024 Queen Suzie                                                   *
  *                                                                                    *
  *   Cool Characters Only is free software: you can redistribute it and/or modify     *
  *   it under the terms of the GNU General Public License as published                *
@@ -18,23 +18,34 @@
  *                                                                                    *
  *************************************************************************************/
 
-#include "pch.h"
-#include <vector>
+#pragma once
 
-extern "C" {
-	__declspec(dllexport) void __cdecl Init(const char* path, const HelperFunctions& helperFunctions) {
-		ReplaceCharacters::init();
-		ReplaceStages::init();
-		StageTimers::init();
-		StartingPositions pos;
-		pos.init();
-	}
+struct Mission4Time {
+	uint8_t LevelID;
+	uint8_t Minutes;
+	uint8_t Seconds;
+};
 
-	__declspec(dllexport) void __cdecl OnExit() {
-		if (ReplaceStages::FallenHeroSequence) {
-			delete ReplaceStages::FallenHeroSequence;
-		}
-	}
+DataArray(Mission4Time, Mission4Times, 0x173B318, 31);
 
-	__declspec(dllexport) ModInfo SA2ModInfo = { ModLoaderVer }; // This is needed for the Mod Loader to recognize the DLL.
-}
+class StageTimers {
+	public:
+		static void init();
+		static void setGreentForestTimer();
+		static void setWhiteJungleTimer();
+		static inline uint8_t GreenForestMinutes = 2;
+		static inline uint8_t GreenForestSeconds = 10;
+		static inline uint8_t GreenForestHardMinutes = 2;
+		static inline uint8_t GreenForestHardSeconds = 20;
+		static inline uint8_t WhiteJungleMinutes = 2;
+		static inline uint8_t WhiteJungleSeconds = 30;
+		static inline uint8_t WhiteJungleHardMinutes = 3;
+		static inline uint8_t WhiteJungleHardSeconds = 0;
+		static inline void* JumpToSetTimer = (void*)0x4520AC;
+		static inline void* JumpToAbortTimer = (void*)0x4520C0;
+
+	private:
+		static void initGreenForestTimer();
+		static void initMission4Timers();
+};
+

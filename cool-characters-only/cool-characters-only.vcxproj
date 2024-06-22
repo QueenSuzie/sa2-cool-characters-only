@@ -152,9 +152,10 @@
   <ItemGroup>
     <ClInclude Include="framework.h" />
     <ClInclude Include="pch.h" />
-	<ClInclude Include="SequenceData.h" />
+    <ClInclude Include="SequenceData.h" />
     <ClInclude Include="ReplaceCharacters.h" />
     <ClInclude Include="ReplaceStages.h" />
+    <ClInclude Include="StageTimers.h" />
     <ClInclude Include="StartingPositions.h" />
   </ItemGroup>
   <ItemGroup>
@@ -168,6 +169,7 @@
     </ClCompile>
     <ClCompile Include="ReplaceCharacters.cpp" />
     <ClCompile Include="ReplaceStages.cpp" />
+    <ClCompile Include="StageTimers.cpp" />
     <ClCompile Include="StartingPositions.cpp" />
   </ItemGroup>
   <ItemGroup>

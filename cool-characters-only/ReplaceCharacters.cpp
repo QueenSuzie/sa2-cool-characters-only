@@ -65,7 +65,7 @@ void ReplaceCharacters::init() {
 	// BB Box Break Fix
 	uint8_t opcode = 0x3Cu;
 	uint8_t value = 0x48u;
-	WriteData((void*)0x46ECF8, { opcode, value});
+	WriteData((void*)0x46ECF8, { opcode, value });
 
 	ReplaceCharacters::initCharacterVoices();
 	ReplaceCharacters::remapUpgradeData();

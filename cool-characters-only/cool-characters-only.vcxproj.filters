@@ -30,6 +30,12 @@
     <ClInclude Include="ReplaceStages.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="SequenceData.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="StageTimers.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="dllmain.cpp">
@@ -48,6 +54,9 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="ReplaceStages.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="StageTimers.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
