@@ -45,7 +45,7 @@ enum {
     SEQ_TYPE_EVENT,
     SEQ_TYPE_STAGE,
     SEQ_TYPE_TITLE,
-    SEQ_TYPE_ENDING,
+    SEQ_TYPE_ENDING
 };
 
 enum Event {

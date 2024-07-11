@@ -92,6 +92,7 @@ void ReplaceStages::init() {
 }
 
 void ReplaceStages::initEventData() {
+	// InternalID = (EventID * 1000) + VoiceID
 	EventVoiceData[441].InternalID = 133010;
 	EventVoiceData[442].InternalID = 133020;
 	EventVoiceData[443].InternalID = 134030;

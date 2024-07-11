@@ -14,6 +14,7 @@
 #include "SequenceData.h"
 #include "ReplaceCharacters.h"
 #include "ReplaceStages.h"
+#include "StageTimers.h"
 #include "StartingPositions.h"
 
 #endif //PCH_H

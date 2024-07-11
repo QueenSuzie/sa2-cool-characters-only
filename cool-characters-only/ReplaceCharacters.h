@@ -25,9 +25,9 @@ DataArray(LevelCutscene, LevelCutscenes, 0x173A808, 16);
 
 class ReplaceCharacters {
 	public:
-		static void init();
+		static void init(bool ssu_detected);
 		static void setStageUpgrades();
-		static char remapUpgradeMsg(int);
+		static char remapUpgradeMsg(int msgID);
 		static inline bool CAN_MANIPULATE_ACTION_DATA = false;
 
 	private:
@@ -38,9 +38,9 @@ class ReplaceCharacters {
 		static void remapMiniCutscenes();
 };
 
-void LoadSonic_h(int);
-void LoadKnuckles_h(int);
+void LoadSonic_h(int player);
+void LoadKnuckles_h(int player);
 void SetStageUpgrades();
-int UpgradeHook(int);
-void InputColi_h(ObjectMaster*);
-BYTE* UpgradeDataGet_h(ObjectMaster*);
+int UpgradeHook(int upgrade);
+void InputColi_h(ObjectMaster* obj);
+BYTE* UpgradeDataGet_h(ObjectMaster* a1);
