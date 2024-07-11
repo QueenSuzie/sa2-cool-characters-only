@@ -40,12 +40,12 @@ void StageTimers::initMission4Timers() {
 	for (unsigned short i = 0; i < Mission4Times.size(); i++) {
 		switch (Mission4Times[i].LevelID) {
 			case LevelIDs_GreenForest:
-				Mission4Times[i].Minutes = 1;
-				Mission4Times[i].Seconds = 50;
+				Mission4Times[i].Minutes = StageTimers::GreenForestM4Minutes;
+				Mission4Times[i].Seconds = StageTimers::GreenForestM4Seconds;
 				break;
 			case LevelIDs_WhiteJungle:
-				Mission4Times[i].Minutes = 2;
-				Mission4Times[i].Seconds = 15;
+				Mission4Times[i].Minutes = StageTimers::WhiteJungleM4Minutes;
+				Mission4Times[i].Seconds = StageTimers::WhiteJungleM4Seconds;
 				break;
 		}
 	}

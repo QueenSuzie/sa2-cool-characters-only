@@ -23,7 +23,7 @@
 
 extern "C" {
 	__declspec(dllexport) void __cdecl Init(const char* path, const HelperFunctions& helperFunctions) {
-		ReplaceCharacters::init();
+		ReplaceCharacters::init(helperFunctions.Mods->find("sa2.queensuzie.coolcharactersonly") != NULL);
 		ReplaceStages::init();
 		StageTimers::init();
 		StartingPositions pos;

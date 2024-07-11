@@ -47,6 +47,6 @@ class ReplaceStages {
 		static void replaceStoryStrings();
 };
 
-void __fastcall LoadSequence(int, SeqSection*);
+void __fastcall LoadSequence(int a1, SeqSection* story);
 void* SummaryBgLoad();
 void ProcessWinTime();
