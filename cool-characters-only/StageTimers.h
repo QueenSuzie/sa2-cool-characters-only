@@ -40,11 +40,11 @@ class StageTimers {
 		static inline uint8_t GreenForestHardMinutes = 1;
 		static inline uint8_t GreenForestHardSeconds = 35;
 		static inline uint8_t WhiteJungleMinutes = 1;
-		static inline uint8_t WhiteJungleSeconds = 40;
+		static inline uint8_t WhiteJungleSeconds = 50;
 		static inline uint8_t WhiteJungleM4Minutes = 1;
 		static inline uint8_t WhiteJungleM4Seconds = 32;
 		static inline uint8_t WhiteJungleHardMinutes = 1;
-		static inline uint8_t WhiteJungleHardSeconds = 40;
+		static inline uint8_t WhiteJungleHardSeconds = 45;
 		static inline void* JumpToSetTimer = (void*)0x4520AC;
 		static inline void* JumpToAbortTimer = (void*)0x4520C0;
 
