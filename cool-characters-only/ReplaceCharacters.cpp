@@ -38,7 +38,7 @@ FunctionHook<void, ObjectMaster*> hInputColi((intptr_t)InputColi);
 
 FunctionHook<BYTE*, ObjectMaster*> hUpgradeDataGet((intptr_t)UpgradeDataGet);
 
-void ReplaceCharacters::init(bool ssu_detected) {
+void ReplaceCharacters::init() {
 	// Sonic
 	hLoadSonic.Hook(LoadSonic_h);
 	hLoadShadow.Hook(LoadSonic_h);
@@ -50,7 +50,7 @@ void ReplaceCharacters::init(bool ssu_detected) {
 	hLoadCannonsCoreKCharAnims.Hook(LoadDryLagoon2PCharAnims);
 
 	// Fixes
-	if (!ssu_detected) {
+	if (!ReplaceCharacters::SSU_DETECTED) {
 		hStageLoad.Hook(SetStageUpgrades);
 	}
 
@@ -261,7 +261,7 @@ int UpgradeHook(int upgrade) {
 	int ret = hUpgradeGet.Original(upgrade);
 	ReplaceCharacters::CAN_MANIPULATE_ACTION_DATA = false;
 
-	if (upgrades != MainCharObj2[0]->Upgrades) {
+	if (!ReplaceCharacters::SSU_DETECTED && upgrades != MainCharObj2[0]->Upgrades) {
 		ReplaceCharacters::setStageUpgrades();
 	}
 

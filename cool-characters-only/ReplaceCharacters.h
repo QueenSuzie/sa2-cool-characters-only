@@ -25,10 +25,11 @@ DataArray(LevelCutscene, LevelCutscenes, 0x173A808, 16);
 
 class ReplaceCharacters {
 	public:
-		static void init(bool ssu_detected);
+		static void init();
 		static void setStageUpgrades();
 		static char remapUpgradeMsg(int msgID);
 		static inline bool CAN_MANIPULATE_ACTION_DATA = false;
+		static inline bool SSU_DETECTED = false;
 
 	private:
 		static void initCharacterVoices();
