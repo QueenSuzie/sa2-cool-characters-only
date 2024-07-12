@@ -34,11 +34,11 @@ class StageTimers {
 		static void setGreentForestTimer();
 		static void setWhiteJungleTimer();
 		static inline uint8_t GreenForestMinutes = 1;
-		static inline uint8_t GreenForestSeconds = 40;
+		static inline uint8_t GreenForestSeconds = 45;
 		static inline uint8_t GreenForestM4Minutes = 1;
 		static inline uint8_t GreenForestM4Seconds = 25;
 		static inline uint8_t GreenForestHardMinutes = 1;
-		static inline uint8_t GreenForestHardSeconds = 35;
+		static inline uint8_t GreenForestHardSeconds = 40;
 		static inline uint8_t WhiteJungleMinutes = 1;
 		static inline uint8_t WhiteJungleSeconds = 50;
 		static inline uint8_t WhiteJungleM4Minutes = 1;
