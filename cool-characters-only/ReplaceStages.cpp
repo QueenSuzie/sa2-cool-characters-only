@@ -27,8 +27,8 @@ FunctionHook<void> hProcessWinTime((intptr_t)0x452A00);
 
 SeqAndSummarySection ReplaceStages::FallenHeroStory[] = {
 	SeqEvent(Event::FREE_SHADOW, 0, 0),
-	SeqStage(Characters_Sonic, LevelIDs_HotShot, Characters_Shadow, Summary::HOT_SHOT),
 	SeqStage(Characters_Sonic, LevelIDs_CityEscape, Characters_Shadow, Summary::HOT_SHOT),
+	SeqStage(Characters_Sonic, LevelIDs_BigFoot, Characters_Shadow, Summary::HOT_SHOT),
 	SeqEvent(Event::BIG_FOOT_SHADOW_SONIC_DARK, Event::MASTER_EMERALD_BREAK_DARK, Characters_Shadow, Summary::HOT_SHOT),
 	SeqStage(Characters_Rouge, LevelIDs_WildCanyon, Characters_Rouge, Summary::DRY_LAGOON),
 	SeqEvent(Event::TAILS_FINDS_AMY, Characters_Rouge, Summary::DRY_LAGOON),
@@ -226,9 +226,10 @@ void ProcessWinTime() {
 	if (CurrentLevel == LevelIDs_PrisonLane && !TailsBoosterGot) {
 		TailsBoosterGot = true;
 		MissionStreet_LevelData[0] = 1;
+	} else if (CurrentLevel == LevelIDs_WildCanyon && CurrentSequenceNo == 2 && !KnucklesShovelClawGot) {
+		KnucklesShovelClawGot = true;
 	} else if (CurrentLevel == LevelIDs_TailsVsEggman1 && CurrentSequenceNo == 2 && !EggmanJetEngineGot) {
 		EggmanJetEngineGot = true;
-		LostColony_LevelData[0] = 1;
 	} else if (CurrentLevel == LevelIDs_TailsVsEggman2 && CurrentSequenceNo == 1 && Route101_LevelData[0] == 0) {
 		Route101_LevelData[0] = 1;
 	} else if (CurrentLevel == LevelIDs_TailsVsEggman2 && CurrentSequenceNo == 2 && Route280_LevelData[0] == 0) {
