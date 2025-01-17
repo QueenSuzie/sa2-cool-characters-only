@@ -27,6 +27,7 @@ class ReplaceCharacters {
 	public:
 		static void init();
 		static void setStageUpgrades();
+		static void remapUpgradeDataDynamic();
 		static char remapUpgradeMsg(int msgID);
 		static inline bool CAN_MANIPULATE_ACTION_DATA = false;
 		static inline bool SSU_DETECTED = false;
@@ -40,7 +41,7 @@ class ReplaceCharacters {
 };
 
 void LoadSonic_h(int player);
-void LoadKnuckles_h(int player);
+void LoadDryLagoonAnims();
 void SetStageUpgrades();
 int UpgradeHook(int upgrade);
 void InputColi_h(ObjectMaster* obj);

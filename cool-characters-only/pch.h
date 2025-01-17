@@ -15,6 +15,7 @@
 #include "ReplaceCharacters.h"
 #include "ReplaceStages.h"
 #include "StageTimers.h"
+#include "Animations.h"
 #include "StartingPositions.h"
 
 #endif //PCH_H

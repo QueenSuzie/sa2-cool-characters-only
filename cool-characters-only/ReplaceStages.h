@@ -27,17 +27,23 @@ void MemCopyProtected(void*, const void*, size_t);
 #define WritePData(addr, data, type) { type _v_ = (type)(data); WriteMemory((addr), &_v_, sizeof(type)); }
 #define WritePointer(addr, ptr) WritePData((addr), (ptr), void*)
 
+DataArray(char, LostColony_LevelData, 0x1DEDAE4, 196);
 DataArray(char, MissionStreet_LevelData, 0x1DED33C, 196);
 DataArray(char, Route101_LevelData, 0x1DEF428, 196);
+DataArray(char, Route280_LevelData, 0x1DEF4EC, 196);
 DataArray(CutsceneVoices, EventVoiceData, 0x1716720, 720);
 
 class ReplaceStages {
 	public:
 		static void init();
 		static inline SeqSection* FallenHeroSequence = NULL;
+		static inline SeqSection* FallenDarkSequence = NULL;
 		static SeqAndSummarySection FallenHeroStory[];
+		static SeqAndSummarySection FallenDarkStory[];
 		static unsigned short FallenHeroStoryLength;
 		static unsigned short FallenHeroStoryLengthNoCredits;
+		static unsigned short FallenDarkStoryLength;
+		static unsigned short FallenDarkStoryLengthNoCredits;
 		static inline const char FallenHeroStoryScenesSelect[] = "\tYou can now select scenes\nfrom the Fallen Hero story.";
 		static inline const char FallenHeroStoryBossAttack[] = "\tNow select time attack\nboss stages in the Fallen Hero story.";
 

@@ -30,8 +30,17 @@ extern "C" {
 		ReplaceCharacters::init();
 		ReplaceStages::init();
 		StageTimers::init();
+		Animations anims;
 		StartingPositions pos;
+
+		anims.init();
 		pos.init();
+	}
+
+	__declspec(dllexport) void __cdecl OnFrame() {
+		if (CurrentSequenceNo) {
+			PrintDebug("CurrentSeq: %d", CurrentSequenceNo);
+		}
 	}
 
 	__declspec(dllexport) void __cdecl OnExit() {
