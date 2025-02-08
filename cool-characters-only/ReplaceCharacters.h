@@ -38,6 +38,7 @@ class ReplaceCharacters {
 		static void setKnucklesUpgrades();
 		static void remapUpgradeData();
 		static void remapMiniCutscenes();
+		static void remapStageSelectLevels();
 };
 
 void LoadSonic_h(int player);

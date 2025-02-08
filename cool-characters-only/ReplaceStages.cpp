@@ -22,6 +22,7 @@
 #include "ReplaceStages.h"
 
 FastcallFunctionHook<void, int, SeqSection*> hLoadStoryEntry((intptr_t)LoadStoryEntry);
+FastcallFunctionHook<NJS_TEXLIST*, const char*> hLoadCharTextures((intptr_t)LoadCharTextures);
 FunctionHook<void*> hSummaryBgLoad((intptr_t)0x678BB0);
 FunctionHook<void> hProcessWinTime((intptr_t)0x452A00);
 
@@ -116,6 +117,7 @@ unsigned short ReplaceStages::FallenDarkStoryLengthNoCredits = ReplaceStages::Fa
 
 void ReplaceStages::init() {
 	hLoadStoryEntry.Hook(LoadSequence);
+	hLoadCharTextures.Hook(LoadCharTextures_h);
 	hSummaryBgLoad.Hook(SummaryBgLoad);
 	hProcessWinTime.Hook(ProcessWinTime);
 
@@ -237,4 +239,32 @@ void ProcessWinTime() {
 	}
 
 	hProcessWinTime.Original();
+}
+
+NJS_TEXLIST* __fastcall LoadCharTextures_h(const char* filename) {
+	if (CurrentSequenceNo != 2) {
+		return hLoadCharTextures.Original(filename);
+	}
+
+	if (strcmp("stg_title10", filename) == 0) {
+		return hLoadCharTextures.Original("custom_stage_titles/stg_title_mha_sonic");
+	} else if (strcmp("stg_title16", filename) == 0) {
+		return hLoadCharTextures.Original("custom_stage_titles/stg_title_wc_knuckles");
+	} else if (strcmp("stg_title05", filename) == 0) {
+		return hLoadCharTextures.Original("custom_stage_titles/stg_title_ph_knuckles");
+	} else if (strcmp("stg_title07", filename) == 0) {
+		return hLoadCharTextures.Original("custom_stage_titles/stg_title_am_knuckles");
+	} else if (strcmp("stg_title25", filename) == 0) {
+		return hLoadCharTextures.Original("custom_stage_titles/stg_title_dc_knuckles");
+	} else if (strcmp("stg_title32", filename) == 0) {
+		return hLoadCharTextures.Original("custom_stage_titles/stg_title_mhe_knuckles");
+	} else if (strcmp("stg_title18", filename) == 0) {
+		return hLoadCharTextures.Original("custom_stage_titles/stg_title_dl_knuckles");
+	} else if (strcmp("stg_title08", filename) == 0) {
+		return hLoadCharTextures.Original("custom_stage_titles/stg_title_sh_knuckles");
+	} else if (strcmp("stg_title44", filename) == 0) {
+		return hLoadCharTextures.Original("custom_stage_titles/stg_title_msp_knuckles");
+	}
+
+	return hLoadCharTextures.Original(filename);
 }

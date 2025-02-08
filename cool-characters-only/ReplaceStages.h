@@ -56,3 +56,4 @@ class ReplaceStages {
 void __fastcall LoadSequence(int a1, SeqSection* story);
 void* SummaryBgLoad();
 void ProcessWinTime();
+NJS_TEXLIST* __fastcall LoadCharTextures_h(const char *filename);

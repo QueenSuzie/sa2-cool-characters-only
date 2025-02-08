@@ -74,6 +74,7 @@ void ReplaceCharacters::init() {
 	ReplaceCharacters::initCharacterVoices();
 	ReplaceCharacters::remapUpgradeData();
 	ReplaceCharacters::remapMiniCutscenes();
+	ReplaceCharacters::remapStageSelectLevels();
 }
 
 void ReplaceCharacters::initCharacterVoices() {
@@ -270,6 +271,15 @@ void ReplaceCharacters::remapMiniCutscenes() {
 	LevelCutscenes[1].Cutscene = 108;
 }
 
+void ReplaceCharacters::remapStageSelectLevels() {
+	for (int i = 0; i < StageSelectLevels.size(); i++) {
+		StageSelectLevel t = StageSelectLevels[i];
+		if (StageSelectLevels[i].Character == Characters_Knuckles) {
+			StageSelectLevels[i].Character = Characters_Rouge;
+		}
+	}
+}
+
 void LoadSonic_h(int player) {
 	CharacterVoiceBanks1P[Characters_Sonic].Filename_EN = VoiceBanksCopy[Characters_Sonic].Filename_EN;
 	CharacterVoiceBanks1P[Characters_Sonic].Filename_JP = VoiceBanksCopy[Characters_Sonic].Filename_JP;
@@ -278,7 +288,7 @@ void LoadSonic_h(int player) {
 
 	if (CurrentSequenceNo && CurrentSequenceNo == 2 && player == 0) {
 		hLoadSonic.Original(player);
-	} else if (CurrentSequenceNo && CurrentSequenceNo == 2 || player == 0) {
+	} else if ((CurrentSequenceNo && CurrentSequenceNo == 2) || player == 0) {
 		hLoadShadow.Original(player);
 		CharacterVoiceBanks1P[Characters_Sonic].Filename_EN = VoiceBanksCopy[Characters_Shadow].Filename_EN;
 		CharacterVoiceBanks1P[Characters_Sonic].Filename_JP = VoiceBanksCopy[Characters_Shadow].Filename_JP;
