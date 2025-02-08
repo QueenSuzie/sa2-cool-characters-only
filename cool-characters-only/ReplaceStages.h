@@ -49,6 +49,8 @@ class ReplaceStages {
 		static unsigned short FallenDarkStoryLengthNoCredits;
 		static inline const char FallenHeroStoryScenesSelect[] = "\tYou can now select scenes\nfrom the Fallen Hero story.";
 		static inline const char FallenHeroStoryBossAttack[] = "\tNow select time attack\nboss stages in the Fallen Hero story.";
+		static inline const char RisenDarkStoryScenesSelect[] = "\tYou can now select scenes\nfrom the Risen Dark story.";
+		static inline const char RisenDarkStoryBossAttack[] = "\tNow select time attack\nboss stages in the Risen Dark story.";
 
 	private:
 		static void initEventData();

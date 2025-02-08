@@ -173,6 +173,8 @@ void ReplaceStages::initStorySequence() {
 void ReplaceStages::replaceStoryStrings() {
 	WritePointer((void*)0xC50F48, ReplaceStages::FallenHeroStoryScenesSelect);
 	WritePointer((void*)0xC50F4C, ReplaceStages::FallenHeroStoryBossAttack);
+	WritePointer((void*)0xC50F50, ReplaceStages::RisenDarkStoryScenesSelect);
+	WritePointer((void*)0xC50F54, ReplaceStages::RisenDarkStoryBossAttack);
 }
 
 void __fastcall LoadSequence(int a1, SeqSection* story) {
