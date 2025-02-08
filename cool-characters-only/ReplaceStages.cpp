@@ -178,6 +178,16 @@ void ReplaceStages::replaceStoryStrings() {
 }
 
 void __fastcall LoadSequence(int a1, SeqSection* story) {
+	if (CurrentSequenceNo == 1 && story->type == SEQ_TYPE_EVENT && story->event_num[0] == Event::FREE_SHADOW) {
+		DEBUG_MESSAGE = "Fallen Hero Story: v";
+		DEBUG_MESSAGE += CCM_VERSION;
+		DEBUG_MESSAGE_TIMER = DEFAULT_MESSAGE_TIME;
+	} else if (CurrentSequenceNo == 2 && story->type == SEQ_TYPE_EVENT && story->event_num[0] == Event::MASTER_EMERALD_BREAK_HERO) {
+		DEBUG_MESSAGE = "Risen Dark Story: v";
+		DEBUG_MESSAGE += CCM_VERSION;
+		DEBUG_MESSAGE_TIMER = DEFAULT_MESSAGE_TIME;
+	}
+
 	if (story && story->type == SEQ_TYPE_EVENT) {
 		// InternalID = (EventID * 1000) + VoiceID
 		switch (story->event_num[0]) {
