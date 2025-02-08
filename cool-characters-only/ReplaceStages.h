@@ -27,8 +27,11 @@ void MemCopyProtected(void*, const void*, size_t);
 #define WritePData(addr, data, type) { type _v_ = (type)(data); WriteMemory((addr), &_v_, sizeof(type)); }
 #define WritePointer(addr, ptr) WritePData((addr), (ptr), void*)
 
-DataArray(char, LostColony_LevelData, 0x1DEDAE4, 196);
 DataArray(char, MissionStreet_LevelData, 0x1DED33C, 196);
+DataArray(char, IronGate_LevelData, 0x1DECEA4, 196);
+DataArray(char, SandOcean_LevelData, 0x1DED64C, 196);
+DataArray(char, EggQuarters_LevelData, 0x1DEDA20, 196);
+DataArray(char, CosmicWall_LevelData, 0x1DEE724, 196);
 DataArray(char, Route101_LevelData, 0x1DEF428, 196);
 DataArray(char, Route280_LevelData, 0x1DEF4EC, 196);
 DataArray(CutsceneVoices, EventVoiceData, 0x1716720, 720);

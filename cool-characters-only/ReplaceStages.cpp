@@ -228,14 +228,19 @@ void ProcessWinTime() {
 	if (CurrentLevel == LevelIDs_PrisonLane && !TailsBoosterGot) {
 		TailsBoosterGot = true;
 		MissionStreet_LevelData[0] = 1;
+	} else if (CurrentLevel == LevelIDs_DryLagoon && CurrentSequenceNo == 2) {
+		IronGate_LevelData[0] = 1;
 	} else if (CurrentLevel == LevelIDs_WildCanyon && CurrentSequenceNo == 2 && !KnucklesShovelClawGot) {
 		KnucklesShovelClawGot = true;
+		SandOcean_LevelData[0] = 1;
+		EggQuarters_LevelData[0] = 1;
 	} else if (CurrentLevel == LevelIDs_TailsVsEggman1 && CurrentSequenceNo == 2 && !EggmanJetEngineGot) {
 		EggmanJetEngineGot = true;
 	} else if (CurrentLevel == LevelIDs_TailsVsEggman2 && CurrentSequenceNo == 1 && Route101_LevelData[0] == 0) {
 		Route101_LevelData[0] = 1;
 	} else if (CurrentLevel == LevelIDs_TailsVsEggman2 && CurrentSequenceNo == 2 && Route280_LevelData[0] == 0) {
 		Route280_LevelData[0] = 1;
+		CosmicWall_LevelData[0] = 1;
 	}
 
 	hProcessWinTime.Original();
