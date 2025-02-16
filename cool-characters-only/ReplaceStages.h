@@ -28,18 +28,29 @@ void MemCopyProtected(void*, const void*, size_t);
 #define WritePointer(addr, ptr) WritePData((addr), (ptr), void*)
 
 DataArray(char, MissionStreet_LevelData, 0x1DED33C, 196);
+DataArray(char, IronGate_LevelData, 0x1DECEA4, 196);
+DataArray(char, SandOcean_LevelData, 0x1DED64C, 196);
+DataArray(char, EggQuarters_LevelData, 0x1DEDA20, 196);
+DataArray(char, CosmicWall_LevelData, 0x1DEE724, 196);
 DataArray(char, Route101_LevelData, 0x1DEF428, 196);
+DataArray(char, Route280_LevelData, 0x1DEF4EC, 196);
 DataArray(CutsceneVoices, EventVoiceData, 0x1716720, 720);
 
 class ReplaceStages {
 	public:
 		static void init();
 		static inline SeqSection* FallenHeroSequence = NULL;
+		static inline SeqSection* FallenDarkSequence = NULL;
 		static SeqAndSummarySection FallenHeroStory[];
+		static SeqAndSummarySection FallenDarkStory[];
 		static unsigned short FallenHeroStoryLength;
 		static unsigned short FallenHeroStoryLengthNoCredits;
+		static unsigned short FallenDarkStoryLength;
+		static unsigned short FallenDarkStoryLengthNoCredits;
 		static inline const char FallenHeroStoryScenesSelect[] = "\tYou can now select scenes\nfrom the Fallen Hero story.";
 		static inline const char FallenHeroStoryBossAttack[] = "\tNow select time attack\nboss stages in the Fallen Hero story.";
+		static inline const char RisenDarkStoryScenesSelect[] = "\tYou can now select scenes\nfrom the Risen Dark story.";
+		static inline const char RisenDarkStoryBossAttack[] = "\tNow select time attack\nboss stages in the Risen Dark story.";
 
 	private:
 		static void initEventData();
@@ -50,3 +61,4 @@ class ReplaceStages {
 void __fastcall LoadSequence(int a1, SeqSection* story);
 void* SummaryBgLoad();
 void ProcessWinTime();
+NJS_TEXLIST* __fastcall LoadCharTextures_h(const char *filename);

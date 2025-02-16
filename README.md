@@ -15,6 +15,12 @@ A special thanks to the people that have helped to make this possible.
 - [End User](https://github.com/End-User-Person)
   - For helping me to better understand the game's cutscene files
   - For helping to fix sound effects in the game's cutscenes
+- [wegiso](https://www.twitch.tv/wegiso)
+  - For helping with custom text translations to Japanese
+- [SBDWolf](https://www.twitch.tv/sbdwolf)
+  - For helping with custom text translations to Italian
+- [SpleenFDM](https://www.twitch.tv/spleenfdm)
+  - For helping with custom text translations to French
 
 ## License
 

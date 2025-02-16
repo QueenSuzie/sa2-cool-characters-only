@@ -150,7 +150,9 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="Animations.h" />
     <ClInclude Include="framework.h" />
+    <ClInclude Include="main.h" />
     <ClInclude Include="pch.h" />
     <ClInclude Include="SequenceData.h" />
     <ClInclude Include="ReplaceCharacters.h" />
@@ -159,6 +161,7 @@
     <ClInclude Include="StartingPositions.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="Animations.cpp" />
     <ClCompile Include="dllmain.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="pch.cpp">

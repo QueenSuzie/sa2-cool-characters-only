@@ -11,10 +11,12 @@
 #include "framework.h"
 #include "SA2ModLoader.h"
 #include "FunctionHook.h"
+#include "main.h"
 #include "SequenceData.h"
 #include "ReplaceCharacters.h"
 #include "ReplaceStages.h"
 #include "StageTimers.h"
+#include "Animations.h"
 #include "StartingPositions.h"
 
 #endif //PCH_H

@@ -26,10 +26,9 @@ FunctionHook<void, int> hLoadSonic((intptr_t)LoadSonic);
 FunctionHook<void, int> hLoadShadow((intptr_t)LoadShadow);
 
 // Knuckles
-FunctionHook<void, int> hLoadKnuckles((intptr_t)LoadKnuckles);
-FunctionHook<void, int> hLoadRouge((intptr_t)LoadRouge);
 FunctionHook<void> hLoadAquaticMineCharAnims((intptr_t)LoadAquaticMineCharAnims);
 FunctionHook<void> hLoadCannonsCoreKCharAnims((intptr_t)LoadCannonsCoreKCharAnims);
+FunctionHook<void> hLoadDryLagoonCharAnims((intptr_t)LoadDryLagoonCharAnims);
 
 // Fixes
 FunctionHook<void> hStageLoad((intptr_t)0x439610);
@@ -37,17 +36,19 @@ FunctionHook<int, int> hUpgradeGet((intptr_t)LevelItem_Main);
 FunctionHook<void, ObjectMaster*> hInputColi((intptr_t)InputColi);
 
 FunctionHook<BYTE*, ObjectMaster*> hUpgradeDataGet((intptr_t)UpgradeDataGet);
+static CharacterSoundBank SoundBanksCopy[12];
+static CharacterVoiceBank VoiceBanksCopy[10];
+static LevelItemData LevelItemsCopy[28];
 
 void ReplaceCharacters::init() {
 	// Sonic
 	hLoadSonic.Hook(LoadSonic_h);
 	hLoadShadow.Hook(LoadSonic_h);
-
+	
 	// Knuckles
-	hLoadKnuckles.Hook(LoadKnuckles_h);
-	hLoadRouge.Hook(LoadKnuckles_h);
 	hLoadAquaticMineCharAnims.Hook(LoadDryLagoon2PCharAnims);
 	hLoadCannonsCoreKCharAnims.Hook(LoadDryLagoon2PCharAnims);
+	hLoadDryLagoonCharAnims.Hook(LoadDryLagoonAnims);
 
 	// Fixes
 	if (!ReplaceCharacters::SSU_DETECTED) {
@@ -73,29 +74,22 @@ void ReplaceCharacters::init() {
 	ReplaceCharacters::initCharacterVoices();
 	ReplaceCharacters::remapUpgradeData();
 	ReplaceCharacters::remapMiniCutscenes();
+	ReplaceCharacters::remapStageSelectLevels();
 }
 
 void ReplaceCharacters::initCharacterVoices() {
-	CharacterVoiceBanks1P[Characters_Sonic].Filename_EN = CharacterVoiceBanks1P[Characters_Shadow].Filename_EN;
-	CharacterVoiceBanks1P[Characters_Sonic].Filename_JP = CharacterVoiceBanks1P[Characters_Shadow].Filename_JP;
-	CharacterVoiceBanks1P[Characters_Sonic].SoundList = CharacterVoiceBanks1P[Characters_Shadow].SoundList;
-	CharacterVoiceBanks2P[Characters_Sonic].Filename_EN = CharacterVoiceBanks2P[Characters_Shadow].Filename_EN;
-	CharacterVoiceBanks2P[Characters_Sonic].Filename_JP = CharacterVoiceBanks2P[Characters_Shadow].Filename_JP;
-	CharacterVoiceBanks2P[Characters_Sonic].SoundList = CharacterVoiceBanks2P[Characters_Shadow].SoundList;
+	for (int i = 0; i < 12; i++) {
+		SoundBanksCopy[i] = CharacterSoundBanks1P[i];
+	}
 
-	CharacterVoiceBanks1P[Characters_Knuckles].Filename_EN = CharacterVoiceBanks1P[Characters_Rouge].Filename_EN;
-	CharacterVoiceBanks1P[Characters_Knuckles].Filename_JP = CharacterVoiceBanks1P[Characters_Rouge].Filename_JP;
-	CharacterVoiceBanks1P[Characters_Knuckles].SoundList = CharacterVoiceBanks1P[Characters_Rouge].SoundList;
-	CharacterVoiceBanks2P[Characters_Knuckles].Filename_EN = CharacterVoiceBanks2P[Characters_Rouge].Filename_EN;
-	CharacterVoiceBanks2P[Characters_Knuckles].Filename_JP = CharacterVoiceBanks2P[Characters_Rouge].Filename_JP;
-	CharacterVoiceBanks2P[Characters_Knuckles].SoundList = CharacterVoiceBanks2P[Characters_Rouge].SoundList;
+	for (int i = 0; i < 10; i++) {
+		VoiceBanksCopy[i] = CharacterVoiceBanks1P[i];
+	}
 }
 
 void ReplaceCharacters::setStageUpgrades() {
 	if (CurrentCharacter == Characters_Sonic) {
 		ReplaceCharacters::setSonicUpgrades();
-	} else if (CurrentCharacter == Characters_Knuckles) {
-		ReplaceCharacters::setKnucklesUpgrades();
 	} else if (CurrentCharacter == Characters_Rouge && KnucklesAirNecklaceGot) {
 		MainCharObj2[0]->Upgrades |= Upgrades_KnucklesAirNecklace;
 	}
@@ -127,29 +121,21 @@ void ReplaceCharacters::setSonicUpgrades() {
 	}
 }
 
-void ReplaceCharacters::setKnucklesUpgrades() {
-	if (KnucklesShovelClawGot) {
-		MainCharObj2[0]->Upgrades |= Upgrades_RougePickNails;
-	}
-
-	if (KnucklesSunglassesGot) {
-		MainCharObj2[0]->Upgrades |= Upgrades_RougeTreasureScope;
-	}
-
-	if (KnucklesHammerGlovesGot) {
-		MainCharObj2[0]->Upgrades |= Upgrades_RougeIronBoots;
-	}
-
-	if (KnucklesAirNecklaceGot) {
-		MainCharObj2[0]->Upgrades |= Upgrades_KnucklesAirNecklace;
-	}
-
-	if (KnucklesMysticMelodyGot) {
-		MainCharObj2[0]->Upgrades |= Upgrades_RougeMysticMelody;
-	}
-}
-
 void ReplaceCharacters::remapUpgradeData() {
+	for (int i = 0; i < 28; i++) {
+		LevelItemsCopy[i] = {
+			LevelItems[i].Character,
+			LevelItems[i].Name,
+			LevelItems[i].Mask,
+			LevelItems[i].Index,
+			LevelItems[i].field_10,
+			LevelItems[i].anonymous_1,
+			LevelItems[i].anonymous_2,
+			LevelItems[i].anonymous_3,
+			LevelItems[i].field_20
+		};
+	}
+
 	LevelItems[0].Character = Characters_Shadow; // Bounce
 	LevelItems[25].Character = Characters_Shadow; // Magic Gloves
 	LevelItems[14].Character = Characters_Rouge; // Air Necklace
@@ -157,72 +143,150 @@ void ReplaceCharacters::remapUpgradeData() {
 	// Idea is to override upgrade data but then restore actual upgrade values to not break upgrade handling.
 	// This should let upgrades show up in levelup object but not break how everything has worked up to now.
 
-	// Light Shows -> Air Shoes
-	LevelItems[1] = LevelItems[3];
+	// Light Shoes -> Air Shoes
+	ReplaceCharacters::copyLevelItem(&LevelItems[1], &LevelItemsCopy[3]);
 	LevelItems[1].Mask = Upgrades_SonicLightShoes;
 	LevelItems[1].Index = 0;
 
 	// Flame Ring
-	LevelItems[2] = LevelItems[4];
+	ReplaceCharacters::copyLevelItem(&LevelItems[2], &LevelItemsCopy[4]);
 	LevelItems[2].Mask = Upgrades_SonicFlameRing;
 	LevelItems[2].Index = 3;
 
 	// Sonic Mystic Melody
-	LevelItems[18] = LevelItems[19];
+	ReplaceCharacters::copyLevelItem(&LevelItems[18], &LevelItemsCopy[19]);
 	LevelItems[18].Mask = Upgrades_SonicMysticMelody;
 	LevelItems[18].Index = 5;
 
 	// Ancient Light
-	LevelItems[24] = LevelItems[27];
+	ReplaceCharacters::copyLevelItem(&LevelItems[24], &LevelItemsCopy[27]);
 	LevelItems[24].Mask = Upgrades_SonicAncientLight;
 	LevelItems[24].Index = 1;
+}
 
-	// Shovel Claws -> Pick Nails
-	LevelItems[12] = LevelItems[16];
-	LevelItems[12].Mask = Upgrades_KnucklesShovelClaw;
-	LevelItems[12].Index = 0xA;
+void ReplaceCharacters::remapUpgradeDataDynamic() {
+	LevelItems[14].Character = CurrentSequenceNo == 2 ? Characters_Knuckles : Characters_Rouge; // Air Necklace
+	ReplaceCharacters::copyLevelItem(&LevelItems[17], &LevelItemsCopy[17]);
 
-	// Hammer Gloves -> Iron Boots
-	LevelItems[13] = LevelItems[17];
-	LevelItems[13].Mask = Upgrades_KnucklesHammerGloves;
-	LevelItems[13].Index = 0xC;
+	if (CurrentCharacter == Characters_Knuckles) {
+		// Restore Originals
+		ReplaceCharacters::copyLevelItem(&LevelItems[12], &LevelItemsCopy[12]);
+		ReplaceCharacters::copyLevelItem(&LevelItems[13], &LevelItemsCopy[13]);
+		ReplaceCharacters::copyLevelItem(&LevelItems[22], &LevelItemsCopy[22]);
+		ReplaceCharacters::copyLevelItem(&LevelItems[26], &LevelItemsCopy[26]);
 
-	// Knuckles Mystic Melody
-	LevelItems[22] = LevelItems[23];
-	LevelItems[22].Mask = Upgrades_KnucklesMysticMelody;
-	LevelItems[22].Index = 0xE;
+		if (CurrentSequenceNo == 2 && KnucklesHammerGlovesGot && CurrentLevel == LevelIDs_MadSpace) {
+			ReplaceCharacters::copyLevelItem(&LevelItems[17], NULL);
+		}
+	} else if (CurrentCharacter == Characters_Rouge) {
+		// Shovel Claws -> Pick Nails
+		ReplaceCharacters::copyLevelItem(&LevelItems[12], &LevelItemsCopy[16]);
 
-	// Sunglasses -> Treasure Scope
-	LevelItems[26] = LevelItems[15];
-	LevelItems[26].Mask = Upgrades_KnucklesSunglasses;
-	LevelItems[26].Index = 0xB;
+		// Hammer Gloves -> Iron Boots
+		ReplaceCharacters::copyLevelItem(&LevelItems[13], &LevelItemsCopy[17]);
+
+		// Knuckles Mystic Melody
+		ReplaceCharacters::copyLevelItem(&LevelItems[22], &LevelItemsCopy[23]);
+
+		// Sunglasses -> Treasure Scope
+		ReplaceCharacters::copyLevelItem(&LevelItems[26], &LevelItemsCopy[15]);
+
+		// Restore Iron Boots
+		ReplaceCharacters::copyLevelItem(&LevelItems[17], &LevelItemsCopy[17]);
+	}
+
+	if (CurrentCharacter == Characters_Sonic && CurrentSequenceNo == 2) {
+		// Restore Originals
+		LevelItems[0].Character = Characters_Sonic;
+		ReplaceCharacters::copyLevelItem(&LevelItems[1], &LevelItemsCopy[1]);
+		ReplaceCharacters::copyLevelItem(&LevelItems[2], &LevelItemsCopy[2]);
+		ReplaceCharacters::copyLevelItem(&LevelItems[18], &LevelItemsCopy[18]);
+		ReplaceCharacters::copyLevelItem(&LevelItems[24], &LevelItemsCopy[24]);
+		LevelItems[25].Character = Characters_Sonic;
+	} else if (CurrentSequenceNo != 2 && (CurrentCharacter == Characters_Shadow || CurrentCharacter == Characters_Sonic)) {
+		LevelItems[0].Character = Characters_Shadow; // Bounce
+		LevelItems[25].Character = Characters_Shadow; // Magic Gloves
+
+		// Light Shoes -> Air Shoes
+		ReplaceCharacters::copyLevelItem(&LevelItems[1], &LevelItemsCopy[3]);
+		LevelItems[1].Mask = Upgrades_SonicLightShoes;
+		LevelItems[1].Index = 0;
+
+		// Flame Ring
+		ReplaceCharacters::copyLevelItem(&LevelItems[2], &LevelItemsCopy[4]);
+		LevelItems[2].Mask = Upgrades_SonicFlameRing;
+		LevelItems[2].Index = 3;
+
+		// Sonic Mystic Melody
+		ReplaceCharacters::copyLevelItem(&LevelItems[18], &LevelItemsCopy[19]);
+		LevelItems[18].Mask = Upgrades_SonicMysticMelody;
+		LevelItems[18].Index = 5;
+
+		// Ancient Light
+		ReplaceCharacters::copyLevelItem(&LevelItems[24], &LevelItemsCopy[27]);
+		LevelItems[24].Mask = Upgrades_SonicAncientLight;
+		LevelItems[24].Index = 1;
+	}
+}
+
+void ReplaceCharacters::copyLevelItem(LevelItemData* dest, LevelItemData* source) {
+	if (dest == NULL) {
+		return;
+	}
+
+	if (source == NULL) {
+		dest->anonymous_1 = NULL;
+		dest->anonymous_2 = NULL;
+		dest->anonymous_3 = NULL;
+		dest->Character = NULL;
+		dest->Name = NULL;
+		dest->Mask = NULL;
+		dest->Index = NULL;
+		dest->field_10 = NULL;
+		dest->field_20 = NULL;
+	} else {
+		dest->anonymous_1 = source->anonymous_1;
+		dest->anonymous_2 = source->anonymous_2;
+		dest->anonymous_3 = source->anonymous_3;
+		dest->Character = source->Character;
+		dest->Name = source->Name;
+		dest->Mask = source->Mask;
+		dest->Index = source->Index;
+		dest->field_10 = source->field_10;
+		dest->field_20 = source->field_20;
+	}
 }
 
 char ReplaceCharacters::remapUpgradeMsg(int msgID) {
 	switch (msgID) {
 		case 1: // Light Shoes
-			return (char)3;
+			return CurrentSequenceNo == 2 ? (char)1 : (char)3;
 
 		case 2: // Flame Ring
-			return (char)4;
+			return CurrentSequenceNo == 2 ? (char)2 : (char)4;
 
 		case 12: // Shovel Claws
-			return (char)16;
+			return CurrentCharacter == Characters_Knuckles ? (char)12 : (char)16;
 
 		case 13: // Hammer Gloves
-			return (char)17;
+			return CurrentCharacter == Characters_Knuckles ? (char)13 : (char)17;
 
 		case 18: // Sonic Mystic Melody
-			return (char)19;
+			return CurrentSequenceNo == 2 ? (char)18 : (char)19;
 
 		case 22: // Knuckles Mystic Melody
-			return (char)23;
+			return CurrentCharacter == Characters_Knuckles ? (char)22 : (char)23;
 
 		case 24: // Ancient Light
-			return (char)27;
+			return CurrentSequenceNo == 2 ? (char)24 : (char)27;
 
 		case 26: // Sunglasses
-			return (char)15;
+			return CurrentCharacter == Characters_Knuckles ? (char)26 : (char)15;
+	}
+
+	if (msgID == 17 && CurrentSequenceNo == 2 && !KnucklesHammerGlovesGot) {
+		// Troll message
+		return (char)65;
 	}
 
 	return (char)msgID;
@@ -234,19 +298,39 @@ void ReplaceCharacters::remapMiniCutscenes() {
 	LevelCutscenes[1].Cutscene = 108;
 }
 
+void ReplaceCharacters::remapStageSelectLevels() {
+	for (int i = 0; i < StageSelectLevels.size(); i++) {
+		StageSelectLevel t = StageSelectLevels[i];
+		if (StageSelectLevels[i].Character == Characters_Knuckles) {
+			StageSelectLevels[i].Character = Characters_Rouge;
+		}
+	}
+}
+
 void LoadSonic_h(int player) {
-	if (player == 0) {
-		hLoadShadow.Original(0);
+	CharacterVoiceBanks1P[Characters_Sonic].Filename_EN = VoiceBanksCopy[Characters_Sonic].Filename_EN;
+	CharacterVoiceBanks1P[Characters_Sonic].Filename_JP = VoiceBanksCopy[Characters_Sonic].Filename_JP;
+	CharacterVoiceBanks1P[Characters_Sonic].SoundList = VoiceBanksCopy[Characters_Sonic].SoundList;
+	CharacterSoundBanks1P[Characters_Sonic].SoundList = SoundBanksCopy[Characters_Sonic].SoundList;
+
+	if (CurrentSequenceNo && CurrentSequenceNo == 2 && player == 0) {
+		hLoadSonic.Original(player);
+	} else if ((CurrentSequenceNo && CurrentSequenceNo == 2) || player == 0) {
+		hLoadShadow.Original(player);
+		CharacterVoiceBanks1P[Characters_Sonic].Filename_EN = VoiceBanksCopy[Characters_Shadow].Filename_EN;
+		CharacterVoiceBanks1P[Characters_Sonic].Filename_JP = VoiceBanksCopy[Characters_Shadow].Filename_JP;
+		CharacterVoiceBanks1P[Characters_Sonic].SoundList = VoiceBanksCopy[Characters_Shadow].SoundList;
+		CharacterSoundBanks1P[Characters_Sonic].SoundList = SoundBanksCopy[Characters_Shadow].SoundList;
 	} else {
 		hLoadSonic.Original(player);
 	}
 }
 
-void LoadKnuckles_h(int player) {
-	if (player == 0) {
-		hLoadRouge.Original(0);
+void LoadDryLagoonAnims() {
+	if (CurrentSequenceNo && CurrentSequenceNo == 2) {
+		LoadDryLagoon2PCharAnims();
 	} else {
-		hLoadKnuckles.Original(player);
+		hLoadDryLagoonCharAnims.Original();
 	}
 }
 
@@ -256,6 +340,7 @@ void SetStageUpgrades() {
 }
 
 int UpgradeHook(int upgrade) {
+	char ironBootsOrig = RougeIronBootsGot;
 	ReplaceCharacters::CAN_MANIPULATE_ACTION_DATA = true;
 	int upgrades = MainCharObj2[0]->Upgrades;
 	int ret = hUpgradeGet.Original(upgrade);
@@ -263,6 +348,11 @@ int UpgradeHook(int upgrade) {
 
 	if (!ReplaceCharacters::SSU_DETECTED && upgrades != MainCharObj2[0]->Upgrades) {
 		ReplaceCharacters::setStageUpgrades();
+	}
+
+	if (CurrentSequenceNo == 2 && !KnucklesHammerGlovesGot && CurrentLevel == LevelIDs_MadSpace) {
+		RougeIronBootsGot = ironBootsOrig;
+		MainCharObj2[0]->Upgrades = upgrades;
 	}
 
 	return ret;

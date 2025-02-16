@@ -21,6 +21,15 @@
 #include "pch.h"
 #include <vector>
 
+HelperFunctions HelperFunctionsGlobal;
+const char* CCM_VERSION = "1.3.0";
+std::string DEBUG_MESSAGE = "";
+int DEBUG_MESSAGE_TIMER = 0;
+int DEFAULT_MESSAGE_TIME = 30;
+float SCALE_MULTIPLIER = 2.0;
+int DEBUG_FONT_SCALE = 10;
+int DEBUG_FONT_COLOR = 0xFF7D3C98; // Purple AARRGGBB
+
 extern "C" {
 	__declspec(dllexport) void __cdecl Init(const char* path, const HelperFunctions& helperFunctions) {
 		if (helperFunctions.Mods->find("sa2.queensuzie.storystyleupgrades") != NULL) {
@@ -30,8 +39,24 @@ extern "C" {
 		ReplaceCharacters::init();
 		ReplaceStages::init();
 		StageTimers::init();
+		Animations anims;
 		StartingPositions pos;
+
+		anims.init();
 		pos.init();
+
+		HelperFunctionsGlobal = helperFunctions;
+		helperFunctions.SetWindowTitle(L"SONIC ADVENTURE 2 - FALLEN HERO\n");
+		SCALE_MULTIPLIER = (float)HorizontalResolution / (float)VerticalResolution > 1.33f ? floor((float)VerticalResolution / 480.0f) : floor((float)HorizontalResolution / 640.0f);
+		DEBUG_FONT_SCALE *= SCALE_MULTIPLIER;
+	}
+
+	__declspec(dllexport) void __cdecl OnFrame() {
+		if (DEBUG_MESSAGE_TIMER > 0) {
+			SetDebugInfo();
+			HelperFunctionsGlobal.DisplayDebugString(NJM_LOCATION(1, 1), DEBUG_MESSAGE.c_str());
+			DEBUG_MESSAGE_TIMER--;
+		}
 	}
 
 	__declspec(dllexport) void __cdecl OnExit() {
@@ -41,4 +66,9 @@ extern "C" {
 	}
 
 	__declspec(dllexport) ModInfo SA2ModInfo = { ModLoaderVer }; // This is needed for the Mod Loader to recognize the DLL.
+}
+
+void SetDebugInfo() {
+	HelperFunctionsGlobal.SetDebugFontSize(DEBUG_FONT_SCALE);
+	HelperFunctionsGlobal.SetDebugFontColor(DEBUG_FONT_COLOR);
 }

@@ -19,3 +19,14 @@
  *************************************************************************************/
 
 #pragma once
+
+extern HelperFunctions HelperFunctionsGlobal;
+extern const char* CCM_VERSION;
+extern std::string DEBUG_MESSAGE;
+extern int DEBUG_MESSAGE_TIMER;
+extern int DEFAULT_MESSAGE_TIME;
+extern float SCALE_MULTIPLIER;
+extern int DEBUG_FONT_SCALE;
+extern int DEBUG_FONT_COLOR;
+
+void SetDebugInfo();
