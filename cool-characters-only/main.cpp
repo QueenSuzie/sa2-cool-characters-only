@@ -22,10 +22,10 @@
 #include <vector>
 
 HelperFunctions HelperFunctionsGlobal;
-const char* CCM_VERSION = "1.3.0-rc.1";
+const char* CCM_VERSION = "1.3.0";
 std::string DEBUG_MESSAGE = "";
 int DEBUG_MESSAGE_TIMER = 0;
-int DEFAULT_MESSAGE_TIME = 300;
+int DEFAULT_MESSAGE_TIME = 30;
 float SCALE_MULTIPLIER = 2.0;
 int DEBUG_FONT_SCALE = 10;
 int DEBUG_FONT_COLOR = 0xFF7D3C98; // Purple AARRGGBB

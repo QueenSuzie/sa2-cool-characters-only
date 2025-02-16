@@ -39,6 +39,7 @@ class ReplaceCharacters {
 		static void remapUpgradeData();
 		static void remapMiniCutscenes();
 		static void remapStageSelectLevels();
+		static void copyLevelItem(LevelItemData* dest, LevelItemData* source);
 };
 
 void LoadSonic_h(int player);

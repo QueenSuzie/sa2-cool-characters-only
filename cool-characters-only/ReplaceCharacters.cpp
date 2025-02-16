@@ -90,8 +90,6 @@ void ReplaceCharacters::initCharacterVoices() {
 void ReplaceCharacters::setStageUpgrades() {
 	if (CurrentCharacter == Characters_Sonic) {
 		ReplaceCharacters::setSonicUpgrades();
-	} else if (CurrentCharacter == Characters_Knuckles) {
-		ReplaceCharacters::setKnucklesUpgrades();
 	} else if (CurrentCharacter == Characters_Rouge && KnucklesAirNecklaceGot) {
 		MainCharObj2[0]->Upgrades |= Upgrades_KnucklesAirNecklace;
 	}
@@ -123,31 +121,19 @@ void ReplaceCharacters::setSonicUpgrades() {
 	}
 }
 
-void ReplaceCharacters::setKnucklesUpgrades() {
-	if (KnucklesShovelClawGot) {
-		MainCharObj2[0]->Upgrades |= Upgrades_RougePickNails;
-	}
-
-	if (KnucklesSunglassesGot) {
-		MainCharObj2[0]->Upgrades |= Upgrades_RougeTreasureScope;
-	}
-
-	if (KnucklesHammerGlovesGot) {
-		MainCharObj2[0]->Upgrades |= Upgrades_RougeIronBoots;
-	}
-
-	if (KnucklesAirNecklaceGot) {
-		MainCharObj2[0]->Upgrades |= Upgrades_KnucklesAirNecklace;
-	}
-
-	if (KnucklesMysticMelodyGot) {
-		MainCharObj2[0]->Upgrades |= Upgrades_RougeMysticMelody;
-	}
-}
-
 void ReplaceCharacters::remapUpgradeData() {
 	for (int i = 0; i < 28; i++) {
-		LevelItemsCopy[i] = LevelItems[i];
+		LevelItemsCopy[i] = {
+			LevelItems[i].Character,
+			LevelItems[i].Name,
+			LevelItems[i].Mask,
+			LevelItems[i].Index,
+			LevelItems[i].field_10,
+			LevelItems[i].anonymous_1,
+			LevelItems[i].anonymous_2,
+			LevelItems[i].anonymous_3,
+			LevelItems[i].field_20
+		};
 	}
 
 	LevelItems[0].Character = Characters_Shadow; // Bounce
@@ -158,80 +144,116 @@ void ReplaceCharacters::remapUpgradeData() {
 	// This should let upgrades show up in levelup object but not break how everything has worked up to now.
 
 	// Light Shoes -> Air Shoes
-	LevelItems[1] = LevelItems[3];
+	ReplaceCharacters::copyLevelItem(&LevelItems[1], &LevelItemsCopy[3]);
 	LevelItems[1].Mask = Upgrades_SonicLightShoes;
 	LevelItems[1].Index = 0;
 
 	// Flame Ring
-	LevelItems[2] = LevelItems[4];
+	ReplaceCharacters::copyLevelItem(&LevelItems[2], &LevelItemsCopy[4]);
 	LevelItems[2].Mask = Upgrades_SonicFlameRing;
 	LevelItems[2].Index = 3;
 
 	// Sonic Mystic Melody
-	LevelItems[18] = LevelItems[19];
+	ReplaceCharacters::copyLevelItem(&LevelItems[18], &LevelItemsCopy[19]);
 	LevelItems[18].Mask = Upgrades_SonicMysticMelody;
 	LevelItems[18].Index = 5;
 
 	// Ancient Light
-	LevelItems[24] = LevelItems[27];
+	ReplaceCharacters::copyLevelItem(&LevelItems[24], &LevelItemsCopy[27]);
 	LevelItems[24].Mask = Upgrades_SonicAncientLight;
 	LevelItems[24].Index = 1;
 }
 
 void ReplaceCharacters::remapUpgradeDataDynamic() {
 	LevelItems[14].Character = CurrentSequenceNo == 2 ? Characters_Knuckles : Characters_Rouge; // Air Necklace
+	ReplaceCharacters::copyLevelItem(&LevelItems[17], &LevelItemsCopy[17]);
 
 	if (CurrentCharacter == Characters_Knuckles) {
 		// Restore Originals
-		LevelItems[12] = LevelItemsCopy[12];
-		LevelItems[13] = LevelItemsCopy[13];
-		LevelItems[22] = LevelItemsCopy[22];
-		LevelItems[26] = LevelItemsCopy[26];
+		ReplaceCharacters::copyLevelItem(&LevelItems[12], &LevelItemsCopy[12]);
+		ReplaceCharacters::copyLevelItem(&LevelItems[13], &LevelItemsCopy[13]);
+		ReplaceCharacters::copyLevelItem(&LevelItems[22], &LevelItemsCopy[22]);
+		ReplaceCharacters::copyLevelItem(&LevelItems[26], &LevelItemsCopy[26]);
+
+		if (CurrentSequenceNo == 2 && KnucklesHammerGlovesGot && CurrentLevel == LevelIDs_MadSpace) {
+			ReplaceCharacters::copyLevelItem(&LevelItems[17], NULL);
+		}
 	} else if (CurrentCharacter == Characters_Rouge) {
 		// Shovel Claws -> Pick Nails
-		LevelItems[12] = LevelItems[16];
+		ReplaceCharacters::copyLevelItem(&LevelItems[12], &LevelItemsCopy[16]);
 
 		// Hammer Gloves -> Iron Boots
-		LevelItems[13] = LevelItems[17];
+		ReplaceCharacters::copyLevelItem(&LevelItems[13], &LevelItemsCopy[17]);
 
 		// Knuckles Mystic Melody
-		LevelItems[22] = LevelItems[23];
+		ReplaceCharacters::copyLevelItem(&LevelItems[22], &LevelItemsCopy[23]);
 
 		// Sunglasses -> Treasure Scope
-		LevelItems[26] = LevelItems[15];
+		ReplaceCharacters::copyLevelItem(&LevelItems[26], &LevelItemsCopy[15]);
+
+		// Restore Iron Boots
+		ReplaceCharacters::copyLevelItem(&LevelItems[17], &LevelItemsCopy[17]);
 	}
 
 	if (CurrentCharacter == Characters_Sonic && CurrentSequenceNo == 2) {
 		// Restore Originals
 		LevelItems[0].Character = Characters_Sonic;
-		LevelItems[1] = LevelItemsCopy[1];
-		LevelItems[2] = LevelItemsCopy[2];
-		LevelItems[18] = LevelItemsCopy[18];
-		LevelItems[24] = LevelItemsCopy[24];
+		ReplaceCharacters::copyLevelItem(&LevelItems[1], &LevelItemsCopy[1]);
+		ReplaceCharacters::copyLevelItem(&LevelItems[2], &LevelItemsCopy[2]);
+		ReplaceCharacters::copyLevelItem(&LevelItems[18], &LevelItemsCopy[18]);
+		ReplaceCharacters::copyLevelItem(&LevelItems[24], &LevelItemsCopy[24]);
 		LevelItems[25].Character = Characters_Sonic;
 	} else if (CurrentSequenceNo != 2 && (CurrentCharacter == Characters_Shadow || CurrentCharacter == Characters_Sonic)) {
 		LevelItems[0].Character = Characters_Shadow; // Bounce
 		LevelItems[25].Character = Characters_Shadow; // Magic Gloves
 
 		// Light Shoes -> Air Shoes
-		LevelItems[1] = LevelItems[3];
+		ReplaceCharacters::copyLevelItem(&LevelItems[1], &LevelItemsCopy[3]);
 		LevelItems[1].Mask = Upgrades_SonicLightShoes;
 		LevelItems[1].Index = 0;
 
 		// Flame Ring
-		LevelItems[2] = LevelItems[4];
+		ReplaceCharacters::copyLevelItem(&LevelItems[2], &LevelItemsCopy[4]);
 		LevelItems[2].Mask = Upgrades_SonicFlameRing;
 		LevelItems[2].Index = 3;
 
 		// Sonic Mystic Melody
-		LevelItems[18] = LevelItems[19];
+		ReplaceCharacters::copyLevelItem(&LevelItems[18], &LevelItemsCopy[19]);
 		LevelItems[18].Mask = Upgrades_SonicMysticMelody;
 		LevelItems[18].Index = 5;
 
 		// Ancient Light
-		LevelItems[24] = LevelItems[27];
+		ReplaceCharacters::copyLevelItem(&LevelItems[24], &LevelItemsCopy[27]);
 		LevelItems[24].Mask = Upgrades_SonicAncientLight;
 		LevelItems[24].Index = 1;
+	}
+}
+
+void ReplaceCharacters::copyLevelItem(LevelItemData* dest, LevelItemData* source) {
+	if (dest == NULL) {
+		return;
+	}
+
+	if (source == NULL) {
+		dest->anonymous_1 = NULL;
+		dest->anonymous_2 = NULL;
+		dest->anonymous_3 = NULL;
+		dest->Character = NULL;
+		dest->Name = NULL;
+		dest->Mask = NULL;
+		dest->Index = NULL;
+		dest->field_10 = NULL;
+		dest->field_20 = NULL;
+	} else {
+		dest->anonymous_1 = source->anonymous_1;
+		dest->anonymous_2 = source->anonymous_2;
+		dest->anonymous_3 = source->anonymous_3;
+		dest->Character = source->Character;
+		dest->Name = source->Name;
+		dest->Mask = source->Mask;
+		dest->Index = source->Index;
+		dest->field_10 = source->field_10;
+		dest->field_20 = source->field_20;
 	}
 }
 
@@ -260,6 +282,11 @@ char ReplaceCharacters::remapUpgradeMsg(int msgID) {
 
 		case 26: // Sunglasses
 			return CurrentCharacter == Characters_Knuckles ? (char)26 : (char)15;
+	}
+
+	if (msgID == 17 && CurrentSequenceNo == 2 && !KnucklesHammerGlovesGot) {
+		// Troll message
+		return (char)65;
 	}
 
 	return (char)msgID;
@@ -313,6 +340,7 @@ void SetStageUpgrades() {
 }
 
 int UpgradeHook(int upgrade) {
+	char ironBootsOrig = RougeIronBootsGot;
 	ReplaceCharacters::CAN_MANIPULATE_ACTION_DATA = true;
 	int upgrades = MainCharObj2[0]->Upgrades;
 	int ret = hUpgradeGet.Original(upgrade);
@@ -320,6 +348,11 @@ int UpgradeHook(int upgrade) {
 
 	if (!ReplaceCharacters::SSU_DETECTED && upgrades != MainCharObj2[0]->Upgrades) {
 		ReplaceCharacters::setStageUpgrades();
+	}
+
+	if (CurrentSequenceNo == 2 && !KnucklesHammerGlovesGot && CurrentLevel == LevelIDs_MadSpace) {
+		RougeIronBootsGot = ironBootsOrig;
+		MainCharObj2[0]->Upgrades = upgrades;
 	}
 
 	return ret;
