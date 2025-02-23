@@ -53,7 +53,7 @@ void StageTimers::initMission4Timers() {
 
 __declspec(naked) void StageTimers::setGreentForestTimer() {
 	__asm {
-		cmp     al, 0
+		cmp		al, 0
 		je		SET_TIMER
 		cmp		al, 4
 		je		SET_HARD_TIMER
@@ -77,7 +77,7 @@ RETURN:
 
 __declspec(naked) void StageTimers::setWhiteJungleTimer() {
 	__asm {
-		cmp     al, 0
+		cmp		al, 0
 		je		SET_TIMER
 		cmp		al, 4
 		je		SET_HARD_TIMER
