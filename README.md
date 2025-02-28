@@ -1,4 +1,5 @@
-## Fallen Hero Story
+## Sonic Adventure 2: Fallen
+<img src="https://github.com/QueenSuzie/sa2-cool-characters-only/blob/master/cover.png?raw=true" alt="SA2 Fallen Cover" height="250">
 Introduces a more "cool" experience for Hero Story enjoyers. This is Fallen Hero. Where lame stages are replaced. Cool stages are added, and Shadow and Rouge enjoy more action than ever before.
 
 ## Installation
