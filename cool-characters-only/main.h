@@ -29,4 +29,6 @@ extern float SCALE_MULTIPLIER;
 extern int DEBUG_FONT_SCALE;
 extern int DEBUG_FONT_COLOR;
 
-void SetDebugInfo();
+static void ExitHandler();
+static void SetDebugInfo();
+static LRESULT __stdcall WndProcFallen(HWND hWnd, UINT uMsg, WPARAM wParam, LPARAM lParam);

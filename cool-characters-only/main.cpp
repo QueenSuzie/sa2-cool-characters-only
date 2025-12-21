@@ -29,6 +29,7 @@ int DEFAULT_MESSAGE_TIME = 30;
 float SCALE_MULTIPLIER = 2.0;
 int DEBUG_FONT_SCALE = 10;
 int DEBUG_FONT_COLOR = 0xFF7D3C98; // Purple AARRGGBB
+static WNDPROC OldWndProc = nullptr;
 
 extern "C" {
 	__declspec(dllexport) void __cdecl Init(const char* path, const HelperFunctions& helperFunctions) {
@@ -49,6 +50,8 @@ extern "C" {
 		helperFunctions.SetWindowTitle(L"SONIC ADVENTURE 2 - FALLEN HERO\n");
 		SCALE_MULTIPLIER = (float)HorizontalResolution / (float)VerticalResolution > 1.33f ? floor((float)VerticalResolution / 480.0f) : floor((float)HorizontalResolution / 640.0f);
 		DEBUG_FONT_SCALE *= SCALE_MULTIPLIER;
+
+		OldWndProc = (WNDPROC)SetWindowLong(GetActiveWindow(), GWLP_WNDPROC, (LONG_PTR)WndProcFallen);
 	}
 
 	__declspec(dllexport) void __cdecl OnFrame() {
@@ -60,15 +63,28 @@ extern "C" {
 	}
 
 	__declspec(dllexport) void __cdecl OnExit() {
-		if (ReplaceStages::FallenHeroSequence) {
-			delete ReplaceStages::FallenHeroSequence;
-		}
+		ExitHandler();
 	}
 
 	__declspec(dllexport) ModInfo SA2ModInfo = { ModLoaderVer }; // This is needed for the Mod Loader to recognize the DLL.
 }
 
-void SetDebugInfo() {
+static void ExitHandler() {
+	if (ReplaceStages::FallenHeroSequence) {
+		delete ReplaceStages::FallenHeroSequence;
+		ReplaceStages::FallenHeroSequence = nullptr;
+	}
+}
+
+static void SetDebugInfo() {
 	HelperFunctionsGlobal.SetDebugFontSize(DEBUG_FONT_SCALE);
 	HelperFunctionsGlobal.SetDebugFontColor(DEBUG_FONT_COLOR);
+}
+
+static LRESULT __stdcall WndProcFallen(HWND hWnd, UINT uMsg, WPARAM wParam, LPARAM lParam) {
+	if (uMsg == WM_QUIT || (uMsg == WM_SYSCOMMAND && (wParam & 0xFFF0) == SC_CLOSE)) {
+		ExitHandler();
+	}
+
+	return CallWindowProc(OldWndProc, hWnd, uMsg, wParam, lParam);
 }
