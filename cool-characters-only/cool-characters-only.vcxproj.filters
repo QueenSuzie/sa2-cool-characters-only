@@ -13,6 +13,9 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="Header Files\SA2 Headers">
+      <UniqueIdentifier>{a46cbdbe-d150-49e7-bc6b-83895ad687f1}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="framework.h">
@@ -41,6 +44,42 @@
     </ClInclude>
     <ClInclude Include="main.h">
       <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="SA2ModLoader\FunctionHook.h">
+      <Filter>Header Files\SA2 Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="SA2ModLoader\magic.h">
+      <Filter>Header Files\SA2 Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="SA2ModLoader\MemAccess.h">
+      <Filter>Header Files\SA2 Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="SA2ModLoader\ninja.h">
+      <Filter>Header Files\SA2 Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="SA2ModLoader\njdef.h">
+      <Filter>Header Files\SA2 Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="SA2ModLoader\SA2Enums.h">
+      <Filter>Header Files\SA2 Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="SA2ModLoader\SA2Functions.h">
+      <Filter>Header Files\SA2 Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="SA2ModLoader\SA2ModInfo.h">
+      <Filter>Header Files\SA2 Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="SA2ModLoader\SA2ModLoader.h">
+      <Filter>Header Files\SA2 Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="SA2ModLoader\SA2Structs.h">
+      <Filter>Header Files\SA2 Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="SA2ModLoader\SA2Variables.h">
+      <Filter>Header Files\SA2 Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="SA2ModLoader\UsercallFunctionHandler.h">
+      <Filter>Header Files\SA2 Headers</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

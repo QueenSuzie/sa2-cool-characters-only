@@ -74,6 +74,11 @@ static void ExitHandler() {
 		delete ReplaceStages::FallenHeroSequence;
 		ReplaceStages::FallenHeroSequence = nullptr;
 	}
+
+	if (ReplaceStages::FallenDarkSequence) {
+		delete ReplaceStages::FallenDarkSequence;
+		ReplaceStages::FallenDarkSequence = nullptr;
+	}
 }
 
 static void SetDebugInfo() {

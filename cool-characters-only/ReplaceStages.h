@@ -39,8 +39,8 @@ DataArray(CutsceneVoices, EventVoiceData, 0x1716720, 720);
 class ReplaceStages {
 	public:
 		static void init();
-		static inline SeqSection* FallenHeroSequence = NULL;
-		static inline SeqSection* FallenDarkSequence = NULL;
+		static inline SeqSection* FallenHeroSequence = nullptr;
+		static inline SeqSection* FallenDarkSequence = nullptr;
 		static SeqAndSummarySection FallenHeroStory[];
 		static SeqAndSummarySection FallenDarkStory[];
 		static unsigned short FallenHeroStoryLength;
