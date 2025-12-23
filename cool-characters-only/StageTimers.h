@@ -33,6 +33,24 @@ class StageTimers {
 		static void init();
 		static void setGreentForestTimer();
 		static void setWhiteJungleTimer();
+
+#ifdef CASUAL_MODE
+		// Casual Times
+		static inline int32_t TempStorage = 0;
+		static inline uint8_t GreenForestMinutes = 2;
+		static inline uint8_t GreenForestSeconds = 5;
+		static inline uint8_t GreenForestM4Minutes = 1;
+		static inline uint8_t GreenForestM4Seconds = 55;
+		static inline uint8_t GreenForestHardMinutes = 2;
+		static inline uint8_t GreenForestHardSeconds = 0;
+		static inline uint8_t WhiteJungleMinutes = 2;
+		static inline uint8_t WhiteJungleSeconds = 5;
+		static inline uint8_t WhiteJungleM4Minutes = 1;
+		static inline uint8_t WhiteJungleM4Seconds = 55;
+		static inline uint8_t WhiteJungleHardMinutes = 2;
+		static inline uint8_t WhiteJungleHardSeconds = 0;
+#else
+		// Speedrun Times
 		static inline uint8_t GreenForestMinutes = 1;
 		static inline uint8_t GreenForestSeconds = 45;
 		static inline uint8_t GreenForestM4Minutes = 1;
@@ -45,11 +63,13 @@ class StageTimers {
 		static inline uint8_t WhiteJungleM4Seconds = 32;
 		static inline uint8_t WhiteJungleHardMinutes = 1;
 		static inline uint8_t WhiteJungleHardSeconds = 45;
+#endif
+
 		static inline void* JumpToSetTimer = (void*)0x4520AC;
 		static inline void* JumpToAbortTimer = (void*)0x4520C0;
 
 	private:
-		static void initGreenForestTimer();
+		static void initJungleTimer();
 		static void initMission4Timers();
 };
 

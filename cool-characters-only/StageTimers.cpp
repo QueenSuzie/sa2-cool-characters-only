@@ -22,11 +22,11 @@
 #include "StageTimers.h"
 
 void StageTimers::init() {
-	StageTimers::initGreenForestTimer();
+	StageTimers::initJungleTimer();
 	StageTimers::initMission4Timers();
 }
 
-void StageTimers::initGreenForestTimer() {
+void StageTimers::initJungleTimer() {
 	WriteJump((void*)0x452073, &StageTimers::setGreentForestTimer);
 	WriteJump((void*)0x45208B, &StageTimers::setWhiteJungleTimer);
 
@@ -87,6 +87,17 @@ SET_TIMER:
 		mov		cl, StageTimers::WhiteJungleMinutes
 		mov		byte ptr[esp + 4], cl
 		mov		cl, StageTimers::WhiteJungleSeconds
+#ifdef CASUAL_MODE
+		mov		StageTimers::TempStorage, eax
+		mov		eax, dword ptr ds:0x1DE9600
+		mov		eax, dword ptr[eax + 24h]
+		test	eax, 10000h
+		pushfd
+		mov		eax, StageTimers::TempStorage
+		popfd
+		jnz		RETURN
+		add		cl, 5
+#endif
 		jmp		RETURN
 
 SET_HARD_TIMER:

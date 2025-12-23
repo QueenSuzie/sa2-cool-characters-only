@@ -120,7 +120,7 @@ void ReplaceStages::init() {
 	hLoadCharTextures.Hook(LoadCharTextures_h);
 	hSummaryBgLoad.Hook(SummaryBgLoad);
 	hProcessWinTime.Hook(ProcessWinTime);
-
+	PrintDebug("test");
 	ReplaceStages::initEventData();
 	ReplaceStages::initStorySequence();
 	ReplaceStages::replaceStoryStrings();
@@ -184,6 +184,10 @@ void __fastcall LoadSequence(int a1, SeqSection* story) {
 		DEBUG_MESSAGE_TIMER = DEFAULT_MESSAGE_TIME;
 	} else if (CurrentSequenceNo == 2 && story->type == SEQ_TYPE_EVENT && story->event_num[0] == Event::MASTER_EMERALD_BREAK_HERO) {
 		DEBUG_MESSAGE = "Risen Dark Story: v";
+		DEBUG_MESSAGE += CCM_VERSION;
+		DEBUG_MESSAGE_TIMER = DEFAULT_MESSAGE_TIME;
+	} else if (CurrentSequenceNo == 3 && story->type == SEQ_TYPE_EVENT && story->event_num[0] == Event::ECLIPSE_CANON_DESTRUCTION_SEQUENCE) {
+		DEBUG_MESSAGE = "Last Story: v";
 		DEBUG_MESSAGE += CCM_VERSION;
 		DEBUG_MESSAGE_TIMER = DEFAULT_MESSAGE_TIME;
 	}

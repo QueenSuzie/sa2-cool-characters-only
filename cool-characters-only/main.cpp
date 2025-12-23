@@ -37,6 +37,7 @@ extern "C" {
 			ReplaceCharacters::SSU_DETECTED = true;
 		}
 
+		EmeraldManager::Init();
 		ReplaceCharacters::init();
 		ReplaceStages::init();
 		StageTimers::init();
@@ -54,6 +55,7 @@ extern "C" {
 		OldWndProc = (WNDPROC)SetWindowLong(GetActiveWindow(), GWLP_WNDPROC, (LONG_PTR)WndProcFallen);
 	}
 
+#ifndef CASUAL_MODE
 	__declspec(dllexport) void __cdecl OnFrame() {
 		if (DEBUG_MESSAGE_TIMER > 0) {
 			SetDebugInfo();
@@ -61,6 +63,7 @@ extern "C" {
 			DEBUG_MESSAGE_TIMER--;
 		}
 	}
+#endif
 
 	__declspec(dllexport) void __cdecl OnExit() {
 		ExitHandler();
@@ -79,6 +82,8 @@ static void ExitHandler() {
 		delete ReplaceStages::FallenDarkSequence;
 		ReplaceStages::FallenDarkSequence = nullptr;
 	}
+
+	EmeraldManager::Destroy();
 }
 
 static void SetDebugInfo() {

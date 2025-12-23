@@ -13,6 +13,7 @@
 #include "FunctionHook.h"
 #include "main.h"
 #include "SequenceData.h"
+#include "EmeraldManager.h"
 #include "ReplaceCharacters.h"
 #include "ReplaceStages.h"
 #include "StageTimers.h"
