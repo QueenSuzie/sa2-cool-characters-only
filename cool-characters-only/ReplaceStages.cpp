@@ -120,7 +120,7 @@ void ReplaceStages::init() {
 	hLoadCharTextures.Hook(LoadCharTextures_h);
 	hSummaryBgLoad.Hook(SummaryBgLoad);
 	hProcessWinTime.Hook(ProcessWinTime);
-	PrintDebug("test");
+
 	ReplaceStages::initEventData();
 	ReplaceStages::initStorySequence();
 	ReplaceStages::replaceStoryStrings();
