@@ -115,8 +115,9 @@
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <CopyFileToFolders Include="..\mod.ini" />
     <CopyFileToFolders Include="..\LICENSE" />
+    <CopyFileToFolders Include="..\mod.ini" />
+    <CopyFileToFolders Include="..\mod-casual.ini" />
   </ItemGroup>
   <ItemGroup>
     <None Include="..\README.md" />
