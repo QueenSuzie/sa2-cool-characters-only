@@ -5,6 +5,8 @@ Introduces a more "cool" experience for Hero Story enjoyers. This is Fallen Hero
 ## Installation
 This mod is compatible with the [SA2 Mod Manager.](https://github.com/X-Hax/SA-Mod-Manager) Download the latest release and place the folder inside the 7z archive within your SA2 mods folder. Then enable the mod in your mod manager.
 
+For anyone speedrunning any of the [Fallen Categories](https://www.speedrun.com/sa2b_fallen), you MUST use the `speedrun` build from the releases tab.
+
 ## Credits
 A special thanks to the people that have helped to make this possible.
 
