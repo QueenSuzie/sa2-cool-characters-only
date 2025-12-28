@@ -118,6 +118,7 @@
     <CopyFileToFolders Include="..\LICENSE" />
     <CopyFileToFolders Include="..\mod.ini" />
     <CopyFileToFolders Include="..\mod-casual.ini" />
+    <CopyFileToFolders Include="..\configschema.xml" />
   </ItemGroup>
   <ItemGroup>
     <None Include="..\README.md" />

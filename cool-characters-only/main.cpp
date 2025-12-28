@@ -31,6 +31,8 @@ int DEBUG_FONT_SCALE = 10;
 int DEBUG_FONT_COLOR = 0xFF7D3C98; // Purple AARRGGBB
 static WNDPROC OldWndProc = nullptr;
 
+DataPointer(unsigned int, SkipEmblems, 0x174B08C);
+
 extern "C" {
 	__declspec(dllexport) void __cdecl Init(const char* path, const HelperFunctions& helperFunctions) {
 		if (helperFunctions.Mods->find("sa2.queensuzie.storystyleupgrades") != NULL) {
@@ -53,6 +55,16 @@ extern "C" {
 		DEBUG_FONT_SCALE *= SCALE_MULTIPLIER;
 
 		OldWndProc = (WNDPROC)SetWindowLong(GetActiveWindow(), GWLP_WNDPROC, (LONG_PTR)WndProcFallen);
+
+#ifndef CASUAL_MODE
+		const IniFile* config = new IniFile(std::string(path) + "\\config.ini");
+		bool skipEmblems = config->getBool("Speedrun", "SkipEmblems", false);
+		delete config;
+
+		if (skipEmblems) {
+			SkipEmblems = 1;
+		}
+#endif
 	}
 
 #ifndef CASUAL_MODE
